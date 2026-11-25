@@ -1,0 +1,81 @@
+/* La página ocupa todo el alto disponible y permite el scroll interno. */
+:host {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+}
+
+/* Cuadrícula de carpetas estilo Google Drive. */
+.drive-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 12px;
+  width: 100%;
+}
+
+/* Tarjeta de carpeta con acciones rápidas. */
+.drive-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.drive-card:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.drive-card.active {
+  background: #f0fdfa;
+  border-color: #5eead4;
+  box-shadow: 0 0 0 2px rgba(20, 184, 166, 0.2);
+}
+
+.drive-icon {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.drive-title {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #0f172a !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  max-width: 150px;
+}
+
+.drive-subtitle {
+  font-size: 11px !important;
+  color: #64748b !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  margin-top: 2px !important;
+  max-width: 150px;
+}
+
+/* En pantallas pequeñas la cuadrícula pasa a una sola columna. */
+@media (max-width: 1023px) {
+  .drive-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,6 @@
+/* La página ocupa el alto disponible dentro del contenedor de la aplicación. */
+:host {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}

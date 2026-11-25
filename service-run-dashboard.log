@@ -1,0 +1,466 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by lombok.permit.Permit
+WARNING: Please consider reporting this to the maintainers of class lombok.permit.Permit
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.2.0)
+
+2026-11-21T22:45:36.956-03:00  INFO 5148 --- [service] [           main] com.backlog.service.ServiceApplication   : Starting ServiceApplication using Java 24 with PID 5148 (H:\Proyectos\Backlog\service\target\classes started by Usuario in H:\Proyectos\Backlog\service)
+2026-11-21T22:45:36.959-03:00  INFO 5148 --- [service] [           main] com.backlog.service.ServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-11-21T22:45:37.735-03:00  INFO 5148 --- [service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-21T22:45:37.836-03:00  INFO 5148 --- [service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 10 JPA repository interfaces.
+2026-11-21T22:45:38.439-03:00  INFO 5148 --- [service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-11-21T22:45:38.456-03:00  INFO 5148 --- [service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-21T22:45:38.456-03:00  INFO 5148 --- [service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.27]
+2026-11-21T22:45:38.512-03:00  INFO 5148 --- [service] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1502 ms
+2026-11-21T22:45:38.700-03:00  INFO 5148 --- [service] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-21T22:45:38.750-03:00  INFO 5148 --- [service] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.15.Final
+2026-11-21T22:45:39.199-03:00  INFO 5148 --- [service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-21T22:45:39.228-03:00  INFO 5148 --- [service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-21T22:45:39.383-03:00  INFO 5148 --- [service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5f166f2e
+2026-11-21T22:45:39.385-03:00  INFO 5148 --- [service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-21T22:45:39.431-03:00  WARN 5148 --- [service] [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-21T22:45:39.449-03:00  INFO 5148 --- [service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/backlog?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: backlog/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-21T22:45:40.624-03:00  INFO 5148 --- [service] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-21T22:45:40.702-03:00  INFO 5148 --- [service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-21T22:45:40.772-03:00  INFO 5148 --- [service] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-21T22:45:41.694-03:00  INFO 5148 --- [service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-11-21T22:45:41.699-03:00  INFO 5148 --- [service] [           main] com.backlog.service.ServiceApplication   : Started ServiceApplication in 5.132 seconds (process running for 5.541)
+2026-11-21T22:45:57.302-03:00  INFO 5148 --- [service] [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-21T22:45:57.302-03:00  INFO 5148 --- [service] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-21T22:45:57.303-03:00  INFO 5148 --- [service] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+Hibernate: select u1_0.id_usuario from usuario u1_0 where u1_0.nombre_usuario=? limit ?
+Hibernate: select u1_0.id_usuario from usuario u1_0 where u1_0.email=? limit ?
+Hibernate: insert into usuario (fecha_nacimiento,email,contraseña,nombre_usuario) values (?,?,?,?)
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: insert into proyecto (fecha_creacion,descripcion,id_usuario_propietario,titulo) values (?,?,?,?)
+Hibernate: select count(e1_0.id_elemento) from epica e1_0 join elemento e1_1 on e1_0.id_elemento=e1_1.id_elemento where e1_1.id_proyecto=?
+Hibernate: select count(hu1_0.id_elemento) from historia_de_usuario hu1_0 join elemento hu1_1 on hu1_0.id_elemento=hu1_1.id_elemento where hu1_1.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_usuario_propietario=?
+Hibernate: select count(e1_0.id_elemento) from epica e1_0 join elemento e1_1 on e1_0.id_elemento=e1_1.id_elemento where e1_1.id_proyecto=?
+Hibernate: select count(hu1_0.id_elemento) from historia_de_usuario hu1_0 join elemento hu1_1 on hu1_0.id_elemento=hu1_1.id_elemento where hu1_1.id_proyecto=?
+2026-11-21T22:45:59.014-03:00 ERROR 5148 --- [service] [nio-8081-exec-7] c.b.s.exception.GlobalExceptionHandler   : Error no controlado en la API
+
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/proyectos/4/directorios for request '/api/proyectos/4/directorios'.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:527) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:50) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1001) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:913) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.27.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:872) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.27.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59) ~[tomcat-embed-websocket-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:131) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$2(FilterChainProxy.java:235) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:378) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:132) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:86) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:101) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at com.backlog.service.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:69) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:91) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:76) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:136) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:136) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.2.0.jar:7.2.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:411) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2202) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:947) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:481) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at java.base/java.lang.Thread.run(Thread.java:1447) ~[na:na]
+
+2026-11-21T22:45:59.061-03:00 ERROR 5148 --- [service] [nio-8081-exec-8] c.b.s.exception.GlobalExceptionHandler   : Error no controlado en la API
+
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/proyectos/4/historias for request '/api/proyectos/4/historias'.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:527) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:50) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1001) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:913) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.27.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:872) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.27.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59) ~[tomcat-embed-websocket-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:131) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$2(FilterChainProxy.java:235) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:378) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:132) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:86) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:101) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at com.backlog.service.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:69) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:91) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:76) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:387) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.2.0.jar:7.2.0]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:136) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:136) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.2.0.jar:7.2.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:411) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2202) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:947) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:481) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at java.base/java.lang.Thread.run(Thread.java:1447) ~[na:na]
+
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_proyecto=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario from participa p1_0 where p1_0.idUsuario=? and p1_0.idProyecto=? limit ?
+Hibernate: insert into elemento (fecha_creacion,descripcion,fecha_ult_modificacion,id_elemento_padre,id_proyecto,titulo) values (?,?,?,?,?,?)
+Hibernate: insert into epica (id_elemento) values (?)
+Hibernate: select u1_0.id_usuario from usuario u1_0 where u1_0.nombre_usuario=? limit ?
+Hibernate: select u1_0.id_usuario from usuario u1_0 where u1_0.email=? limit ?
+Hibernate: insert into usuario (fecha_nacimiento,email,contraseña,nombre_usuario) values (?,?,?,?)
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: insert into proyecto (fecha_creacion,descripcion,id_usuario_propietario,titulo) values (?,?,?,?)
+Hibernate: select count(e1_0.id_elemento) from epica e1_0 join elemento e1_1 on e1_0.id_elemento=e1_1.id_elemento where e1_1.id_proyecto=?
+Hibernate: select count(hu1_0.id_elemento) from historia_de_usuario hu1_0 join elemento hu1_1 on hu1_0.id_elemento=hu1_1.id_elemento where hu1_1.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_usuario_propietario=?
+Hibernate: select count(e1_0.id_elemento) from epica e1_0 join elemento e1_1 on e1_0.id_elemento=e1_1.id_elemento where e1_1.id_proyecto=?
+Hibernate: select count(hu1_0.id_elemento) from historia_de_usuario hu1_0 join elemento hu1_1 on hu1_0.id_elemento=hu1_1.id_elemento where hu1_1.id_proyecto=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario,p1_0.id_proyecto,p1_0.id_usuario from participa p1_0 where p1_0.idUsuario=?
+Hibernate: select count(e1_0.id_elemento) from epica e1_0 join elemento e1_1 on e1_0.id_elemento=e1_1.id_elemento where e1_1.id_proyecto=?
+Hibernate: select count(hu1_0.id_elemento) from historia_de_usuario hu1_0 join elemento hu1_1 on hu1_0.id_elemento=hu1_1.id_elemento where hu1_1.id_proyecto=?
+Hibernate: select count(e1_0.id_elemento) from epica e1_0 join elemento e1_1 on e1_0.id_elemento=e1_1.id_elemento where e1_1.id_proyecto=?
+Hibernate: select count(hu1_0.id_elemento) from historia_de_usuario hu1_0 join elemento hu1_1 on hu1_0.id_elemento=hu1_1.id_elemento where hu1_1.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_proyecto=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario from participa p1_0 where p1_0.idUsuario=? and p1_0.idProyecto=? limit ?
+Hibernate: select e1_0.id_elemento,case when e1_1.id_elemento is not null then 1 when e1_2.id_elemento is not null then 2 when e1_3.id_elemento is not null then 3 when e1_0.id_elemento is not null then 0 end,e1_0.fecha_creacion,e1_0.descripcion,e1_0.fecha_ult_modificacion,e1_0.id_elemento_padre,e1_0.id_proyecto,e1_0.titulo,e1_1.color,e1_3.criterios_aceptacion,e1_3.reglas_negocio,e1_3.identificador from elemento e1_0 left join directorio e1_1 on e1_0.id_elemento=e1_1.id_elemento left join epica e1_2 on e1_0.id_elemento=e1_2.id_elemento left join historia_de_usuario e1_3 on e1_0.id_elemento=e1_3.id_elemento where e1_0.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_proyecto=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario from participa p1_0 where p1_0.idUsuario=? and p1_0.idProyecto=? limit ?
+Hibernate: select e1_0.id_elemento,case when e1_1.id_elemento is not null then 1 when e1_2.id_elemento is not null then 2 when e1_3.id_elemento is not null then 3 when e1_0.id_elemento is not null then 0 end,e1_0.fecha_creacion,e1_0.descripcion,e1_0.fecha_ult_modificacion,e1_0.id_elemento_padre,e1_0.id_proyecto,e1_0.titulo,e1_1.color,e1_3.criterios_aceptacion,e1_3.reglas_negocio,e1_3.identificador from elemento e1_0 left join directorio e1_1 on e1_0.id_elemento=e1_1.id_elemento left join epica e1_2 on e1_0.id_elemento=e1_2.id_elemento left join historia_de_usuario e1_3 on e1_0.id_elemento=e1_3.id_elemento where e1_0.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_proyecto=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario from participa p1_0 where p1_0.idUsuario=? and p1_0.idProyecto=? limit ?
+Hibernate: select e1_0.id_elemento,case when e1_1.id_elemento is not null then 1 when e1_2.id_elemento is not null then 2 when e1_3.id_elemento is not null then 3 when e1_0.id_elemento is not null then 0 end,e1_0.fecha_creacion,e1_0.descripcion,e1_0.fecha_ult_modificacion,e1_0.id_elemento_padre,e1_0.id_proyecto,e1_0.titulo,e1_1.color,e1_3.criterios_aceptacion,e1_3.reglas_negocio,e1_3.identificador from elemento e1_0 left join directorio e1_1 on e1_0.id_elemento=e1_1.id_elemento left join epica e1_2 on e1_0.id_elemento=e1_2.id_elemento left join historia_de_usuario e1_3 on e1_0.id_elemento=e1_3.id_elemento where e1_0.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_proyecto=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario from participa p1_0 where p1_0.idUsuario=? and p1_0.idProyecto=? limit ?
+Hibernate: select e1_0.id_elemento,case when e1_1.id_elemento is not null then 1 when e1_2.id_elemento is not null then 2 when e1_3.id_elemento is not null then 3 when e1_0.id_elemento is not null then 0 end,e1_0.fecha_creacion,e1_0.descripcion,e1_0.fecha_ult_modificacion,e1_0.id_elemento_padre,e1_0.id_proyecto,e1_0.titulo,e1_1.color,e1_3.criterios_aceptacion,e1_3.reglas_negocio,e1_3.identificador from elemento e1_0 left join directorio e1_1 on e1_0.id_elemento=e1_1.id_elemento left join epica e1_2 on e1_0.id_elemento=e1_2.id_elemento left join historia_de_usuario e1_3 on e1_0.id_elemento=e1_3.id_elemento where e1_0.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_proyecto=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario from participa p1_0 where p1_0.idUsuario=? and p1_0.idProyecto=? limit ?
+Hibernate: select e1_0.id_elemento,case when e1_1.id_elemento is not null then 1 when e1_2.id_elemento is not null then 2 when e1_3.id_elemento is not null then 3 when e1_0.id_elemento is not null then 0 end,e1_0.fecha_creacion,e1_0.descripcion,e1_0.fecha_ult_modificacion,e1_0.id_elemento_padre,e1_0.id_proyecto,e1_0.titulo,e1_1.color,e1_3.criterios_aceptacion,e1_3.reglas_negocio,e1_3.identificador from elemento e1_0 left join directorio e1_1 on e1_0.id_elemento=e1_1.id_elemento left join epica e1_2 on e1_0.id_elemento=e1_2.id_elemento left join historia_de_usuario e1_3 on e1_0.id_elemento=e1_3.id_elemento where e1_0.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_proyecto=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario from participa p1_0 where p1_0.idUsuario=? and p1_0.idProyecto=? limit ?
+Hibernate: select e1_0.id_elemento,case when e1_1.id_elemento is not null then 1 when e1_2.id_elemento is not null then 2 when e1_3.id_elemento is not null then 3 when e1_0.id_elemento is not null then 0 end,e1_0.fecha_creacion,e1_0.descripcion,e1_0.fecha_ult_modificacion,e1_0.id_elemento_padre,e1_0.id_proyecto,e1_0.titulo,e1_1.color,e1_3.criterios_aceptacion,e1_3.reglas_negocio,e1_3.identificador from elemento e1_0 left join directorio e1_1 on e1_0.id_elemento=e1_1.id_elemento left join epica e1_2 on e1_0.id_elemento=e1_2.id_elemento left join historia_de_usuario e1_3 on e1_0.id_elemento=e1_3.id_elemento where e1_0.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_proyecto=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario from participa p1_0 where p1_0.idUsuario=? and p1_0.idProyecto=? limit ?
+Hibernate: select e1_0.id_elemento,case when e1_1.id_elemento is not null then 1 when e1_2.id_elemento is not null then 2 when e1_3.id_elemento is not null then 3 when e1_0.id_elemento is not null then 0 end,e1_0.fecha_creacion,e1_0.descripcion,e1_0.fecha_ult_modificacion,e1_0.id_elemento_padre,e1_0.id_proyecto,e1_0.titulo,e1_1.color,e1_3.criterios_aceptacion,e1_3.reglas_negocio,e1_3.identificador from elemento e1_0 left join directorio e1_1 on e1_0.id_elemento=e1_1.id_elemento left join epica e1_2 on e1_0.id_elemento=e1_2.id_elemento left join historia_de_usuario e1_3 on e1_0.id_elemento=e1_3.id_elemento where e1_0.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario,p1_0.id_proyecto,p1_0.id_usuario from participa p1_0 where p1_0.idUsuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_usuario_propietario=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_usuario_propietario=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario,p1_0.id_proyecto,p1_0.id_usuario from participa p1_0 where p1_0.idUsuario=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_usuario_propietario=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario,p1_0.id_proyecto,p1_0.id_usuario from participa p1_0 where p1_0.idUsuario=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_usuario_propietario=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario,p1_0.id_proyecto,p1_0.id_usuario from participa p1_0 where p1_0.idUsuario=?
+Hibernate: select count(e1_0.id_elemento) from epica e1_0 join elemento e1_1 on e1_0.id_elemento=e1_1.id_elemento where e1_1.id_proyecto=?
+Hibernate: select count(hu1_0.id_elemento) from historia_de_usuario hu1_0 join elemento hu1_1 on hu1_0.id_elemento=hu1_1.id_elemento where hu1_1.id_proyecto=?
+Hibernate: select count(e1_0.id_elemento) from epica e1_0 join elemento e1_1 on e1_0.id_elemento=e1_1.id_elemento where e1_1.id_proyecto=?
+Hibernate: select count(hu1_0.id_elemento) from historia_de_usuario hu1_0 join elemento hu1_1 on hu1_0.id_elemento=hu1_1.id_elemento where hu1_1.id_proyecto=?
+Hibernate: select count(e1_0.id_elemento) from epica e1_0 join elemento e1_1 on e1_0.id_elemento=e1_1.id_elemento where e1_1.id_proyecto=?
+Hibernate: select count(hu1_0.id_elemento) from historia_de_usuario hu1_0 join elemento hu1_1 on hu1_0.id_elemento=hu1_1.id_elemento where hu1_1.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_proyecto=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario from participa p1_0 where p1_0.idUsuario=? and p1_0.idProyecto=? limit ?
+Hibernate: select e1_0.id_elemento,case when e1_1.id_elemento is not null then 1 when e1_2.id_elemento is not null then 2 when e1_3.id_elemento is not null then 3 when e1_0.id_elemento is not null then 0 end,e1_0.fecha_creacion,e1_0.descripcion,e1_0.fecha_ult_modificacion,e1_0.id_elemento_padre,e1_0.id_proyecto,e1_0.titulo,e1_1.color,e1_3.criterios_aceptacion,e1_3.reglas_negocio,e1_3.identificador from elemento e1_0 left join directorio e1_1 on e1_0.id_elemento=e1_1.id_elemento left join epica e1_2 on e1_0.id_elemento=e1_2.id_elemento left join historia_de_usuario e1_3 on e1_0.id_elemento=e1_3.id_elemento where e1_0.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_usuario_propietario=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario,p1_0.id_proyecto,p1_0.id_usuario from participa p1_0 where p1_0.idUsuario=?
+Hibernate: select count(e1_0.id_elemento) from epica e1_0 join elemento e1_1 on e1_0.id_elemento=e1_1.id_elemento where e1_1.id_proyecto=?
+Hibernate: select count(hu1_0.id_elemento) from historia_de_usuario hu1_0 join elemento hu1_1 on hu1_0.id_elemento=hu1_1.id_elemento where hu1_1.id_proyecto=?
+Hibernate: select count(e1_0.id_elemento) from epica e1_0 join elemento e1_1 on e1_0.id_elemento=e1_1.id_elemento where e1_1.id_proyecto=?
+Hibernate: select count(hu1_0.id_elemento) from historia_de_usuario hu1_0 join elemento hu1_1 on hu1_0.id_elemento=hu1_1.id_elemento where hu1_1.id_proyecto=?
+Hibernate: select count(e1_0.id_elemento) from epica e1_0 join elemento e1_1 on e1_0.id_elemento=e1_1.id_elemento where e1_1.id_proyecto=?
+Hibernate: select count(hu1_0.id_elemento) from historia_de_usuario hu1_0 join elemento hu1_1 on hu1_0.id_elemento=hu1_1.id_elemento where hu1_1.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_proyecto=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario from participa p1_0 where p1_0.idUsuario=? and p1_0.idProyecto=? limit ?
+Hibernate: select e1_0.id_elemento,case when e1_1.id_elemento is not null then 1 when e1_2.id_elemento is not null then 2 when e1_3.id_elemento is not null then 3 when e1_0.id_elemento is not null then 0 end,e1_0.fecha_creacion,e1_0.descripcion,e1_0.fecha_ult_modificacion,e1_0.id_elemento_padre,e1_0.id_proyecto,e1_0.titulo,e1_1.color,e1_3.criterios_aceptacion,e1_3.reglas_negocio,e1_3.identificador from elemento e1_0 left join directorio e1_1 on e1_0.id_elemento=e1_1.id_elemento left join epica e1_2 on e1_0.id_elemento=e1_2.id_elemento left join historia_de_usuario e1_3 on e1_0.id_elemento=e1_3.id_elemento where e1_0.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_proyecto=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario from participa p1_0 where p1_0.idUsuario=? and p1_0.idProyecto=? limit ?
+Hibernate: select e1_0.id_elemento,case when e1_1.id_elemento is not null then 1 when e1_2.id_elemento is not null then 2 when e1_3.id_elemento is not null then 3 when e1_0.id_elemento is not null then 0 end,e1_0.fecha_creacion,e1_0.descripcion,e1_0.fecha_ult_modificacion,e1_0.id_elemento_padre,e1_0.id_proyecto,e1_0.titulo,e1_1.color,e1_3.criterios_aceptacion,e1_3.reglas_negocio,e1_3.identificador from elemento e1_0 left join directorio e1_1 on e1_0.id_elemento=e1_1.id_elemento left join epica e1_2 on e1_0.id_elemento=e1_2.id_elemento left join historia_de_usuario e1_3 on e1_0.id_elemento=e1_3.id_elemento where e1_0.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario,p1_0.id_proyecto,p1_0.id_usuario from participa p1_0 where p1_0.idUsuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_usuario_propietario=?
+Hibernate: select count(e1_0.id_elemento) from epica e1_0 join elemento e1_1 on e1_0.id_elemento=e1_1.id_elemento where e1_1.id_proyecto=?
+Hibernate: select count(hu1_0.id_elemento) from historia_de_usuario hu1_0 join elemento hu1_1 on hu1_0.id_elemento=hu1_1.id_elemento where hu1_1.id_proyecto=?
+Hibernate: select count(e1_0.id_elemento) from epica e1_0 join elemento e1_1 on e1_0.id_elemento=e1_1.id_elemento where e1_1.id_proyecto=?
+Hibernate: select count(hu1_0.id_elemento) from historia_de_usuario hu1_0 join elemento hu1_1 on hu1_0.id_elemento=hu1_1.id_elemento where hu1_1.id_proyecto=?
+Hibernate: select count(e1_0.id_elemento) from epica e1_0 join elemento e1_1 on e1_0.id_elemento=e1_1.id_elemento where e1_1.id_proyecto=?
+Hibernate: select count(hu1_0.id_elemento) from historia_de_usuario hu1_0 join elemento hu1_1 on hu1_0.id_elemento=hu1_1.id_elemento where hu1_1.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_proyecto=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario from participa p1_0 where p1_0.idUsuario=? and p1_0.idProyecto=? limit ?
+Hibernate: select e1_0.id_elemento,case when e1_1.id_elemento is not null then 1 when e1_2.id_elemento is not null then 2 when e1_3.id_elemento is not null then 3 when e1_0.id_elemento is not null then 0 end,e1_0.fecha_creacion,e1_0.descripcion,e1_0.fecha_ult_modificacion,e1_0.id_elemento_padre,e1_0.id_proyecto,e1_0.titulo,e1_1.color,e1_3.criterios_aceptacion,e1_3.reglas_negocio,e1_3.identificador from elemento e1_0 left join directorio e1_1 on e1_0.id_elemento=e1_1.id_elemento left join epica e1_2 on e1_0.id_elemento=e1_2.id_elemento left join historia_de_usuario e1_3 on e1_0.id_elemento=e1_3.id_elemento where e1_0.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_usuario_propietario=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario,p1_0.id_proyecto,p1_0.id_usuario from participa p1_0 where p1_0.idUsuario=?
+Hibernate: select count(e1_0.id_elemento) from epica e1_0 join elemento e1_1 on e1_0.id_elemento=e1_1.id_elemento where e1_1.id_proyecto=?
+Hibernate: select count(hu1_0.id_elemento) from historia_de_usuario hu1_0 join elemento hu1_1 on hu1_0.id_elemento=hu1_1.id_elemento where hu1_1.id_proyecto=?
+Hibernate: select count(e1_0.id_elemento) from epica e1_0 join elemento e1_1 on e1_0.id_elemento=e1_1.id_elemento where e1_1.id_proyecto=?
+Hibernate: select count(hu1_0.id_elemento) from historia_de_usuario hu1_0 join elemento hu1_1 on hu1_0.id_elemento=hu1_1.id_elemento where hu1_1.id_proyecto=?
+Hibernate: select count(e1_0.id_elemento) from epica e1_0 join elemento e1_1 on e1_0.id_elemento=e1_1.id_elemento where e1_1.id_proyecto=?
+Hibernate: select count(hu1_0.id_elemento) from historia_de_usuario hu1_0 join elemento hu1_1 on hu1_0.id_elemento=hu1_1.id_elemento where hu1_1.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_proyecto=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario from participa p1_0 where p1_0.idUsuario=? and p1_0.idProyecto=? limit ?
+Hibernate: select e1_0.id_elemento,case when e1_1.id_elemento is not null then 1 when e1_2.id_elemento is not null then 2 when e1_3.id_elemento is not null then 3 when e1_0.id_elemento is not null then 0 end,e1_0.fecha_creacion,e1_0.descripcion,e1_0.fecha_ult_modificacion,e1_0.id_elemento_padre,e1_0.id_proyecto,e1_0.titulo,e1_1.color,e1_3.criterios_aceptacion,e1_3.reglas_negocio,e1_3.identificador from elemento e1_0 left join directorio e1_1 on e1_0.id_elemento=e1_1.id_elemento left join epica e1_2 on e1_0.id_elemento=e1_2.id_elemento left join historia_de_usuario e1_3 on e1_0.id_elemento=e1_3.id_elemento where e1_0.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_proyecto=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario from participa p1_0 where p1_0.idUsuario=? and p1_0.idProyecto=? limit ?
+Hibernate: select e1_0.id_elemento,case when e1_1.id_elemento is not null then 1 when e1_2.id_elemento is not null then 2 when e1_3.id_elemento is not null then 3 when e1_0.id_elemento is not null then 0 end,e1_0.fecha_creacion,e1_0.descripcion,e1_0.fecha_ult_modificacion,e1_0.id_elemento_padre,e1_0.id_proyecto,e1_0.titulo,e1_1.color,e1_3.criterios_aceptacion,e1_3.reglas_negocio,e1_3.identificador from elemento e1_0 left join directorio e1_1 on e1_0.id_elemento=e1_1.id_elemento left join epica e1_2 on e1_0.id_elemento=e1_2.id_elemento left join historia_de_usuario e1_3 on e1_0.id_elemento=e1_3.id_elemento where e1_0.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_proyecto=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario from participa p1_0 where p1_0.idUsuario=? and p1_0.idProyecto=? limit ?
+Hibernate: select e1_0.id_elemento,case when e1_1.id_elemento is not null then 1 when e1_2.id_elemento is not null then 2 when e1_3.id_elemento is not null then 3 when e1_0.id_elemento is not null then 0 end,e1_0.fecha_creacion,e1_0.descripcion,e1_0.fecha_ult_modificacion,e1_0.id_elemento_padre,e1_0.id_proyecto,e1_0.titulo,e1_1.color,e1_3.criterios_aceptacion,e1_3.reglas_negocio,e1_3.identificador from elemento e1_0 left join directorio e1_1 on e1_0.id_elemento=e1_1.id_elemento left join epica e1_2 on e1_0.id_elemento=e1_2.id_elemento left join historia_de_usuario e1_3 on e1_0.id_elemento=e1_3.id_elemento where e1_0.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_proyecto=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario from participa p1_0 where p1_0.idUsuario=? and p1_0.idProyecto=? limit ?
+Hibernate: select e1_0.id_elemento,case when e1_1.id_elemento is not null then 1 when e1_2.id_elemento is not null then 2 when e1_3.id_elemento is not null then 3 when e1_0.id_elemento is not null then 0 end,e1_0.fecha_creacion,e1_0.descripcion,e1_0.fecha_ult_modificacion,e1_0.id_elemento_padre,e1_0.id_proyecto,e1_0.titulo,e1_1.color,e1_3.criterios_aceptacion,e1_3.reglas_negocio,e1_3.identificador from elemento e1_0 left join directorio e1_1 on e1_0.id_elemento=e1_1.id_elemento left join epica e1_2 on e1_0.id_elemento=e1_2.id_elemento left join historia_de_usuario e1_3 on e1_0.id_elemento=e1_3.id_elemento where e1_0.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_proyecto=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario from participa p1_0 where p1_0.idUsuario=? and p1_0.idProyecto=? limit ?
+Hibernate: select e1_0.id_elemento,case when e1_1.id_elemento is not null then 1 when e1_2.id_elemento is not null then 2 when e1_3.id_elemento is not null then 3 when e1_0.id_elemento is not null then 0 end,e1_0.fecha_creacion,e1_0.descripcion,e1_0.fecha_ult_modificacion,e1_0.id_elemento_padre,e1_0.id_proyecto,e1_0.titulo,e1_1.color,e1_3.criterios_aceptacion,e1_3.reglas_negocio,e1_3.identificador from elemento e1_0 left join directorio e1_1 on e1_0.id_elemento=e1_1.id_elemento left join epica e1_2 on e1_0.id_elemento=e1_2.id_elemento left join historia_de_usuario e1_3 on e1_0.id_elemento=e1_3.id_elemento where e1_0.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_proyecto=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario from participa p1_0 where p1_0.idUsuario=? and p1_0.idProyecto=? limit ?
+Hibernate: select e1_0.id_elemento,case when e1_1.id_elemento is not null then 1 when e1_2.id_elemento is not null then 2 when e1_3.id_elemento is not null then 3 when e1_0.id_elemento is not null then 0 end,e1_0.fecha_creacion,e1_0.descripcion,e1_0.fecha_ult_modificacion,e1_0.id_elemento_padre,e1_0.id_proyecto,e1_0.titulo,e1_1.color,e1_3.criterios_aceptacion,e1_3.reglas_negocio,e1_3.identificador from elemento e1_0 left join directorio e1_1 on e1_0.id_elemento=e1_1.id_elemento left join epica e1_2 on e1_0.id_elemento=e1_2.id_elemento left join historia_de_usuario e1_3 on e1_0.id_elemento=e1_3.id_elemento where e1_0.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_proyecto=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario from participa p1_0 where p1_0.idUsuario=? and p1_0.idProyecto=? limit ?
+Hibernate: select e1_0.id_elemento,case when e1_1.id_elemento is not null then 1 when e1_2.id_elemento is not null then 2 when e1_3.id_elemento is not null then 3 when e1_0.id_elemento is not null then 0 end,e1_0.fecha_creacion,e1_0.descripcion,e1_0.fecha_ult_modificacion,e1_0.id_elemento_padre,e1_0.id_proyecto,e1_0.titulo,e1_1.color,e1_3.criterios_aceptacion,e1_3.reglas_negocio,e1_3.identificador from elemento e1_0 left join directorio e1_1 on e1_0.id_elemento=e1_1.id_elemento left join epica e1_2 on e1_0.id_elemento=e1_2.id_elemento left join historia_de_usuario e1_3 on e1_0.id_elemento=e1_3.id_elemento where e1_0.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_proyecto=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario from participa p1_0 where p1_0.idUsuario=? and p1_0.idProyecto=? limit ?
+Hibernate: select e1_0.id_elemento,case when e1_1.id_elemento is not null then 1 when e1_2.id_elemento is not null then 2 when e1_3.id_elemento is not null then 3 when e1_0.id_elemento is not null then 0 end,e1_0.fecha_creacion,e1_0.descripcion,e1_0.fecha_ult_modificacion,e1_0.id_elemento_padre,e1_0.id_proyecto,e1_0.titulo,e1_1.color,e1_3.criterios_aceptacion,e1_3.reglas_negocio,e1_3.identificador from elemento e1_0 left join directorio e1_1 on e1_0.id_elemento=e1_1.id_elemento left join epica e1_2 on e1_0.id_elemento=e1_2.id_elemento left join historia_de_usuario e1_3 on e1_0.id_elemento=e1_3.id_elemento where e1_0.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_proyecto=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario from participa p1_0 where p1_0.idUsuario=? and p1_0.idProyecto=? limit ?
+Hibernate: select e1_0.id_elemento,case when e1_1.id_elemento is not null then 1 when e1_2.id_elemento is not null then 2 when e1_3.id_elemento is not null then 3 when e1_0.id_elemento is not null then 0 end,e1_0.fecha_creacion,e1_0.descripcion,e1_0.fecha_ult_modificacion,e1_0.id_elemento_padre,e1_0.id_proyecto,e1_0.titulo,e1_1.color,e1_3.criterios_aceptacion,e1_3.reglas_negocio,e1_3.identificador from elemento e1_0 left join directorio e1_1 on e1_0.id_elemento=e1_1.id_elemento left join epica e1_2 on e1_0.id_elemento=e1_2.id_elemento left join historia_de_usuario e1_3 on e1_0.id_elemento=e1_3.id_elemento where e1_0.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_proyecto=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario from participa p1_0 where p1_0.idUsuario=? and p1_0.idProyecto=? limit ?
+Hibernate: select e1_0.id_elemento,case when e1_1.id_elemento is not null then 1 when e1_2.id_elemento is not null then 2 when e1_3.id_elemento is not null then 3 when e1_0.id_elemento is not null then 0 end,e1_0.fecha_creacion,e1_0.descripcion,e1_0.fecha_ult_modificacion,e1_0.id_elemento_padre,e1_0.id_proyecto,e1_0.titulo,e1_1.color,e1_3.criterios_aceptacion,e1_3.reglas_negocio,e1_3.identificador from elemento e1_0 left join directorio e1_1 on e1_0.id_elemento=e1_1.id_elemento left join epica e1_2 on e1_0.id_elemento=e1_2.id_elemento left join historia_de_usuario e1_3 on e1_0.id_elemento=e1_3.id_elemento where e1_0.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_proyecto=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario from participa p1_0 where p1_0.idUsuario=? and p1_0.idProyecto=? limit ?
+Hibernate: select e1_0.id_elemento,case when e1_1.id_elemento is not null then 1 when e1_2.id_elemento is not null then 2 when e1_3.id_elemento is not null then 3 when e1_0.id_elemento is not null then 0 end,e1_0.fecha_creacion,e1_0.descripcion,e1_0.fecha_ult_modificacion,e1_0.id_elemento_padre,e1_0.id_proyecto,e1_0.titulo,e1_1.color,e1_3.criterios_aceptacion,e1_3.reglas_negocio,e1_3.identificador from elemento e1_0 left join directorio e1_1 on e1_0.id_elemento=e1_1.id_elemento left join epica e1_2 on e1_0.id_elemento=e1_2.id_elemento left join historia_de_usuario e1_3 on e1_0.id_elemento=e1_3.id_elemento where e1_0.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario,p1_0.id_proyecto,p1_0.id_usuario from participa p1_0 where p1_0.idUsuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_usuario_propietario=?
+Hibernate: select count(e1_0.id_elemento) from epica e1_0 join elemento e1_1 on e1_0.id_elemento=e1_1.id_elemento where e1_1.id_proyecto=?
+Hibernate: select count(hu1_0.id_elemento) from historia_de_usuario hu1_0 join elemento hu1_1 on hu1_0.id_elemento=hu1_1.id_elemento where hu1_1.id_proyecto=?
+Hibernate: select count(e1_0.id_elemento) from epica e1_0 join elemento e1_1 on e1_0.id_elemento=e1_1.id_elemento where e1_1.id_proyecto=?
+Hibernate: select count(hu1_0.id_elemento) from historia_de_usuario hu1_0 join elemento hu1_1 on hu1_0.id_elemento=hu1_1.id_elemento where hu1_1.id_proyecto=?
+Hibernate: select count(e1_0.id_elemento) from epica e1_0 join elemento e1_1 on e1_0.id_elemento=e1_1.id_elemento where e1_1.id_proyecto=?
+Hibernate: select count(hu1_0.id_elemento) from historia_de_usuario hu1_0 join elemento hu1_1 on hu1_0.id_elemento=hu1_1.id_elemento where hu1_1.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_proyecto=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario from participa p1_0 where p1_0.idUsuario=? and p1_0.idProyecto=? limit ?
+Hibernate: select e1_0.id_elemento,case when e1_1.id_elemento is not null then 1 when e1_2.id_elemento is not null then 2 when e1_3.id_elemento is not null then 3 when e1_0.id_elemento is not null then 0 end,e1_0.fecha_creacion,e1_0.descripcion,e1_0.fecha_ult_modificacion,e1_0.id_elemento_padre,e1_0.id_proyecto,e1_0.titulo,e1_1.color,e1_3.criterios_aceptacion,e1_3.reglas_negocio,e1_3.identificador from elemento e1_0 left join directorio e1_1 on e1_0.id_elemento=e1_1.id_elemento left join epica e1_2 on e1_0.id_elemento=e1_2.id_elemento left join historia_de_usuario e1_3 on e1_0.id_elemento=e1_3.id_elemento where e1_0.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario,p1_0.id_proyecto,p1_0.id_usuario from participa p1_0 where p1_0.idUsuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_usuario_propietario=?
+Hibernate: select count(e1_0.id_elemento) from epica e1_0 join elemento e1_1 on e1_0.id_elemento=e1_1.id_elemento where e1_1.id_proyecto=?
+Hibernate: select count(hu1_0.id_elemento) from historia_de_usuario hu1_0 join elemento hu1_1 on hu1_0.id_elemento=hu1_1.id_elemento where hu1_1.id_proyecto=?
+Hibernate: select count(e1_0.id_elemento) from epica e1_0 join elemento e1_1 on e1_0.id_elemento=e1_1.id_elemento where e1_1.id_proyecto=?
+Hibernate: select count(hu1_0.id_elemento) from historia_de_usuario hu1_0 join elemento hu1_1 on hu1_0.id_elemento=hu1_1.id_elemento where hu1_1.id_proyecto=?
+Hibernate: select count(e1_0.id_elemento) from epica e1_0 join elemento e1_1 on e1_0.id_elemento=e1_1.id_elemento where e1_1.id_proyecto=?
+Hibernate: select count(hu1_0.id_elemento) from historia_de_usuario hu1_0 join elemento hu1_1 on hu1_0.id_elemento=hu1_1.id_elemento where hu1_1.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_proyecto=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario from participa p1_0 where p1_0.idUsuario=? and p1_0.idProyecto=? limit ?
+Hibernate: select e1_0.id_elemento,case when e1_1.id_elemento is not null then 1 when e1_2.id_elemento is not null then 2 when e1_3.id_elemento is not null then 3 when e1_0.id_elemento is not null then 0 end,e1_0.fecha_creacion,e1_0.descripcion,e1_0.fecha_ult_modificacion,e1_0.id_elemento_padre,e1_0.id_proyecto,e1_0.titulo,e1_1.color,e1_3.criterios_aceptacion,e1_3.reglas_negocio,e1_3.identificador from elemento e1_0 left join directorio e1_1 on e1_0.id_elemento=e1_1.id_elemento left join epica e1_2 on e1_0.id_elemento=e1_2.id_elemento left join historia_de_usuario e1_3 on e1_0.id_elemento=e1_3.id_elemento where e1_0.id_proyecto=?
+Hibernate: select u1_0.id_usuario from usuario u1_0 where u1_0.nombre_usuario=? limit ?
+Hibernate: select u1_0.id_usuario from usuario u1_0 where u1_0.email=? limit ?
+Hibernate: insert into usuario (fecha_nacimiento,email,contraseña,nombre_usuario) values (?,?,?,?)
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario,p1_0.id_proyecto,p1_0.id_usuario from participa p1_0 where p1_0.idUsuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_usuario_propietario=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario,p1_0.id_proyecto,p1_0.id_usuario from participa p1_0 where p1_0.idUsuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_usuario_propietario=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_usuario_propietario=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario,p1_0.id_proyecto,p1_0.id_usuario from participa p1_0 where p1_0.idUsuario=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_usuario_propietario=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario,p1_0.id_proyecto,p1_0.id_usuario from participa p1_0 where p1_0.idUsuario=?
+Hibernate: select count(e1_0.id_elemento) from epica e1_0 join elemento e1_1 on e1_0.id_elemento=e1_1.id_elemento where e1_1.id_proyecto=?
+Hibernate: select count(hu1_0.id_elemento) from historia_de_usuario hu1_0 join elemento hu1_1 on hu1_0.id_elemento=hu1_1.id_elemento where hu1_1.id_proyecto=?
+Hibernate: select count(e1_0.id_elemento) from epica e1_0 join elemento e1_1 on e1_0.id_elemento=e1_1.id_elemento where e1_1.id_proyecto=?
+Hibernate: select count(hu1_0.id_elemento) from historia_de_usuario hu1_0 join elemento hu1_1 on hu1_0.id_elemento=hu1_1.id_elemento where hu1_1.id_proyecto=?
+Hibernate: select count(e1_0.id_elemento) from epica e1_0 join elemento e1_1 on e1_0.id_elemento=e1_1.id_elemento where e1_1.id_proyecto=?
+Hibernate: select count(hu1_0.id_elemento) from historia_de_usuario hu1_0 join elemento hu1_1 on hu1_0.id_elemento=hu1_1.id_elemento where hu1_1.id_proyecto=?
+Hibernate: select u1_0.id_usuario,u1_0.fecha_nacimiento,u1_0.email,u1_0.contraseña,u1_0.nombre_usuario from usuario u1_0 where u1_0.nombre_usuario=?
+Hibernate: select p1_0.id_proyecto,p1_0.fecha_creacion,p1_0.descripcion,p1_0.id_usuario_propietario,p1_0.titulo from proyecto p1_0 where p1_0.id_proyecto=?
+Hibernate: select p1_0.idProyecto,p1_0.idUsuario from participa p1_0 where p1_0.idUsuario=? and p1_0.idProyecto=? limit ?
+Hibernate: select e1_0.id_elemento,case when e1_1.id_elemento is not null then 1 when e1_2.id_elemento is not null then 2 when e1_3.id_elemento is not null then 3 when e1_0.id_elemento is not null then 0 end,e1_0.fecha_creacion,e1_0.descripcion,e1_0.fecha_ult_modificacion,e1_0.id_elemento_padre,e1_0.id_proyecto,e1_0.titulo,e1_1.color,e1_3.criterios_aceptacion,e1_3.reglas_negocio,e1_3.identificador from elemento e1_0 left join directorio e1_1 on e1_0.id_elemento=e1_1.id_elemento left join epica e1_2 on e1_0.id_elemento=e1_2.id_elemento left join historia_de_usuario e1_3 on e1_0.id_elemento=e1_3.id_elemento where e1_0.id_proyecto=?

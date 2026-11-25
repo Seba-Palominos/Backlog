@@ -1,0 +1,936 @@
+<!DOCTYPE html><html lang="es" class="h-full"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle de Repositorio &amp; Permisos — AgileFlow</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'accent': '#DC2626',
+        'btn-primary': '#DC2626',
+        'btn-hover': '#B91C1C',
+        'success': '#16A34A',
+        'warning': '#D97706',
+        'error': '#DC2626',
+        'info': '#2563EB',
+        'epic': '#6D28D9',
+        'story': '#2563EB',
+        'subrepo': '#3F3F46',
+        'light-primary': '#09090B',
+        'light-on-primary': '#FFFFFF',
+        'light-accent': '#DC2626',
+        'light-surface': '#FAFAFA',
+        'light-on-surface': '#09090B',
+        'light-surface-card': '#FFFFFF',
+        'light-surface-subtle': '#F4F4F5',
+        'light-border-subtle': '#E4E4E7',
+        'dark-primary': '#09090B',
+        'dark-on-primary': '#FFFFFF',
+        'dark-accent': '#EF4444',
+        'dark-surface': '#09090B',
+        'dark-on-surface': '#FAFAFA',
+        'dark-surface-card': '#18181B',
+        'dark-surface-subtle': '#27272A',
+        'dark-border-subtle': '#3F3F46',
+      },
+      borderRadius: {
+        'sm': '4px',
+        'DEFAULT': '8px',
+        'md': '12px',
+        'lg': '16px',
+        'xl': '20px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '48px',
+        'page-margin': '24px',
+      },
+      fontFamily: {
+        'display': ['"Red Hat Text"', 'sans-serif'],
+        'headline': ['"Red Hat Text"', 'sans-serif'],
+        'title': ['"Instrument Sans"', 'sans-serif'],
+        'body': ['"Instrument Sans"', 'sans-serif'],
+        'label': ['"Instrument Sans"', 'sans-serif'],
+        'code': ['"Red Hat Mono"', 'monospace'],
+      },
+      fontSize: {
+        'display-lg': ['36px', { lineHeight: '44px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'display-lg-mobile': ['28px', { lineHeight: '34px', letterSpacing: '-0.25px', fontWeight: '700' }],
+        'headline-lg': ['28px', { lineHeight: '36px', letterSpacing: '-0.25px', fontWeight: '700' }],
+        'headline-lg-mobile': ['22px', { lineHeight: '28px', fontWeight: '700' }],
+        'headline-md': ['22px', { lineHeight: '28px', fontWeight: '600' }],
+        'headline-sm': ['18px', { lineHeight: '24px', fontWeight: '600' }],
+        'title-lg': ['16px', { lineHeight: '22px', fontWeight: '600' }],
+        'title-md': ['14px', { lineHeight: '20px', fontWeight: '600' }],
+        'body-lg': ['16px', { lineHeight: '24px', fontWeight: '400' }],
+        'body-md': ['14px', { lineHeight: '20px', fontWeight: '400' }],
+        'body-sm': ['12px', { lineHeight: '16px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '20px', fontWeight: '600' }],
+        'label-md': ['12px', { lineHeight: '16px', fontWeight: '500' }],
+        'label-sm': ['11px', { lineHeight: '14px', fontWeight: '500' }],
+        'code-md': ['13px', { lineHeight: '18px', fontWeight: '500' }],
+      },
+      transitionDuration: {
+        'state-change': '120ms',
+        'drawer-slide': '220ms',
+        'modal-enter': '200ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'drawer-slide': '0ms',
+        'modal-enter': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'cubic-bezier(0.4, 0, 0.2, 1)',
+        'drawer-slide': 'cubic-bezier(0.16, 1, 0.3, 1)',
+        'modal-enter': 'cubic-bezier(0.16, 1, 0.3, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&amp;family=Red+Hat+Mono:wght@500;600&amp;family=Red+Hat+Text:wght@600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>
+    .material-symbols-outlined { display: inline-flex; align-items: center; justify-content: center; line-height: 1 !important; box-sizing: border-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+  </style>
+</head>
+<body class="bg-light-surface text-light-on-surface font-body min-h-[1024px] flex flex-col antialiased" data-stitch-vh="min-h-[1024px]===min-h-screen">
+
+  <!-- TOP HEADER / APP SHELL (PARITY WITH DASHBOARD) -->
+  <header class="bg-light-surface-card border-b border-light-border-subtle h-16 px-6 flex items-center justify-between sticky top-0 z-30">
+    <div class="flex items-center gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded bg-neutral-950 text-white flex items-center justify-center font-headline font-bold text-headline-sm shadow-sm">
+          <span class="material-symbols-outlined text-xl">view_kanban</span>
+        </div>
+        <div>
+          <span class="font-headline text-headline-sm text-neutral-950 leading-none tracking-tight block">AgileFlow</span>
+          <span class="text-label-sm text-slate-500 font-label">Scrum &amp; Kanban Workspace</span>
+        </div>
+      </div>
+
+      <!-- Breadcrumb navigation -->
+      <nav class="hidden md:flex items-center gap-2 pl-4 border-l border-light-border-subtle text-xs" aria-label="Breadcrumb">
+        <a href="../agile-dashboard/AgileDashboard.html" class="text-slate-500 hover:text-red-700 font-medium flex items-center gap-1">
+          <span class="material-symbols-outlined text-base">home</span>
+          <span>Repositorios</span>
+        </a>
+        <span class="text-slate-300">/</span>
+        <span class="font-code font-bold text-neutral-950 bg-neutral-100 px-2 py-0.5 rounded border border-neutral-300">agile-core-platform</span>
+        <span class="text-slate-300">/</span>
+        <span class="text-slate-500" id="current-folder-view">Raíz (3 sub-carpetas, 2 épicas, 4 historias)</span>
+      </nav>
+    </div>
+
+    <!-- Right Header Tools -->
+    <div class="flex items-center gap-4">
+      <div class="relative w-64">
+        <span class="material-symbols-outlined absolute left-3 top-2.5 text-slate-400 text-lg pointer-events-none">search</span>
+        <input type="search" placeholder="Buscar dentro de este repo..." class="w-full pl-9 pr-4 py-1.5 bg-light-surface-subtle border border-light-border-subtle rounded font-body text-xs text-light-on-surface placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-red-500 focus:bg-white">
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="flex items-center gap-2">
+        <button type="button" onclick="openItemModal(&#39;subrepo&#39;)" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border border-slate-300 hover:border-red-300 text-slate-800 hover:text-red-700 hover:bg-red-50/50 rounded text-xs font-semibold shadow-2xs transition-colors">
+          <span class="material-symbols-outlined text-slate-600 text-base">create_new_folder</span>
+          <span>+ Sub-repo</span>
+        </button>
+        <button type="button" onclick="openItemModal(&#39;story&#39;)" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-red-600 text-white hover:bg-red-700 active:bg-red-800 rounded text-xs font-semibold shadow-sm transition-colors">
+          <span class="material-symbols-outlined text-base">add</span>
+          <span>+ Historia / Épica</span>
+        </button>
+      </div>
+
+      <!-- User avatar -->
+      <div class="w-8 h-8 rounded-full bg-neutral-900 text-white flex items-center justify-center font-bold text-xs ring-2 ring-neutral-300">
+        SC
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN THREE-COLUMN WORKSPACE: LEFT NAV + MAIN EXPLORER + RIGHT PERMISSIONS PANEL -->
+  <div class="flex-1 flex overflow-hidden">
+
+    <!-- LEFT SIDEBAR: FAST REPO TREE NAVIGATION -->
+    <aside class="w-56 bg-light-surface-card border-r border-light-border-subtle flex flex-col justify-between shrink-0 hidden lg:flex">
+      <div class="p-3.5 space-y-4">
+        <div class="flex items-center justify-between px-2">
+          <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Explorador de Árbol</span>
+          <span class="text-[10px] text-teal-700 bg-teal-50 px-1.5 py-0.5 rounded font-code">Sprint 4</span>
+        </div>
+
+        <nav class="space-y-1 text-xs">
+          <!-- Root Repository (Active) -->
+          <div class="bg-teal-50/80 text-teal-900 border border-teal-200 rounded p-2 flex items-center gap-2 font-semibold">
+            <span class="material-symbols-outlined text-teal-700 text-lg">folder_open</span>
+            <span class="truncate">agile-core-platform</span>
+          </div>
+
+          <!-- Tree Children (Sub-repos & Artifact Files) -->
+          <div class="pl-4 space-y-1 border-l-2 border-slate-200 ml-3.5 mt-1">
+            <button type="button" onclick="filterBySubfolder(&#39;auth-service&#39;)" class="w-full flex items-center gap-2 p-1.5 rounded hover:bg-slate-100 text-slate-600 text-left">
+              <span class="material-symbols-outlined text-base text-slate-400">subdirectory_arrow_right</span>
+              <span class="truncate font-code">/auth-service</span>
+            </button>
+            <button type="button" onclick="filterBySubfolder(&#39;kanban-engine&#39;)" class="w-full flex items-center gap-2 p-1.5 rounded hover:bg-slate-100 text-slate-600 text-left">
+              <span class="material-symbols-outlined text-base text-slate-400">subdirectory_arrow_right</span>
+              <span class="truncate font-code">/kanban-engine</span>
+            </button>
+            <button type="button" onclick="filterBySubfolder(&#39;chat-collaboration&#39;)" class="w-full flex items-center gap-2 p-1.5 rounded hover:bg-slate-100 text-slate-600 text-left">
+              <span class="material-symbols-outlined text-base text-slate-400">subdirectory_arrow_right</span>
+              <span class="truncate font-code">/chat-collaboration</span>
+            </button>
+
+            <!-- File tree items: Epics (Purple file) and Stories (Sky file) -->
+            <div class="pt-2 border-t border-slate-100 space-y-1">
+              <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block px-1">Archivos</span>
+              <div class="flex items-center gap-1.5 px-1 py-1 rounded text-purple-700 hover:bg-purple-50 cursor-pointer text-[11px]" onclick="openItemModal(&#39;epic&#39;)">
+                <span class="material-symbols-outlined text-sm text-purple-600">description</span>
+                <span class="truncate font-medium">EPIC-01: Kanban</span>
+              </div>
+              <div class="flex items-center gap-1.5 px-1 py-1 rounded text-purple-700 hover:bg-purple-50 cursor-pointer text-[11px]" onclick="openItemModal(&#39;epic&#39;)">
+                <span class="material-symbols-outlined text-sm text-purple-600">description</span>
+                <span class="truncate font-medium">EPIC-02: Chat</span>
+              </div>
+              <div class="flex items-center gap-1.5 px-1 py-1 rounded text-sky-700 hover:bg-sky-50 cursor-pointer text-[11px]" onclick="window.open(&#39;../../html/UserStoryTemplate.html&#39;, &#39;_blank&#39;)">
+                <span class="material-symbols-outlined text-sm text-sky-600">description</span>
+                <span class="truncate font-medium">US-201: Sub-repos</span>
+              </div>
+              <div class="flex items-center gap-1.5 px-1 py-1 rounded text-sky-700 hover:bg-sky-50 cursor-pointer text-[11px]" onclick="window.open(&#39;../../html/UserStoryTemplate.html&#39;, &#39;_blank&#39;)">
+                <span class="material-symbols-outlined text-sm text-sky-600">description</span>
+                <span class="truncate font-medium">US-204: Chat tags</span>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Sprint stats badge -->
+        <div class="bg-slate-50 border border-slate-200 rounded p-3 text-xs space-y-2">
+          <div class="flex items-center justify-between text-slate-600">
+            <span>Velocidad Sprint:</span>
+            <span class="font-bold text-slate-800 font-code">42 pts</span>
+          </div>
+          <div class="flex items-center justify-between text-slate-600">
+            <span>Historias activas:</span>
+            <span class="font-bold text-sky-700 font-code">14 historias</span>
+          </div>
+          <div class="flex items-center justify-between text-slate-600">
+            <span>Épicas vinculadas:</span>
+            <span class="font-bold text-purple-700 font-code">2 épicas</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Back to Dashboard link -->
+      <div class="p-3 border-t border-light-border-subtle bg-slate-50/50">
+        <a href="../agile-dashboard/AgileDashboard.html" class="flex items-center gap-2 text-xs font-semibold text-slate-600 hover:text-teal-800 transition-colors">
+          <span class="material-symbols-outlined text-base">arrow_back</span>
+          <span>Volver al Dashboard General</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- CENTER MAIN VIEWPORT: REPOSITORY CONTENTS EXPLORER -->
+    <main class="flex-1 overflow-y-auto p-6 space-y-6">
+
+      <!-- REPOSITORY HEADER HERO -->
+      <div class="bg-white border border-slate-200/90 rounded-xl p-5 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div class="flex items-start gap-3.5">
+          <div class="w-12 h-12 rounded-lg bg-neutral-950 text-white flex items-center justify-center shrink-0 shadow-xs">
+            <span class="material-symbols-outlined text-2xl">folder_open</span>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h1 class="font-headline text-headline-sm text-neutral-950 font-bold">agile-core-platform</h1>
+              <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-code">v2.4.0</span>
+              <span class="text-xs bg-neutral-100 text-neutral-800 border border-neutral-300 px-2 py-0.5 rounded-full font-semibold">Sprint 4 Activo</span>
+            </div>
+            <p class="text-xs text-slate-500 mt-1 max-w-2xl">
+              Repositorio principal de arquitectura de microservicios, motores de tablero ágil y plantillas de especificación de requisitos.
+            </p>
+          </div>
+        </div>
+
+        <!-- Filter tabs for content type -->
+        <div class="flex items-center gap-1.5 bg-slate-100 p-1 rounded-lg text-xs self-start md:self-auto">
+          <button type="button" onclick="filterContent(&#39;all&#39;)" id="btn-filter-all" class="px-2.5 py-1 rounded bg-white text-slate-900 font-semibold shadow-2xs">
+            Todos (9)
+          </button>
+          <button type="button" onclick="filterContent(&#39;subrepo&#39;)" id="btn-filter-subrepo" class="px-2.5 py-1 rounded text-slate-600 hover:text-slate-900">
+            Sub-repos (3)
+          </button>
+          <button type="button" onclick="filterContent(&#39;epic&#39;)" id="btn-filter-epic" class="px-2.5 py-1 rounded text-slate-600 hover:text-slate-900">
+            Épicas (2)
+          </button>
+          <button type="button" onclick="filterContent(&#39;story&#39;)" id="btn-filter-story" class="px-2.5 py-1 rounded text-slate-600 hover:text-slate-900">
+            Historias (4)
+          </button>
+        </div>
+      </div>
+
+      <!-- SECTION 1: SUB-REPOSITORIOS (DIVISIÓN DEL PROYECTO) -->
+      <section id="section-subrepos" class="space-y-3">
+        <div class="flex items-center justify-between">
+          <h2 class="text-xs font-bold uppercase tracking-wider text-zinc-500 flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-sm text-zinc-700">alt_route</span>
+            <span>Sub-repositorios (División Modular del Proyecto)</span>
+          </h2>
+          <span class="text-xs text-zinc-400">Haz doble clic para abrir sub-carpeta</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <!-- Subrepo 1 -->
+          <div ondblclick="filterBySubfolder(&#39;auth-service&#39;)" class="group bg-white hover:bg-zinc-50/80 border border-zinc-200/90 rounded-lg p-3.5 transition-all cursor-pointer shadow-2xs hover:shadow-xs flex items-center justify-between select-none" title="Doble clic para abrir módulo">
+            <div class="flex items-center gap-3 min-w-0">
+              <div class="w-10 h-10 rounded-md bg-zinc-100 text-zinc-800 flex items-center justify-center shrink-0 border border-zinc-200/70">
+                <span class="material-symbols-outlined text-xl">folder</span>
+              </div>
+              <div class="min-w-0">
+                <p class="font-code text-xs font-bold text-zinc-900 truncate">/auth-service</p>
+                <p class="text-[11px] text-zinc-500 mt-0.5">8 historias • 24 pts</p>
+              </div>
+            </div>
+            <span class="w-2 h-2 rounded-full bg-zinc-400 group-hover:bg-red-500 transition-colors" title="Activo"></span>
+          </div>
+
+          <!-- Subrepo 2 -->
+          <div ondblclick="filterBySubfolder(&#39;kanban-engine&#39;)" class="group bg-white hover:bg-zinc-50/80 border border-zinc-200/90 rounded-lg p-3.5 transition-all cursor-pointer shadow-2xs hover:shadow-xs flex items-center justify-between select-none" title="Doble clic para abrir módulo">
+            <div class="flex items-center gap-3 min-w-0">
+              <div class="w-10 h-10 rounded-md bg-zinc-100 text-zinc-800 flex items-center justify-center shrink-0 border border-zinc-200/70">
+                <span class="material-symbols-outlined text-xl">folder</span>
+              </div>
+              <div class="min-w-0">
+                <p class="font-code text-xs font-bold text-zinc-900 truncate">/kanban-engine</p>
+                <p class="text-[11px] text-zinc-500 mt-0.5">14 historias • 42 pts</p>
+              </div>
+            </div>
+            <span class="w-2 h-2 rounded-full bg-zinc-400 group-hover:bg-red-500 transition-colors" title="Activo"></span>
+          </div>
+
+          <!-- Subrepo 3 -->
+          <div ondblclick="filterBySubfolder(&#39;chat-collaboration&#39;)" class="group bg-white hover:bg-zinc-50/80 border border-zinc-200/90 rounded-lg p-3.5 transition-all cursor-pointer shadow-2xs hover:shadow-xs flex items-center justify-between select-none" title="Doble clic para abrir módulo">
+            <div class="flex items-center gap-3 min-w-0">
+              <div class="w-10 h-10 rounded-md bg-zinc-100 text-zinc-800 flex items-center justify-center shrink-0 border border-zinc-200/70">
+                <span class="material-symbols-outlined text-xl">folder</span>
+              </div>
+              <div class="min-w-0">
+                <p class="font-code text-xs font-bold text-zinc-900 truncate">/chat-collaboration</p>
+                <p class="text-[11px] text-zinc-500 mt-0.5">6 historias • 18 pts</p>
+              </div>
+            </div>
+            <span class="w-2 h-2 rounded-full bg-zinc-400 group-hover:bg-red-500 transition-colors" title="En revisión"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2 & 3: ARCHIVOS DEL REPOSITORIO (ÉPICAS E HISTORIAS DE USUARIO CON SÍMBOLO DE ARCHIVO Y TÍTULO) -->
+      <section id="section-artifacts" class="space-y-4">
+        <!-- Section Header with View Modes & Quick Create -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-1 border-b border-slate-200">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-slate-500 text-lg">description</span>
+            <h2 class="text-xs font-bold uppercase tracking-wider text-slate-600">
+              Archivos del Repositorio (Épicas e Historias de Usuario)
+            </h2>
+            <span class="text-[11px] text-slate-400">• 6 archivos</span>
+          </div>
+
+          <!-- Color legend & quick actions -->
+          <div class="flex items-center gap-3">
+            <!-- Color convention legend -->
+            <div class="flex items-center gap-2.5 text-[11px]">
+              <span class="inline-flex items-center gap-1 text-purple-700 font-medium">
+                <span class="material-symbols-outlined text-base text-purple-600">description</span>
+                <span>Épica (Púrpura)</span>
+              </span>
+              <span class="text-slate-300">|</span>
+              <span class="inline-flex items-center gap-1 text-sky-700 font-medium">
+                <span class="material-symbols-outlined text-base text-sky-600">description</span>
+                <span>Historia de Usuario (Azul)</span>
+              </span>
+            </div>
+
+            <!-- View toggle (grid vs list) -->
+            <div class="flex items-center bg-slate-100 p-0.5 rounded text-slate-500 text-xs">
+              <button type="button" id="btn-view-grid" onclick="switchArtifactView(&#39;grid&#39;)" class="p-1 rounded bg-white text-slate-900 shadow-2xs" title="Vista de cuadrícula de archivos">
+                <span class="material-symbols-outlined text-base">grid_view</span>
+              </button>
+              <button type="button" id="btn-view-list" onclick="switchArtifactView(&#39;list&#39;)" class="p-1 rounded text-slate-500 hover:text-slate-900" title="Vista de lista de archivos">
+                <span class="material-symbols-outlined text-base">format_list_bulleted</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- GRID VIEW: ARTIFACTS AS GOOGLE DRIVE FILES (SÍMBOLO DE ARCHIVO + TÍTULO) -->
+        <div id="artifacts-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+
+          <!-- FILE 1: ÉPICA (EPIC-01) - SÍMBOLO DE ARCHIVO PÚRPURA + TÍTULO -->
+          <div onclick="openItemModal(&#39;epic&#39;)" class="group bg-white hover:bg-purple-50/30 border border-slate-200 hover:border-purple-300 rounded-lg p-3.5 transition-all shadow-2xs hover:shadow-xs flex items-center justify-between cursor-pointer" title="Épica: Clic para abrir plantilla de épica">
+            <div class="flex items-center gap-3 min-w-0 flex-1">
+              <!-- Símbolo de archivo color Púrpura -->
+              <div class="w-10 h-10 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center shrink-0 border border-purple-200/80 group-hover:scale-105 transition-transform">
+                <span class="material-symbols-outlined text-2xl">description</span>
+              </div>
+              <div class="min-w-0 flex-1">
+                <div class="flex items-center gap-1.5 mb-0.5">
+                  <span class="font-code text-[10px] font-bold text-purple-700 bg-purple-100/70 px-1.5 py-0.2 rounded">EPIC-01</span>
+                  <span class="text-[10px] text-purple-600 font-medium">Épica</span>
+                </div>
+                <h3 class="font-body text-xs font-semibold text-slate-900 truncate group-hover:text-purple-900" title="Reorganización y Tablero Kanban Multiequipo">
+                  Reorganización y Tablero Kanban Multiequipo
+                </h3>
+                <p class="text-[11px] text-slate-400 mt-0.5">18 pts • Sprint 4</p>
+              </div>
+            </div>
+            <span class="material-symbols-outlined text-slate-300 group-hover:text-purple-600 text-lg ml-2">open_in_new</span>
+          </div>
+
+          <!-- FILE 2: ÉPICA (EPIC-02) - SÍMBOLO DE ARCHIVO PÚRPURA + TÍTULO -->
+          <div onclick="openItemModal(&#39;epic&#39;)" class="group bg-white hover:bg-purple-50/30 border border-slate-200 hover:border-purple-300 rounded-lg p-3.5 transition-all shadow-2xs hover:shadow-xs flex items-center justify-between cursor-pointer" title="Épica: Clic para abrir plantilla de épica">
+            <div class="flex items-center gap-3 min-w-0 flex-1">
+              <!-- Símbolo de archivo color Púrpura -->
+              <div class="w-10 h-10 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center shrink-0 border border-purple-200/80 group-hover:scale-105 transition-transform">
+                <span class="material-symbols-outlined text-2xl">description</span>
+              </div>
+              <div class="min-w-0 flex-1">
+                <div class="flex items-center gap-1.5 mb-0.5">
+                  <span class="font-code text-[10px] font-bold text-purple-700 bg-purple-100/70 px-1.5 py-0.2 rounded">EPIC-02</span>
+                  <span class="text-[10px] text-purple-600 font-medium">Épica</span>
+                </div>
+                <h3 class="font-body text-xs font-semibold text-slate-900 truncate group-hover:text-purple-900" title="Integración de Chat Bidireccional con Notificaciones">
+                  Integración de Chat Bidireccional con Notificaciones
+                </h3>
+                <p class="text-[11px] text-slate-400 mt-0.5">24 pts • Sprint 4 &amp; 5</p>
+              </div>
+            </div>
+            <span class="material-symbols-outlined text-slate-300 group-hover:text-purple-600 text-lg ml-2">open_in_new</span>
+          </div>
+
+          <!-- FILE 3: HISTORIA DE USUARIO (US-201) - SÍMBOLO DE ARCHIVO AZUL + TÍTULO -->
+          <div onclick="window.open(&#39;../../html/UserStoryTemplate.html&#39;, &#39;_blank&#39;)" class="group bg-white hover:bg-sky-50/40 border border-slate-200 hover:border-sky-300 rounded-lg p-3.5 transition-all shadow-2xs hover:shadow-xs flex items-center justify-between cursor-pointer" title="Historia de Usuario: Clic para ver plantilla INVEST">
+            <div class="flex items-center gap-3 min-w-0 flex-1">
+              <!-- Símbolo de archivo color Azul -->
+              <div class="w-10 h-10 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center shrink-0 border border-sky-200/80 group-hover:scale-105 transition-transform">
+                <span class="material-symbols-outlined text-2xl">description</span>
+              </div>
+              <div class="min-w-0 flex-1">
+                <div class="flex items-center gap-1.5 mb-0.5">
+                  <span class="font-code text-[10px] font-bold text-sky-700 bg-sky-100/70 px-1.5 py-0.2 rounded">US-201</span>
+                  <span class="text-[10px] text-sky-600 font-medium">Historia</span>
+                  <span class="text-[10px] text-slate-400">• EPIC-01</span>
+                </div>
+                <h3 class="font-body text-xs font-semibold text-slate-900 truncate group-hover:text-sky-900" title="Crear sub-repositorios para modularizar el proyecto">
+                  Crear sub-repositorios para modularizar el proyecto
+                </h3>
+                <p class="text-[11px] text-slate-400 mt-0.5">5 pts • /auth-service</p>
+              </div>
+            </div>
+            <span class="material-symbols-outlined text-slate-300 group-hover:text-sky-600 text-lg ml-2">launch</span>
+          </div>
+
+          <!-- FILE 4: HISTORIA DE USUARIO (US-204) - SÍMBOLO DE ARCHIVO AZUL + TÍTULO -->
+          <div onclick="window.open(&#39;../../html/UserStoryTemplate.html&#39;, &#39;_blank&#39;)" class="group bg-white hover:bg-sky-50/40 border border-slate-200 hover:border-sky-300 rounded-lg p-3.5 transition-all shadow-2xs hover:shadow-xs flex items-center justify-between cursor-pointer" title="Historia de Usuario: Clic para ver plantilla INVEST">
+            <div class="flex items-center gap-3 min-w-0 flex-1">
+              <!-- Símbolo de archivo color Azul -->
+              <div class="w-10 h-10 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center shrink-0 border border-sky-200/80 group-hover:scale-105 transition-transform">
+                <span class="material-symbols-outlined text-2xl">description</span>
+              </div>
+              <div class="min-w-0 flex-1">
+                <div class="flex items-center gap-1.5 mb-0.5">
+                  <span class="font-code text-[10px] font-bold text-sky-700 bg-sky-100/70 px-1.5 py-0.2 rounded">US-204</span>
+                  <span class="text-[10px] text-sky-600 font-medium">Historia</span>
+                  <span class="text-[10px] text-slate-400">• EPIC-02</span>
+                </div>
+                <h3 class="font-body text-xs font-semibold text-slate-900 truncate group-hover:text-sky-900" title="Enviar mensajes a canales de equipo con mención de tags">
+                  Enviar mensajes a canales de equipo con mención de tags
+                </h3>
+                <p class="text-[11px] text-slate-400 mt-0.5">3 pts • /chat-collaboration</p>
+              </div>
+            </div>
+            <span class="material-symbols-outlined text-slate-300 group-hover:text-sky-600 text-lg ml-2">launch</span>
+          </div>
+
+          <!-- FILE 5: HISTORIA DE USUARIO (US-205) - SÍMBOLO DE ARCHIVO AZUL + TÍTULO -->
+          <div onclick="window.open(&#39;../../html/UserStoryTemplate.html&#39;, &#39;_blank&#39;)" class="group bg-white hover:bg-sky-50/40 border border-slate-200 hover:border-sky-300 rounded-lg p-3.5 transition-all shadow-2xs hover:shadow-xs flex items-center justify-between cursor-pointer" title="Historia de Usuario: Clic para ver plantilla INVEST">
+            <div class="flex items-center gap-3 min-w-0 flex-1">
+              <!-- Símbolo de archivo color Azul -->
+              <div class="w-10 h-10 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center shrink-0 border border-sky-200/80 group-hover:scale-105 transition-transform">
+                <span class="material-symbols-outlined text-2xl">description</span>
+              </div>
+              <div class="min-w-0 flex-1">
+                <div class="flex items-center gap-1.5 mb-0.5">
+                  <span class="font-code text-[10px] font-bold text-sky-700 bg-sky-100/70 px-1.5 py-0.2 rounded">US-205</span>
+                  <span class="text-[10px] text-sky-600 font-medium">Historia</span>
+                  <span class="text-[10px] text-slate-400">• EPIC-01</span>
+                </div>
+                <h3 class="font-body text-xs font-semibold text-slate-900 truncate group-hover:text-sky-900" title="Agregar escenarios BDD dinámicos en criterios de aceptación">
+                  Agregar escenarios BDD dinámicos en criterios de aceptación
+                </h3>
+                <p class="text-[11px] text-slate-400 mt-0.5">2 pts • /kanban-engine</p>
+              </div>
+            </div>
+            <span class="material-symbols-outlined text-slate-300 group-hover:text-sky-600 text-lg ml-2">launch</span>
+          </div>
+
+          <!-- FILE 6: HISTORIA DE USUARIO (US-206) - SÍMBOLO DE ARCHIVO AZUL + TÍTULO -->
+          <div onclick="window.open(&#39;../../html/UserStoryTemplate.html&#39;, &#39;_blank&#39;)" class="group bg-white hover:bg-sky-50/40 border border-slate-200 hover:border-sky-300 rounded-lg p-3.5 transition-all shadow-2xs hover:shadow-xs flex items-center justify-between cursor-pointer" title="Historia de Usuario: Clic para ver plantilla INVEST">
+            <div class="flex items-center gap-3 min-w-0 flex-1">
+              <!-- Símbolo de archivo color Azul -->
+              <div class="w-10 h-10 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center shrink-0 border border-sky-200/80 group-hover:scale-105 transition-transform">
+                <span class="material-symbols-outlined text-2xl">description</span>
+              </div>
+              <div class="min-w-0 flex-1">
+                <div class="flex items-center gap-1.5 mb-0.5">
+                  <span class="font-code text-[10px] font-bold text-sky-700 bg-sky-100/70 px-1.5 py-0.2 rounded">US-206</span>
+                  <span class="text-[10px] text-sky-600 font-medium">Historia</span>
+                  <span class="text-[10px] text-slate-400">• EPIC-01</span>
+                </div>
+                <h3 class="font-body text-xs font-semibold text-slate-900 truncate group-hover:text-sky-900" title="Gestión de permisos de usuario sobre elementos del repositorio">
+                  Gestión de permisos de usuario sobre elementos del repositorio
+                </h3>
+                <p class="text-[11px] text-slate-400 mt-0.5">5 pts • /auth-service</p>
+              </div>
+            </div>
+            <span class="material-symbols-outlined text-slate-300 group-hover:text-sky-600 text-lg ml-2">launch</span>
+          </div>
+
+        </div>
+
+        <!-- LIST VIEW: CLEAN TABLE WITH FILE ICONS DIFFERENTIATED BY COLOR -->
+        <div id="artifacts-list" class="hidden border border-slate-200 rounded-lg overflow-hidden bg-white shadow-2xs">
+          <table class="w-full text-left border-collapse text-xs">
+            <thead>
+              <tr class="bg-slate-50 border-b border-slate-200 text-slate-500 font-semibold">
+                <th class="py-2.5 px-4">Tipo</th>
+                <th class="py-2.5 px-4">Símbolo &amp; Título</th>
+                <th class="py-2.5 px-4 hidden md:table-cell">Código</th>
+                <th class="py-2.5 px-4 hidden sm:table-cell">Ubicación / Sub-carpeta</th>
+                <th class="py-2.5 px-4 text-center">Pts</th>
+                <th class="py-2.5 px-4 text-right">Acción</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+
+              <!-- Row 1: Epic (Purple File Icon) -->
+              <tr class="hover:bg-purple-50/30 transition-colors cursor-pointer" onclick="openItemModal(&#39;epic&#39;)">
+                <td class="py-2.5 px-4">
+                  <span class="font-code text-[10px] font-bold text-purple-700 bg-purple-50 border border-purple-200 px-2 py-0.5 rounded">ÉPICA</span>
+                </td>
+                <td class="py-2.5 px-4 flex items-center gap-2.5">
+                  <span class="material-symbols-outlined text-purple-600 text-lg">description</span>
+                  <span class="font-semibold text-slate-900">Reorganización y Tablero Kanban Multiequipo</span>
+                </td>
+                <td class="py-2.5 px-4 hidden md:table-cell font-code text-purple-700">EPIC-01</td>
+                <td class="py-2.5 px-4 hidden sm:table-cell font-code text-slate-500">/kanban-engine</td>
+                <td class="py-2.5 px-4 text-center font-code text-slate-700">18</td>
+                <td class="py-2.5 px-4 text-right">
+                  <button type="button" class="text-purple-700 hover:text-purple-900 font-semibold inline-flex items-center gap-1">
+                    <span>Ver épica</span>
+                    <span class="material-symbols-outlined text-xs">launch</span>
+                  </button>
+                </td>
+              </tr>
+
+              <!-- Row 2: Epic (Purple File Icon) -->
+              <tr class="hover:bg-purple-50/30 transition-colors cursor-pointer" onclick="openItemModal(&#39;epic&#39;)">
+                <td class="py-2.5 px-4">
+                  <span class="font-code text-[10px] font-bold text-purple-700 bg-purple-50 border border-purple-200 px-2 py-0.5 rounded">ÉPICA</span>
+                </td>
+                <td class="py-2.5 px-4 flex items-center gap-2.5">
+                  <span class="material-symbols-outlined text-purple-600 text-lg">description</span>
+                  <span class="font-semibold text-slate-900">Integración de Chat Bidireccional con Notificaciones</span>
+                </td>
+                <td class="py-2.5 px-4 hidden md:table-cell font-code text-purple-700">EPIC-02</td>
+                <td class="py-2.5 px-4 hidden sm:table-cell font-code text-slate-500">/chat-collaboration</td>
+                <td class="py-2.5 px-4 text-center font-code text-slate-700">24</td>
+                <td class="py-2.5 px-4 text-right">
+                  <button type="button" class="text-purple-700 hover:text-purple-900 font-semibold inline-flex items-center gap-1">
+                    <span>Ver épica</span>
+                    <span class="material-symbols-outlined text-xs">launch</span>
+                  </button>
+                </td>
+              </tr>
+
+              <!-- Row 3: User Story (Blue File Icon) -->
+              <tr class="hover:bg-sky-50/40 transition-colors cursor-pointer" onclick="window.open(&#39;../../html/UserStoryTemplate.html&#39;, &#39;_blank&#39;)">
+                <td class="py-2.5 px-4">
+                  <span class="font-code text-[10px] font-bold text-sky-700 bg-sky-50 border border-sky-200 px-2 py-0.5 rounded">HISTORIA</span>
+                </td>
+                <td class="py-2.5 px-4 flex items-center gap-2.5">
+                  <span class="material-symbols-outlined text-sky-600 text-lg">description</span>
+                  <div>
+                    <span class="font-semibold text-slate-900">Crear sub-repositorios para modularizar el proyecto</span>
+                    <span class="text-[11px] text-slate-400 block">Vinculada a EPIC-01</span>
+                  </div>
+                </td>
+                <td class="py-2.5 px-4 hidden md:table-cell font-code text-sky-700">US-201</td>
+                <td class="py-2.5 px-4 hidden sm:table-cell font-code text-slate-500">/auth-service</td>
+                <td class="py-2.5 px-4 text-center font-code text-slate-700">5</td>
+                <td class="py-2.5 px-4 text-right">
+                  <a href="../../html/UserStoryTemplate.html" target="_blank" class="text-sky-700 hover:text-sky-900 font-semibold inline-flex items-center gap-1">
+                    <span>Plantilla</span>
+                    <span class="material-symbols-outlined text-xs">launch</span>
+                  </a>
+                </td>
+              </tr>
+
+              <!-- Row 4: User Story (Blue File Icon) -->
+              <tr class="hover:bg-sky-50/40 transition-colors cursor-pointer" onclick="window.open(&#39;../../html/UserStoryTemplate.html&#39;, &#39;_blank&#39;)">
+                <td class="py-2.5 px-4">
+                  <span class="font-code text-[10px] font-bold text-sky-700 bg-sky-50 border border-sky-200 px-2 py-0.5 rounded">HISTORIA</span>
+                </td>
+                <td class="py-2.5 px-4 flex items-center gap-2.5">
+                  <span class="material-symbols-outlined text-sky-600 text-lg">description</span>
+                  <div>
+                    <span class="font-semibold text-slate-900">Enviar mensajes a canales de equipo con mención de tags</span>
+                    <span class="text-[11px] text-slate-400 block">Vinculada a EPIC-02</span>
+                  </div>
+                </td>
+                <td class="py-2.5 px-4 hidden md:table-cell font-code text-sky-700">US-204</td>
+                <td class="py-2.5 px-4 hidden sm:table-cell font-code text-slate-500">/chat-collaboration</td>
+                <td class="py-2.5 px-4 text-center font-code text-slate-700">3</td>
+                <td class="py-2.5 px-4 text-right">
+                  <a href="../../html/UserStoryTemplate.html" target="_blank" class="text-sky-700 hover:text-sky-900 font-semibold inline-flex items-center gap-1">
+                    <span>Plantilla</span>
+                    <span class="material-symbols-outlined text-xs">launch</span>
+                  </a>
+                </td>
+              </tr>
+
+              <!-- Row 5: User Story (Blue File Icon) -->
+              <tr class="hover:bg-sky-50/40 transition-colors cursor-pointer" onclick="window.open(&#39;../../html/UserStoryTemplate.html&#39;, &#39;_blank&#39;)">
+                <td class="py-2.5 px-4">
+                  <span class="font-code text-[10px] font-bold text-sky-700 bg-sky-50 border border-sky-200 px-2 py-0.5 rounded">HISTORIA</span>
+                </td>
+                <td class="py-2.5 px-4 flex items-center gap-2.5">
+                  <span class="material-symbols-outlined text-sky-600 text-lg">description</span>
+                  <div>
+                    <span class="font-semibold text-slate-900">Agregar escenarios BDD dinámicos en criterios de aceptación</span>
+                    <span class="text-[11px] text-slate-400 block">Vinculada a EPIC-01</span>
+                  </div>
+                </td>
+                <td class="py-2.5 px-4 hidden md:table-cell font-code text-sky-700">US-205</td>
+                <td class="py-2.5 px-4 hidden sm:table-cell font-code text-slate-500">/kanban-engine</td>
+                <td class="py-2.5 px-4 text-center font-code text-slate-700">2</td>
+                <td class="py-2.5 px-4 text-right">
+                  <a href="../../html/UserStoryTemplate.html" target="_blank" class="text-sky-700 hover:text-sky-900 font-semibold inline-flex items-center gap-1">
+                    <span>Plantilla</span>
+                    <span class="material-symbols-outlined text-xs">launch</span>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- RIGHT SIDEBAR: INFORMACIÓN DE USUARIOS & PERMISOS SOBRE ELEMENTOS -->
+    <aside class="w-80 lg:w-96 bg-light-surface-card border-l border-light-border-subtle flex flex-col justify-between shrink-0 overflow-y-auto">
+      
+      <!-- Permissions Panel Header -->
+      <div class="p-4 border-b border-zinc-200 bg-zinc-50/80 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-zinc-800 text-xl">shield_person</span>
+          <div>
+            <h2 class="font-headline text-title-md font-bold text-zinc-900">Usuarios &amp; Permisos</h2>
+            <p class="text-[11px] text-zinc-500">Control de acceso sobre este repositorio</p>
+          </div>
+        </div>
+        <button type="button" onclick="openItemModal(&#39;invite&#39;)" class="p-1 rounded text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100 transition-colors" title="Invitar colaborador">
+          <span class="material-symbols-outlined text-xl">person_add</span>
+        </button>
+      </div>
+
+      <!-- Permission Legend / Chips (Minimal Clean Style) -->
+      <div class="p-4 border-b border-zinc-200 bg-white space-y-2">
+        <span class="text-[11px] font-bold text-zinc-500 uppercase tracking-wider block">Matriz de Permisos Disponibles</span>
+        <div class="flex flex-wrap gap-1.5 text-[10px]">
+          <span class="px-2 py-0.5 rounded bg-zinc-900 text-white font-semibold font-code">Todos (Admin)</span>
+          <span class="px-2 py-0.5 rounded bg-zinc-100 text-zinc-700 font-medium border border-zinc-200">Lectura</span>
+          <span class="px-2 py-0.5 rounded bg-zinc-100 text-zinc-700 font-medium border border-zinc-200">Modificación</span>
+          <span class="px-2 py-0.5 rounded bg-zinc-100 text-zinc-700 font-medium border border-zinc-200">Creación</span>
+        </div>
+      </div>
+
+      <!-- Users with Access List -->
+      <div class="p-4 space-y-4 flex-1">
+        <span class="text-[11px] font-bold text-zinc-500 uppercase tracking-wider block">Colaboradores con Acceso (5)</span>
+
+        <div class="space-y-3">
+          
+          <!-- User 1: Sofía Campos (Admin) -->
+          <div class="border border-zinc-200 rounded-lg p-3 bg-white space-y-2.5 shadow-2xs">
+            <div class="flex items-start justify-between">
+              <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-full bg-zinc-900 text-white flex items-center justify-center font-bold text-xs">
+                  SC
+                </div>
+                <div>
+                  <p class="text-xs font-bold text-zinc-900 leading-tight">Sofía Campos (Tú)</p>
+                  <p class="text-[11px] text-zinc-400">Scrum Master / Lead</p>
+                </div>
+              </div>
+              <span class="text-[10px] font-bold font-code bg-zinc-900 text-white px-2 py-0.5 rounded">TODOS</span>
+            </div>
+            <div class="text-[11px] text-zinc-600 bg-zinc-50 p-2 rounded space-y-1">
+              <div class="flex items-center justify-between">
+                <span>Sub-repos:</span>
+                <span class="text-zinc-900 font-medium">Crear, Modificar, Borrar</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span>Historias / Épicas:</span>
+                <span class="text-zinc-900 font-medium">Crear, Modificar, Estimar</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- User 2: Marcos Rivera (Tech Lead) -->
+          <div class="border border-zinc-200 rounded-lg p-3 bg-white space-y-2.5 shadow-2xs">
+            <div class="flex items-start justify-between">
+              <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-full bg-zinc-800 text-white flex items-center justify-center font-bold text-xs">
+                  MR
+                </div>
+                <div>
+                  <p class="text-xs font-bold text-zinc-900 leading-tight">Marcos Rivera</p>
+                  <p class="text-[11px] text-zinc-400">Tech Lead Backend</p>
+                </div>
+              </div>
+              <select onchange="updateUserPermission(&#39;Marcos Rivera&#39;, this.value)" class="text-[11px] font-semibold bg-zinc-50 border border-zinc-200 rounded px-1.5 py-0.5 text-zinc-800">
+                <option selected>Todos</option>
+                <option>Creación + Modificación</option>
+                <option>Modificación</option>
+                <option>Solo Lectura</option>
+              </select>
+            </div>
+            <div class="text-[11px] text-zinc-600 bg-zinc-50 p-2 rounded space-y-1">
+              <div class="flex items-center justify-between">
+                <span>Permiso sobre elementos:</span>
+                <span class="text-zinc-800 font-medium font-code">Creación • Modificación</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- User 3: Elena Gómez (Product Owner) -->
+          <div class="border border-zinc-200 rounded-lg p-3 bg-white space-y-2.5 shadow-2xs">
+            <div class="flex items-start justify-between">
+              <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-full bg-zinc-700 text-white flex items-center justify-center font-bold text-xs">
+                  EG
+                </div>
+                <div>
+                  <p class="text-xs font-bold text-zinc-900 leading-tight">Elena Gómez</p>
+                  <p class="text-[11px] text-zinc-400">Product Owner</p>
+                </div>
+              </div>
+              <select onchange="updateUserPermission(&#39;Elena Gómez&#39;, this.value)" class="text-[11px] font-semibold bg-zinc-100 border border-zinc-200 rounded px-1.5 py-0.5 text-zinc-800">
+                <option>Todos</option>
+                <option selected>Creación</option>
+                <option>Modificación</option>
+                <option>Lectura</option>
+              </select>
+            </div>
+            <div class="text-[11px] text-zinc-600 bg-zinc-50 p-2 rounded space-y-1">
+              <div class="flex items-center justify-between">
+                <span>Épicas e Historias:</span>
+                <span class="text-zinc-900 font-medium">Creación de requisitos</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span>Sub-repositorios:</span>
+                <span class="text-zinc-500 font-medium">Solo Lectura</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- User 4: Carlos Mendoza (Frontend Dev) -->
+          <div class="border border-zinc-200 rounded-lg p-3 bg-white space-y-2.5 shadow-2xs">
+            <div class="flex items-start justify-between">
+              <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-full bg-zinc-800 text-white flex items-center justify-center font-bold text-xs">
+                  CM
+                </div>
+                <div>
+                  <p class="text-xs font-bold text-zinc-900 leading-tight">Carlos Mendoza</p>
+                  <p class="text-[11px] text-zinc-400">Senior Frontend Dev</p>
+                </div>
+              </div>
+              <select onchange="updateUserPermission(&#39;Carlos Mendoza&#39;, this.value)" class="text-[11px] font-semibold bg-zinc-100 border border-zinc-200 rounded px-1.5 py-0.5 text-zinc-800">
+                <option>Todos</option>
+                <option>Creación</option>
+                <option selected>Modificación</option>
+                <option>Lectura</option>
+              </select>
+            </div>
+            <div class="text-[11px] text-zinc-600 bg-zinc-50 p-2 rounded space-y-1">
+              <div class="flex items-center justify-between">
+                <span>Tareas de Historias:</span>
+                <span class="text-zinc-800 font-medium">Modificar estado y commits</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- User 5: Javier QA Tester -->
+          <div class="border border-zinc-200 rounded-lg p-3 bg-white space-y-2.5 shadow-2xs">
+            <div class="flex items-start justify-between">
+              <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-full bg-zinc-600 text-white flex items-center justify-center font-bold text-xs">
+                  JQ
+                </div>
+                <div>
+                  <p class="text-xs font-bold text-zinc-900 leading-tight">Javier QA Tester</p>
+                  <p class="text-[11px] text-zinc-400">Automation QA</p>
+                </div>
+              </div>
+              <select onchange="updateUserPermission(&#39;Javier QA&#39;, this.value)" class="text-[11px] font-semibold bg-zinc-100 border border-zinc-200 rounded px-1.5 py-0.5 text-zinc-800">
+                <option>Todos</option>
+                <option>Creación</option>
+                <option>Modificación</option>
+                <option selected>Lectura</option>
+              </select>
+            </div>
+            <div class="text-[11px] text-zinc-600 bg-zinc-50 p-2 rounded space-y-1">
+              <div class="flex items-center justify-between">
+                <span>Criterios de Aceptación:</span>
+                <span class="text-zinc-800 font-medium">Lectura &amp; Validación</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Quick Add Collaborator Button Footer -->
+      <div class="p-4 border-t border-light-border-subtle bg-slate-50">
+        <button type="button" onclick="alert(&#39;Añadir nuevo miembro al repositorio&#39;)" class="w-full py-2.5 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white text-xs font-semibold rounded-lg shadow-sm transition-colors flex items-center justify-center gap-1.5">
+          <span class="material-symbols-outlined text-base">group_add</span>
+          <span>Gestionar accesos del equipo</span>
+        </button>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="repo-toast" class="hidden fixed bottom-6 left-6 bg-slate-900 text-white px-4 py-3 rounded-md shadow-xl flex items-center gap-3 z-50 text-xs">
+    <span class="material-symbols-outlined text-emerald-400 text-lg">check_circle</span>
+    <span id="repo-toast-msg">Mensaje de confirmación</span>
+  </div>
+
+  <script>
+    function switchArtifactView(mode) {
+      const grid = document.getElementById('artifacts-grid');
+      const list = document.getElementById('artifacts-list');
+      const btnGrid = document.getElementById('btn-view-grid');
+      const btnList = document.getElementById('btn-view-list');
+
+      if (mode === 'grid') {
+        grid.classList.remove('hidden');
+        list.classList.add('hidden');
+        btnGrid.className = 'p-1 rounded bg-white text-slate-900 shadow-2xs';
+        btnList.className = 'p-1 rounded text-slate-500 hover:text-slate-900';
+      } else {
+        grid.classList.add('hidden');
+        list.classList.remove('hidden');
+        btnList.className = 'p-1 rounded bg-white text-slate-900 shadow-2xs';
+        btnGrid.className = 'p-1 rounded text-slate-500 hover:text-slate-900';
+      }
+    }
+
+    function filterContent(type) {
+      const secSubrepos = document.getElementById('section-subrepos');
+      const secArtifacts = document.getElementById('section-artifacts');
+      const buttons = ['all', 'subrepo', 'epic', 'story'];
+
+      buttons.forEach(b => {
+        const btn = document.getElementById('btn-filter-' + b);
+        if (btn) {
+          if (b === type) {
+            btn.className = 'px-2.5 py-1 rounded bg-white text-slate-900 font-semibold shadow-2xs';
+          } else {
+            btn.className = 'px-2.5 py-1 rounded text-slate-600 hover:text-slate-900';
+          }
+        }
+      });
+
+      if (type === 'all') {
+        secSubrepos.style.display = 'block';
+        secArtifacts.style.display = 'block';
+        // show all cards in grid & list
+        filterArtifactCards('all');
+      } else if (type === 'subrepo') {
+        secSubrepos.style.display = 'block';
+        secArtifacts.style.display = 'none';
+      } else if (type === 'epic') {
+        secSubrepos.style.display = 'none';
+        secArtifacts.style.display = 'block';
+        filterArtifactCards('epic');
+      } else if (type === 'story') {
+        secSubrepos.style.display = 'none';
+        secArtifacts.style.display = 'block';
+        filterArtifactCards('story');
+      }
+    }
+
+    function filterArtifactCards(type) {
+      const gridItems = document.querySelectorAll('#artifacts-grid > div');
+      gridItems.forEach(item => {
+        const isEpic = item.getAttribute('title').includes('Épica');
+        if (type === 'all') {
+          item.style.display = 'flex';
+        } else if (type === 'epic') {
+          item.style.display = isEpic ? 'flex' : 'none';
+        } else if (type === 'story') {
+          item.style.display = !isEpic ? 'flex' : 'none';
+        }
+      });
+    }
+
+    function filterBySubfolder(slug) {
+      document.getElementById('current-folder-view').textContent = 'Sub-carpeta: /' + slug;
+      showToast('Navegando a la sub-carpeta /' + slug);
+    }
+
+    function updateUserPermission(userName, newRole) {
+      showToast(`Permisos de ${userName} actualizados a: ${newRole}`);
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('repo-toast');
+      document.getElementById('repo-toast-msg').textContent = msg;
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 3000);
+    }
+
+    function openItemModal(type) {
+      if (type === 'story') {
+        window.open('../../html/UserStoryTemplate.html', '_blank');
+      } else {
+        showToast('Creando nuevo ' + type + ' en este repositorio');
+      }
+    }
+  </script>
+
+
+</body></html>

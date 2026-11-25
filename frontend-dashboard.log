@@ -1,0 +1,2598 @@
+
+> frontend@0.0.0 start
+> ng serve
+
+> Building...
+√ Building...
+Browser bundles     
+Initial chunk files  | Names            |  Raw size
+styles.css           | styles           |  50.72 kB | 
+main.js              | main             |   4.43 kB | 
+chunk-M6OHVEK3.js    | -                | 936 bytes | 
+
+                     | Initial total    |  56.08 kB
+
+Lazy chunk files     | Names            |  Raw size
+chunk-G3EUTCJO.js    | dashboard        | 211.49 kB | 
+chunk-CD6Z4DJP.js    | registro         |  34.01 kB | 
+chunk-AOAMHUB5.js    | login            |  26.43 kB | 
+chunk-BZ64EEZD.js    | -                |   4.03 kB | 
+
+
+Server bundles      
+Initial chunk files  | Names            |  Raw size
+main.server.mjs      | main.server      |   5.64 kB | 
+server.mjs           | server           |   1.86 kB | 
+chunk-D4S3BQJI.mjs   | -                | 921 bytes | 
+polyfills.server.mjs | polyfills.server | 268 bytes | 
+
+Lazy chunk files     | Names            |  Raw size
+chunk-WPOWQN4E.mjs   | dashboard        | 211.48 kB | 
+chunk-YA5EPYZI.mjs   | registro         |  33.99 kB | 
+chunk-HLPPD4RT.mjs   | login            |  26.42 kB | 
+chunk-QYODCWB4.mjs   | -                |   4.01 kB | 
+
+Application bundle generation complete. [4.204 seconds] - 2026-11-22T01:15:52.283Z
+
+Watch mode enabled. Watching for file changes...
+NOTE: Raw file sizes do not reflect development server per-request transformations.
+[2m10:15:54 p.m.[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m Re-optimizing dependencies because vite config has changed
+[2m10:15:54 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m Re-optimizing dependencies because vite config has changed
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m4200[22m/[39m
+[2m10:15:55 p.m.[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [optimizer] bundling dependencies...
+[2m10:15:56 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [optimizer] bundling dependencies...
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |   4.43 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-SZ5QPVLQ.js   | dashboard   | 211.49 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+main.server.mjs     | main.server |   5.64 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-YI4ULS5D.mjs  | dashboard   | 211.48 kB | 
+
+Application bundle generation complete. [0.876 seconds] - 2026-11-22T01:17:20.085Z
+
+Page reload sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       | Raw size
+main.js             | main        |  7.70 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       | Raw size
+main.server.mjs     | main.server |  8.91 kB | 
+
+Application bundle generation complete. [0.485 seconds] - 2026-11-22T01:24:15.112Z
+
+[2m10:24:16 p.m.[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [optimizer] bundling dependencies...
+[2m10:24:16 p.m.[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32mdependency optimized: [33m@angular/common[32m[39m
+[2m10:24:16 p.m.[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32moptimized dependencies changed. reloading[39m
+[2m10:24:17 p.m.[22m [31m[1m[vite][22m[39m [31m[2m(ssr)[22m[39m [31mError when evaluating SSR module /main.server.mjs?timestamp=1795310655117: There is a new version of the pre-bundle for "H:/Proyectos/Backlog/frontend/.angular/cache/22.3.0/frontend/dev-server/vite/deps_ssr/@angular_core.js?v=c382c066", a page reload is going to ask for it.[39m
+      at throwOutdatedRequest (file:///H:/Proyectos/Backlog/frontend/node_modules/vite/dist/node/chunks/node.js:25855:30)
+      at LoadPluginContext.load (file:///H:/Proyectos/Backlog/frontend/node_modules/vite/dist/node/chunks/node.js:25820:118)
+      at EnvironmentPluginContainer.load (file:///H:/Proyectos/Backlog/frontend/node_modules/vite/dist/node/chunks/node.js:8594:56)
+      at loadAndTransform (file:///H:/Proyectos/Backlog/frontend/node_modules/vite/dist/node/chunks/node.js:20065:43)
+      at doTransform (file:///H:/Proyectos/Backlog/frontend/node_modules/vite/dist/node/chunks/node.js:20033:17)
+      at async fetchModule (file:///H:/Proyectos/Backlog/frontend/node_modules/vite/dist/node/chunks/node.js:36229:15)
+      at async handleInvoke (file:///H:/Proyectos/Backlog/frontend/node_modules/vite/dist/node/chunks/node.js:25278:21)
+      at async EventEmitter.listenerForInvokeHandler (file:///H:/Proyectos/Backlog/frontend/node_modules/vite/dist/node/chunks/node.js:25333:13)
+Page reload sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       | Raw size
+main.js             | main        |  8.09 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       | Raw size
+main.server.mjs     | main.server |  9.45 kB | 
+
+Application bundle generation complete. [0.350 seconds] - 2026-11-22T01:24:19.460Z
+
+Page reload sent to client(s).
+[2m10:24:19 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mdependency optimized: [33m@angular/common[32m[39m
+[2m10:24:19 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32moptimized dependencies changed. reloading[39m
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       | Raw size
+main.js             | main        |  8.04 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       | Raw size
+main.server.mjs     | main.server |  9.41 kB | 
+
+Application bundle generation complete. [0.246 seconds] - 2026-11-22T01:24:21.951Z
+
+Page reload sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       | Raw size
+main.js             | main        |  4.82 kB | 
+chunk-KD2FXGID.js   | -           |  3.34 kB | 
+
+Lazy chunk files    | Names       | Raw size
+chunk-CUY5UEFB.js   | login       | 26.58 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       | Raw size
+main.server.mjs     | main.server |  6.19 kB | 
+chunk-TTBRAMW3.mjs  | -           |  3.33 kB | 
+
+Lazy chunk files    | Names       | Raw size
+chunk-BZAVO2A3.mjs  | login       | 26.57 kB | 
+
+Application bundle generation complete. [0.484 seconds] - 2026-11-22T01:24:27.477Z
+
+Page reload sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Application bundle generation failed. [0.323 seconds] - 2026-11-22T01:24:30.478Z
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'resolveReturnUrl' does not exist on type 'Login'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/login/login.ts:80:47:
+[37m      80 │           () => this.router.navigateByUrl(this.[32mresolveReturnUrl[37m()),
+         ╵                                                [32m~~~~~~~~~~~~~~~~[0m
+
+
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles     
+Initial chunk files  | Names            |  Raw size
+styles.css           | styles           |  50.72 kB | 
+main.js              | main             |   4.82 kB | 
+chunk-KD2FXGID.js    | -                |   3.34 kB | 
+chunk-M6OHVEK3.js    | -                | 936 bytes | 
+
+                     | Initial total    |  59.81 kB
+
+Lazy chunk files     | Names            |  Raw size
+chunk-SZ5QPVLQ.js    | dashboard        | 211.49 kB | 
+chunk-CD6Z4DJP.js    | registro         |  34.01 kB | 
+chunk-MHHZTM4W.js    | login            |  26.86 kB | 
+chunk-BZ64EEZD.js    | -                |   4.03 kB | 
+
+
+Server bundles      
+Initial chunk files  | Names            |  Raw size
+main.server.mjs      | main.server      |   6.19 kB | 
+chunk-TTBRAMW3.mjs   | -                |   3.33 kB | 
+server.mjs           | server           |   1.86 kB | 
+chunk-D4S3BQJI.mjs   | -                | 921 bytes | 
+polyfills.server.mjs | polyfills.server | 268 bytes | 
+
+Lazy chunk files     | Names            |  Raw size
+chunk-YI4ULS5D.mjs   | dashboard        | 211.48 kB | 
+chunk-YA5EPYZI.mjs   | registro         |  33.99 kB | 
+chunk-WWLDS44O.mjs   | login            |  26.84 kB | 
+chunk-QYODCWB4.mjs   | -                |   4.01 kB | 
+
+Application bundle generation complete. [0.408 seconds] - 2026-11-22T01:24:33.407Z
+
+Page reload sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |   4.82 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-QOA2X72E.js   | dashboard   | 211.49 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+main.server.mjs     | main.server |   6.19 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-ICLGEQ5U.mjs  | dashboard   | 211.48 kB | 
+
+Application bundle generation complete. [0.713 seconds] - 2026-11-22T01:24:37.646Z
+
+Page reload sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |   4.82 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-SGOCAFVJ.js   | dashboard   | 211.38 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+main.server.mjs     | main.server |   6.19 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-CMXUHNJS.mjs  | dashboard   | 211.37 kB | 
+
+Application bundle generation complete. [0.659 seconds] - 2026-11-22T01:24:38.562Z
+
+Page reload sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |   4.82 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-MTO3KOVA.js   | dashboard   | 211.25 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+main.server.mjs     | main.server |   6.19 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-XOVOUQRY.mjs  | dashboard   | 211.24 kB | 
+
+Application bundle generation complete. [0.579 seconds] - 2026-11-22T01:24:43.213Z
+
+Page reload sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |   4.82 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-RSGYNIDP.js   | dashboard   | 204.81 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+main.server.mjs     | main.server |   6.19 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-HNGXJPKQ.mjs  | dashboard   | 204.80 kB | 
+
+Application bundle generation complete. [0.927 seconds] - 2026-11-22T01:39:09.888Z
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |   4.82 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-EKGA5B46.js   | dashboard   | 204.22 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+main.server.mjs     | main.server |   6.19 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-BNMSSN2W.mjs  | dashboard   | 204.21 kB | 
+
+Application bundle generation complete. [0.804 seconds] - 2026-11-22T01:39:14.860Z
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |   4.82 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-L4IYKL27.js   | dashboard   | 204.18 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+main.server.mjs     | main.server |   6.19 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-OWWMU62T.mjs  | dashboard   | 204.17 kB | 
+
+Application bundle generation complete. [0.594 seconds] - 2026-11-22T01:39:18.791Z
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |   4.82 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-WS67HQFL.js   | dashboard   | 201.73 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+main.server.mjs     | main.server |   6.19 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-2FKAVFNL.mjs  | dashboard   | 201.72 kB | 
+
+Application bundle generation complete. [0.533 seconds] - 2026-11-22T01:39:23.609Z
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |   4.82 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-N2H3XBDV.js   | dashboard   | 194.42 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+main.server.mjs     | main.server |   6.19 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-HXVQ5OWS.mjs  | dashboard   | 194.41 kB | 
+
+Application bundle generation complete. [0.683 seconds] - 2026-11-22T01:39:44.632Z
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |   4.82 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-F4GONMS2.js   | dashboard   | 193.10 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+main.server.mjs     | main.server |   6.19 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-ICOKGAEL.mjs  | dashboard   | 193.09 kB | 
+
+Application bundle generation complete. [0.554 seconds] - 2026-11-22T01:39:52.969Z
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |   4.82 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-FE4OXMMA.js   | dashboard   | 192.81 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+main.server.mjs     | main.server |   6.19 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-CY365OYE.mjs  | dashboard   | 192.80 kB | 
+
+Application bundle generation complete. [0.532 seconds] - 2026-11-22T01:40:01.380Z
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |   4.82 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-SGKBOICM.js   | dashboard   | 192.24 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+main.server.mjs     | main.server |   6.19 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-LLTAB4YF.mjs  | dashboard   | 192.23 kB | 
+
+Application bundle generation complete. [0.499 seconds] - 2026-11-22T01:40:05.815Z
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |   4.82 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-Z63R6CJ2.js   | dashboard   | 191.12 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+main.server.mjs     | main.server |   6.19 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-HYZEDRIH.mjs  | dashboard   | 191.11 kB | 
+
+Application bundle generation complete. [0.476 seconds] - 2026-11-22T01:40:10.488Z
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |   4.82 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-ACZKGFZI.js   | dashboard   | 180.64 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+main.server.mjs     | main.server |   6.19 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-IORUJH6X.mjs  | dashboard   | 180.63 kB | 
+
+Application bundle generation complete. [0.523 seconds] - 2026-11-22T01:40:29.680Z
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |   4.82 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-Z46HALEA.js   | dashboard   | 159.24 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+main.server.mjs     | main.server |   6.19 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-AUV3HZZ3.mjs  | dashboard   | 159.22 kB | 
+
+Application bundle generation complete. [0.541 seconds] - 2026-11-22T01:40:39.308Z
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |   4.82 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-AVKSJIQP.js   | dashboard   | 158.22 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+main.server.mjs     | main.server |   6.19 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-BF7SLJKF.mjs  | dashboard   | 158.21 kB | 
+
+Application bundle generation complete. [0.692 seconds] - 2026-11-22T01:40:53.697Z
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Application bundle generation failed. [0.691 seconds] - 2026-11-22T01:41:08.076Z
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'CrearHistoriaRequest'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:469:19:
+[37m      469 │     const request: [32mCrearHistoriaRequest[37m = {
+          ╵                    [32m~~~~~~~~~~~~~~~~~~~~[0m
+
+
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Application bundle generation failed. [0.626 seconds] - 2026-11-22T01:41:12.332Z
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type '"subrepo"' is not assignable to parameter of type 'ModalType'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:323:19:
+[37m      323 │     this.modal.set([32m'subrepo'[37m);
+          ╵                    [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type '"story"' is not assignable to parameter of type 'ModalType'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:347:19:
+[37m      347 │     this.modal.set([32m'story'[37m);
+          ╵                    [32m~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'CrearHistoriaRequest'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:469:19:
+[37m      469 │     const request: [32mCrearHistoriaRequest[37m = {
+          ╵                    [32m~~~~~~~~~~~~~~~~~~~~[0m
+
+
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Application bundle generation failed. [0.514 seconds] - 2026-11-22T01:41:21.796Z
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:285:9:
+[37m      285 │     this.[32mcreateMenuOpen[37m.update((open) => !open);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS7006: Parameter 'open' implicitly has an 'any' type.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:285:32:
+[37m      285 │     this.createMenuOpen.update(([32mopen[37m) => !open);
+          ╵                                 [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:306:9:
+[37m      306 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:321:9:
+[37m      321 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type '"subrepo"' is not assignable to parameter of type 'ModalType'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:322:19:
+[37m      322 │     this.modal.set([32m'subrepo'[37m);
+          ╵                    [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:345:9:
+[37m      345 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type '"story"' is not assignable to parameter of type 'ModalType'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:346:19:
+[37m      346 │     this.modal.set([32m'story'[37m);
+          ╵                    [32m~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:362:9:
+[37m      362 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'CrearHistoriaRequest'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:468:19:
+[37m      468 │     const request: [32mCrearHistoriaRequest[37m = {
+          ╵                    [32m~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:570:11:
+[37m      570 │       this.[32mcreateMenuOpen[37m.set(false);
+          ╵            [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:581:9:
+[37m      581 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Application bundle generation failed. [0.461 seconds] - 2026-11-22T01:41:26.644Z
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:280:9:
+[37m      280 │     this.[32mcreateMenuOpen[37m.update((open) => !open);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS7006: Parameter 'open' implicitly has an 'any' type.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:280:32:
+[37m      280 │     this.createMenuOpen.update(([32mopen[37m) => !open);
+          ╵                                 [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:301:9:
+[37m      301 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:315:9:
+[37m      315 │     this.[32msubrepoForm[37m.reset();
+          ╵          [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:316:9:
+[37m      316 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type '"subrepo"' is not assignable to parameter of type 'ModalType'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:317:19:
+[37m      317 │     this.modal.set([32m'subrepo'[37m);
+          ╵                    [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:340:9:
+[37m      340 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type '"story"' is not assignable to parameter of type 'ModalType'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:341:19:
+[37m      341 │     this.modal.set([32m'story'[37m);
+          ╵                    [32m~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:357:9:
+[37m      357 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:396:13:
+[37m      396 │     if (this.[32msubrepoForm[37m.invalid) {
+          ╵              [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:397:11:
+[37m      397 │       this.[32msubrepoForm[37m.markAllAsTouched();
+          ╵            [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:401:21:
+[37m      401 │     const raw = this.[32msubrepoForm[37m.getRawValue();
+          ╵                      [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'CrearHistoriaRequest'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:463:19:
+[37m      463 │     const request: [32mCrearHistoriaRequest[37m = {
+          ╵                    [32m~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:565:11:
+[37m      565 │       this.[32mcreateMenuOpen[37m.set(false);
+          ╵            [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:576:9:
+[37m      576 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Application bundle generation failed. [0.515 seconds] - 2026-11-22T01:41:30.855Z
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:271:9:
+[37m      271 │     this.[32mcreateMenuOpen[37m.update((open) => !open);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS7006: Parameter 'open' implicitly has an 'any' type.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:271:32:
+[37m      271 │     this.createMenuOpen.update(([32mopen[37m) => !open);
+          ╵                                 [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:292:9:
+[37m      292 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:306:9:
+[37m      306 │     this.[32msubrepoForm[37m.reset();
+          ╵          [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:307:9:
+[37m      307 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type '"subrepo"' is not assignable to parameter of type 'ModalType'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:308:19:
+[37m      308 │     this.modal.set([32m'subrepo'[37m);
+          ╵                    [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:323:9:
+[37m      323 │     this.[32mstoryForm[37m.reset({
+          ╵          [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:331:9:
+[37m      331 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type '"story"' is not assignable to parameter of type 'ModalType'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:332:19:
+[37m      332 │     this.modal.set([32m'story'[37m);
+          ╵                    [32m~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:348:9:
+[37m      348 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:387:13:
+[37m      387 │     if (this.[32msubrepoForm[37m.invalid) {
+          ╵              [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:388:11:
+[37m      388 │       this.[32msubrepoForm[37m.markAllAsTouched();
+          ╵            [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:392:21:
+[37m      392 │     const raw = this.[32msubrepoForm[37m.getRawValue();
+          ╵                      [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:447:13:
+[37m      447 │     if (this.[32mstoryForm[37m.invalid) {
+          ╵              [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:448:11:
+[37m      448 │       this.[32mstoryForm[37m.markAllAsTouched();
+          ╵            [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:452:21:
+[37m      452 │     const raw = this.[32mstoryForm[37m.getRawValue();
+          ╵                      [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'CrearHistoriaRequest'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:454:19:
+[37m      454 │     const request: [32mCrearHistoriaRequest[37m = {
+          ╵                    [32m~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:556:11:
+[37m      556 │       this.[32mcreateMenuOpen[37m.set(false);
+          ╵            [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:567:9:
+[37m      567 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Application bundle generation failed. [0.460 seconds] - 2026-11-22T01:41:43.863Z
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:267:9:
+[37m      267 │     this.[32mcreateMenuOpen[37m.update((open) => !open);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS7006: Parameter 'open' implicitly has an 'any' type.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:267:32:
+[37m      267 │     this.createMenuOpen.update(([32mopen[37m) => !open);
+          ╵                                 [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:288:9:
+[37m      288 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:302:9:
+[37m      302 │     this.[32msubrepoForm[37m.reset();
+          ╵          [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:303:9:
+[37m      303 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type '"subrepo"' is not assignable to parameter of type 'ModalType'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:304:19:
+[37m      304 │     this.modal.set([32m'subrepo'[37m);
+          ╵                    [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:319:9:
+[37m      319 │     this.[32mstoryForm[37m.reset({
+          ╵          [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:327:9:
+[37m      327 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type '"story"' is not assignable to parameter of type 'ModalType'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:328:19:
+[37m      328 │     this.modal.set([32m'story'[37m);
+          ╵                    [32m~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:344:9:
+[37m      344 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:383:13:
+[37m      383 │     if (this.[32msubrepoForm[37m.invalid) {
+          ╵              [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:384:11:
+[37m      384 │       this.[32msubrepoForm[37m.markAllAsTouched();
+          ╵            [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:388:21:
+[37m      388 │     const raw = this.[32msubrepoForm[37m.getRawValue();
+          ╵                      [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:443:13:
+[37m      443 │     if (this.[32mstoryForm[37m.invalid) {
+          ╵              [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:444:11:
+[37m      444 │       this.[32mstoryForm[37m.markAllAsTouched();
+          ╵            [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:448:21:
+[37m      448 │     const raw = this.[32mstoryForm[37m.getRawValue();
+          ╵                      [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'CrearHistoriaRequest'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:450:19:
+[37m      450 │     const request: [32mCrearHistoriaRequest[37m = {
+          ╵                    [32m~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:552:11:
+[37m      552 │       this.[32mcreateMenuOpen[37m.set(false);
+          ╵            [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:563:9:
+[37m      563 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Application bundle generation failed. [0.569 seconds] - 2026-11-22T01:41:50.106Z
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'ownedWithSubfolders' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:175:46:
+[37m      175 │ ...= 0 ? 0 : Math.round((this.[32mownedWithSubfolders[37m() / total) * 100);
+          ╵                               [32m~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:264:9:
+[37m      264 │     this.[32mcreateMenuOpen[37m.update((open) => !open);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS7006: Parameter 'open' implicitly has an 'any' type.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:264:32:
+[37m      264 │     this.createMenuOpen.update(([32mopen[37m) => !open);
+          ╵                                 [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:285:9:
+[37m      285 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:299:9:
+[37m      299 │     this.[32msubrepoForm[37m.reset();
+          ╵          [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:300:9:
+[37m      300 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type '"subrepo"' is not assignable to parameter of type 'ModalType'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:301:19:
+[37m      301 │     this.modal.set([32m'subrepo'[37m);
+          ╵                    [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:316:9:
+[37m      316 │     this.[32mstoryForm[37m.reset({
+          ╵          [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:324:9:
+[37m      324 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type '"story"' is not assignable to parameter of type 'ModalType'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:325:19:
+[37m      325 │     this.modal.set([32m'story'[37m);
+          ╵                    [32m~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:341:9:
+[37m      341 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:380:13:
+[37m      380 │     if (this.[32msubrepoForm[37m.invalid) {
+          ╵              [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:381:11:
+[37m      381 │       this.[32msubrepoForm[37m.markAllAsTouched();
+          ╵            [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:385:21:
+[37m      385 │     const raw = this.[32msubrepoForm[37m.getRawValue();
+          ╵                      [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:440:13:
+[37m      440 │     if (this.[32mstoryForm[37m.invalid) {
+          ╵              [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:441:11:
+[37m      441 │       this.[32mstoryForm[37m.markAllAsTouched();
+          ╵            [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:445:21:
+[37m      445 │     const raw = this.[32mstoryForm[37m.getRawValue();
+          ╵                      [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'CrearHistoriaRequest'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:447:19:
+[37m      447 │     const request: [32mCrearHistoriaRequest[37m = {
+          ╵                    [32m~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:549:11:
+[37m      549 │       this.[32mcreateMenuOpen[37m.set(false);
+          ╵            [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:560:9:
+[37m      560 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'ownedWithSubfolders' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.html:300:14:
+[37m      300 │           >{{ [32mownedWithSubfolders[37m() }} con sub-repositorios</span
+          ╵               [32m~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component Dashboard.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:83:15:
+[37m      83 │   templateUrl: [32m'./dashboard.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Application bundle generation failed. [0.499 seconds] - 2026-11-22T01:41:54.380Z
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:260:9:
+[37m      260 │     this.[32mcreateMenuOpen[37m.update((open) => !open);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS7006: Parameter 'open' implicitly has an 'any' type.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:260:32:
+[37m      260 │     this.createMenuOpen.update(([32mopen[37m) => !open);
+          ╵                                 [32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:281:9:
+[37m      281 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:295:9:
+[37m      295 │     this.[32msubrepoForm[37m.reset();
+          ╵          [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:296:9:
+[37m      296 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type '"subrepo"' is not assignable to parameter of type 'ModalType'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:297:19:
+[37m      297 │     this.modal.set([32m'subrepo'[37m);
+          ╵                    [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:312:9:
+[37m      312 │     this.[32mstoryForm[37m.reset({
+          ╵          [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:320:9:
+[37m      320 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type '"story"' is not assignable to parameter of type 'ModalType'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:321:19:
+[37m      321 │     this.modal.set([32m'story'[37m);
+          ╵                    [32m~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:337:9:
+[37m      337 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:376:13:
+[37m      376 │     if (this.[32msubrepoForm[37m.invalid) {
+          ╵              [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:377:11:
+[37m      377 │       this.[32msubrepoForm[37m.markAllAsTouched();
+          ╵            [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:381:21:
+[37m      381 │     const raw = this.[32msubrepoForm[37m.getRawValue();
+          ╵                      [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:436:13:
+[37m      436 │     if (this.[32mstoryForm[37m.invalid) {
+          ╵              [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:437:11:
+[37m      437 │       this.[32mstoryForm[37m.markAllAsTouched();
+          ╵            [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:441:21:
+[37m      441 │     const raw = this.[32mstoryForm[37m.getRawValue();
+          ╵                      [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'CrearHistoriaRequest'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:443:19:
+[37m      443 │     const request: [32mCrearHistoriaRequest[37m = {
+          ╵                    [32m~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:545:11:
+[37m      545 │       this.[32mcreateMenuOpen[37m.set(false);
+          ╵            [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:556:9:
+[37m      556 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'ownedWithSubfolders' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.html:300:14:
+[37m      300 │           >{{ [32mownedWithSubfolders[37m() }} con sub-repositorios</span
+          ╵               [32m~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component Dashboard.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:83:15:
+[37m      83 │   templateUrl: [32m'./dashboard.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Application bundle generation failed. [0.565 seconds] - 2026-11-22T01:42:13.976Z
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:276:9:
+[37m      276 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:290:9:
+[37m      290 │     this.[32msubrepoForm[37m.reset();
+          ╵          [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:291:9:
+[37m      291 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type '"subrepo"' is not assignable to parameter of type 'ModalType'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:292:19:
+[37m      292 │     this.modal.set([32m'subrepo'[37m);
+          ╵                    [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:307:9:
+[37m      307 │     this.[32mstoryForm[37m.reset({
+          ╵          [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:315:9:
+[37m      315 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type '"story"' is not assignable to parameter of type 'ModalType'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:316:19:
+[37m      316 │     this.modal.set([32m'story'[37m);
+          ╵                    [32m~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:332:9:
+[37m      332 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:371:13:
+[37m      371 │     if (this.[32msubrepoForm[37m.invalid) {
+          ╵              [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:372:11:
+[37m      372 │       this.[32msubrepoForm[37m.markAllAsTouched();
+          ╵            [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:376:21:
+[37m      376 │     const raw = this.[32msubrepoForm[37m.getRawValue();
+          ╵                      [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:431:13:
+[37m      431 │     if (this.[32mstoryForm[37m.invalid) {
+          ╵              [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:432:11:
+[37m      432 │       this.[32mstoryForm[37m.markAllAsTouched();
+          ╵            [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:436:21:
+[37m      436 │     const raw = this.[32mstoryForm[37m.getRawValue();
+          ╵                      [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'CrearHistoriaRequest'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:438:19:
+[37m      438 │     const request: [32mCrearHistoriaRequest[37m = {
+          ╵                    [32m~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:540:11:
+[37m      540 │       this.[32mcreateMenuOpen[37m.set(false);
+          ╵            [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:551:9:
+[37m      551 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'ownedWithSubfolders' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.html:300:14:
+[37m      300 │           >{{ [32mownedWithSubfolders[37m() }} con sub-repositorios</span
+          ╵               [32m~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component Dashboard.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:83:15:
+[37m      83 │   templateUrl: [32m'./dashboard.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Application bundle generation failed. [0.514 seconds] - 2026-11-22T01:42:18.211Z
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:289:9:
+[37m      289 │     this.[32msubrepoForm[37m.reset();
+          ╵          [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:290:9:
+[37m      290 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type '"subrepo"' is not assignable to parameter of type 'ModalType'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:291:19:
+[37m      291 │     this.modal.set([32m'subrepo'[37m);
+          ╵                    [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:306:9:
+[37m      306 │     this.[32mstoryForm[37m.reset({
+          ╵          [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:314:9:
+[37m      314 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2345: Argument of type '"story"' is not assignable to parameter of type 'ModalType'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:315:19:
+[37m      315 │     this.modal.set([32m'story'[37m);
+          ╵                    [32m~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:331:9:
+[37m      331 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:370:13:
+[37m      370 │     if (this.[32msubrepoForm[37m.invalid) {
+          ╵              [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:371:11:
+[37m      371 │       this.[32msubrepoForm[37m.markAllAsTouched();
+          ╵            [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:375:21:
+[37m      375 │     const raw = this.[32msubrepoForm[37m.getRawValue();
+          ╵                      [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:430:13:
+[37m      430 │     if (this.[32mstoryForm[37m.invalid) {
+          ╵              [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:431:11:
+[37m      431 │       this.[32mstoryForm[37m.markAllAsTouched();
+          ╵            [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:435:21:
+[37m      435 │     const raw = this.[32mstoryForm[37m.getRawValue();
+          ╵                      [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'CrearHistoriaRequest'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:437:19:
+[37m      437 │     const request: [32mCrearHistoriaRequest[37m = {
+          ╵                    [32m~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:539:11:
+[37m      539 │       this.[32mcreateMenuOpen[37m.set(false);
+          ╵            [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:550:9:
+[37m      550 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'ownedWithSubfolders' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.html:300:14:
+[37m      300 │           >{{ [32mownedWithSubfolders[37m() }} con sub-repositorios</span
+          ╵               [32m~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component Dashboard.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:83:15:
+[37m      83 │   templateUrl: [32m'./dashboard.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Application bundle generation failed. [0.485 seconds] - 2026-11-22T01:42:23.523Z
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:292:9:
+[37m      292 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:331:13:
+[37m      331 │     if (this.[32msubrepoForm[37m.invalid) {
+          ╵              [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:332:11:
+[37m      332 │       this.[32msubrepoForm[37m.markAllAsTouched();
+          ╵            [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:336:21:
+[37m      336 │     const raw = this.[32msubrepoForm[37m.getRawValue();
+          ╵                      [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:391:13:
+[37m      391 │     if (this.[32mstoryForm[37m.invalid) {
+          ╵              [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:392:11:
+[37m      392 │       this.[32mstoryForm[37m.markAllAsTouched();
+          ╵            [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:396:21:
+[37m      396 │     const raw = this.[32mstoryForm[37m.getRawValue();
+          ╵                      [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'CrearHistoriaRequest'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:398:19:
+[37m      398 │     const request: [32mCrearHistoriaRequest[37m = {
+          ╵                    [32m~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:500:11:
+[37m      500 │       this.[32mcreateMenuOpen[37m.set(false);
+          ╵            [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:511:9:
+[37m      511 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'ownedWithSubfolders' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.html:300:14:
+[37m      300 │           >{{ [32mownedWithSubfolders[37m() }} con sub-repositorios</span
+          ╵               [32m~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component Dashboard.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:83:15:
+[37m      83 │   templateUrl: [32m'./dashboard.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Application bundle generation failed. [0.422 seconds] - 2026-11-22T01:42:27.519Z
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:330:13:
+[37m      330 │     if (this.[32msubrepoForm[37m.invalid) {
+          ╵              [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:331:11:
+[37m      331 │       this.[32msubrepoForm[37m.markAllAsTouched();
+          ╵            [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'subrepoForm' does not exist on type 'Dashboard'. Did you mean 'repoForm'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:335:21:
+[37m      335 │     const raw = this.[32msubrepoForm[37m.getRawValue();
+          ╵                      [32m~~~~~~~~~~~[0m
+
+  'repoForm' is declared here.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:124:21:
+[37m      124 │   protected readonly [32mrepoForm[37m = this.formBuilder.nonNullable.group({
+          ╵                      [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:390:13:
+[37m      390 │     if (this.[32mstoryForm[37m.invalid) {
+          ╵              [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:391:11:
+[37m      391 │       this.[32mstoryForm[37m.markAllAsTouched();
+          ╵            [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:395:21:
+[37m      395 │     const raw = this.[32mstoryForm[37m.getRawValue();
+          ╵                      [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'CrearHistoriaRequest'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:397:19:
+[37m      397 │     const request: [32mCrearHistoriaRequest[37m = {
+          ╵                    [32m~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:499:11:
+[37m      499 │       this.[32mcreateMenuOpen[37m.set(false);
+          ╵            [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:510:9:
+[37m      510 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'ownedWithSubfolders' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.html:300:14:
+[37m      300 │           >{{ [32mownedWithSubfolders[37m() }} con sub-repositorios</span
+          ╵               [32m~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component Dashboard.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:83:15:
+[37m      83 │   templateUrl: [32m'./dashboard.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Application bundle generation failed. [0.629 seconds] - 2026-11-22T01:42:42.181Z
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:360:13:
+[37m      360 │     if (this.[32mstoryForm[37m.invalid) {
+          ╵              [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:361:11:
+[37m      361 │       this.[32mstoryForm[37m.markAllAsTouched();
+          ╵            [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'storyForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:365:21:
+[37m      365 │     const raw = this.[32mstoryForm[37m.getRawValue();
+          ╵                      [32m~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2304: Cannot find name 'CrearHistoriaRequest'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:367:19:
+[37m      367 │     const request: [32mCrearHistoriaRequest[37m = {
+          ╵                    [32m~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:469:11:
+[37m      469 │       this.[32mcreateMenuOpen[37m.set(false);
+          ╵            [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:480:9:
+[37m      480 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'ownedWithSubfolders' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.html:300:14:
+[37m      300 │           >{{ [32mownedWithSubfolders[37m() }} con sub-repositorios</span
+          ╵               [32m~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component Dashboard.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:83:15:
+[37m      83 │   templateUrl: [32m'./dashboard.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Application bundle generation failed. [0.626 seconds] - 2026-11-22T01:42:47.501Z
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:421:11:
+[37m      421 │       this.[32mcreateMenuOpen[37m.set(false);
+          ╵            [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:432:9:
+[37m      432 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'ownedWithSubfolders' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.html:300:14:
+[37m      300 │           >{{ [32mownedWithSubfolders[37m() }} con sub-repositorios</span
+          ╵               [32m~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component Dashboard.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:83:15:
+[37m      83 │   templateUrl: [32m'./dashboard.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Application bundle generation failed. [0.665 seconds] - 2026-11-22T01:43:02.032Z
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'createMenuOpen' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:429:9:
+[37m      429 │     this.[32mcreateMenuOpen[37m.set(false);
+          ╵          [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'ownedWithSubfolders' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.html:300:14:
+[37m      300 │           >{{ [32mownedWithSubfolders[37m() }} con sub-repositorios</span
+          ╵               [32m~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component Dashboard.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:83:15:
+[37m      83 │   templateUrl: [32m'./dashboard.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Application bundle generation failed. [0.556 seconds] - 2026-11-22T01:43:07.295Z
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'ownedWithSubfolders' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.html:300:14:
+[37m      300 │           >{{ [32mownedWithSubfolders[37m() }} con sub-repositorios</span
+          ╵               [32m~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component Dashboard.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:83:15:
+[37m      83 │   templateUrl: [32m'./dashboard.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Application bundle generation failed. [0.269 seconds] - 2026-11-22T01:43:22.077Z
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'ownedWithSubfolders' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.html:300:14:
+[37m      300 │           >{{ [32mownedWithSubfolders[37m() }} con sub-repositorios</span
+          ╵               [32m~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component Dashboard.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:83:15:
+[37m      83 │   templateUrl: [32m'./dashboard.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Application bundle generation failed. [0.272 seconds] - 2026-11-22T01:43:27.107Z
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2305: Module '"../models/elemento.model"' has no exported member 'CrearDirectorioRequest'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/services/elemento.service.ts:6:2:
+[37m      6 │   [32mCrearDirectorioRequest[37m,
+        ╵   [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2305: Module '"../models/elemento.model"' has no exported member 'CrearHistoriaRequest'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/services/elemento.service.ts:8:2:
+[37m      8 │   [32mCrearHistoriaRequest[37m,
+        ╵   [32m~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'ownedWithSubfolders' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.html:300:14:
+[37m      300 │           >{{ [32mownedWithSubfolders[37m() }} con sub-repositorios</span
+          ╵               [32m~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component Dashboard.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:83:15:
+[37m      83 │   templateUrl: [32m'./dashboard.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Application bundle generation failed. [0.300 seconds] - 2026-11-22T01:43:32.578Z
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'ownedWithSubfolders' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.html:300:14:
+[37m      300 │           >{{ [32mownedWithSubfolders[37m() }} con sub-repositorios</span
+          ╵               [32m~~~~~~~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component Dashboard.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:83:15:
+[37m      83 │   templateUrl: [32m'./dashboard.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles     
+Initial chunk files  | Names            |  Raw size
+styles.css           | styles           |  50.72 kB | 
+main.js              | main             |   4.82 kB | 
+chunk-KD2FXGID.js    | -                |   3.34 kB | 
+chunk-M6OHVEK3.js    | -                | 936 bytes | 
+
+                     | Initial total    |  59.81 kB
+
+Lazy chunk files     | Names            |  Raw size
+chunk-XS7IIRY4.js    | dashboard        | 152.46 kB | 
+chunk-CD6Z4DJP.js    | registro         |  34.01 kB | 
+chunk-MHHZTM4W.js    | login            |  26.86 kB | 
+chunk-BZ64EEZD.js    | -                |   4.03 kB | 
+
+
+Server bundles      
+Initial chunk files  | Names            |  Raw size
+main.server.mjs      | main.server      |   6.19 kB | 
+chunk-TTBRAMW3.mjs   | -                |   3.33 kB | 
+server.mjs           | server           |   1.86 kB | 
+chunk-D4S3BQJI.mjs   | -                | 921 bytes | 
+polyfills.server.mjs | polyfills.server | 268 bytes | 
+
+Lazy chunk files     | Names            |  Raw size
+chunk-VRHLZWZW.mjs   | dashboard        | 152.45 kB | 
+chunk-YA5EPYZI.mjs   | registro         |  33.99 kB | 
+chunk-WWLDS44O.mjs   | login            |  26.84 kB | 
+chunk-QYODCWB4.mjs   | -                |   4.01 kB | 
+
+Application bundle generation complete. [0.597 seconds] - 2026-11-22T01:44:37.418Z
+
+Page reload sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |   4.82 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-AGCEYGG5.js   | dashboard   | 151.16 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+main.server.mjs     | main.server |   6.19 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-E4EJ37J6.mjs  | dashboard   | 151.15 kB | 
+
+Application bundle generation complete. [0.565 seconds] - 2026-11-22T01:46:09.734Z
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |   4.82 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-XS7IIRY4.js   | dashboard   | 152.46 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+main.server.mjs     | main.server |   6.19 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-VRHLZWZW.mjs  | dashboard   | 152.45 kB | 
+
+Application bundle generation complete. [0.594 seconds] - 2026-11-22T01:49:31.050Z
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |   4.82 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-SXVX3NEG.js   | dashboard   | 152.33 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+main.server.mjs     | main.server |   6.19 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-YDZLSLCV.mjs  | dashboard   | 152.32 kB | 
+
+Application bundle generation complete. [0.564 seconds] - 2026-11-22T01:49:37.068Z
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |   4.82 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-TTIYVHVX.js   | dashboard   | 151.03 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+main.server.mjs     | main.server |   6.19 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-NBKBNESZ.mjs  | dashboard   | 151.02 kB | 
+
+Application bundle generation complete. [0.474 seconds] - 2026-11-22T01:52:02.972Z
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Application bundle generation failed. [0.535 seconds] - 2026-11-22T01:53:24.396Z
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'openEpicModal' does not exist on type 'Dashboard'. Did you mean 'openRepoModal'?[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.html:494:27:
+[37m      494 │                   (click)="[32mopenEpicModal[37m()"
+          ╵                            [32m~~~~~~~~~~~~~[0m
+
+  Error occurs in the template of component Dashboard.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:83:15:
+[37m      83 │   templateUrl: [32m'./dashboard.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles     
+Initial chunk files  | Names            |  Raw size
+styles.css           | styles           |  50.72 kB | 
+main.js              | main             |   4.82 kB | 
+chunk-KD2FXGID.js    | -                |   3.34 kB | 
+chunk-M6OHVEK3.js    | -                | 936 bytes | 
+
+                     | Initial total    |  59.81 kB
+
+Lazy chunk files     | Names            |  Raw size
+chunk-OFPLKMQP.js    | dashboard        | 149.35 kB | 
+chunk-CD6Z4DJP.js    | registro         |  34.01 kB | 
+chunk-MHHZTM4W.js    | login            |  26.86 kB | 
+chunk-BZ64EEZD.js    | -                |   4.03 kB | 
+
+
+Server bundles      
+Initial chunk files  | Names            |  Raw size
+main.server.mjs      | main.server      |   6.19 kB | 
+chunk-TTBRAMW3.mjs   | -                |   3.33 kB | 
+server.mjs           | server           |   1.86 kB | 
+chunk-D4S3BQJI.mjs   | -                | 921 bytes | 
+polyfills.server.mjs | polyfills.server | 268 bytes | 
+
+Lazy chunk files     | Names            |  Raw size
+chunk-EBGSZX65.mjs   | dashboard        | 149.34 kB | 
+chunk-YA5EPYZI.mjs   | registro         |  33.99 kB | 
+chunk-WWLDS44O.mjs   | login            |  26.84 kB | 
+chunk-QYODCWB4.mjs   | -                |   4.01 kB | 
+
+Application bundle generation complete. [0.449 seconds] - 2026-11-22T01:54:14.451Z
+
+Page reload sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Application bundle generation failed. [0.280 seconds] - 2026-11-22T01:54:33.726Z
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8113: ToastComponent is not used within the template of Dashboard[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:82:33:
+[37m      82 │   imports: [ReactiveFormsModule, [32mToastComponent[37m],
+         ╵                                  [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG5002: Unexpected closing tag "div". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.html:559:8:
+[37m      559 │         [32m</div>[37m
+          ╵         [32m~~~~~~[0m
+
+  Error occurs in the template of component Dashboard.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:83:15:
+[37m      83 │   templateUrl: [32m'./dashboard.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG5002: Unexpected closing block. The block may have been closed earlier. If you meant to write the `}` character, you should use the "&#125;" HTML entity instead.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.html:560:6:
+[37m      560 │       [32m}[37m @else {
+          ╵       [32m^[0m
+
+  Error occurs in the template of component Dashboard.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:83:15:
+[37m      83 │   templateUrl: [32m'./dashboard.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG5002: Unexpected closing tag "section". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.html:625:4:
+[37m      625 │     [32m</section>[37m
+          ╵     [32m~~~~~~~~~~[0m
+
+  Error occurs in the template of component Dashboard.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:83:15:
+[37m      83 │   templateUrl: [32m'./dashboard.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG5002: Unexpected closing tag "main". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.html:626:2:
+[37m      626 │   [32m</main>[37m
+          ╵   [32m~~~~~~~[0m
+
+  Error occurs in the template of component Dashboard.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:83:15:
+[37m      83 │   templateUrl: [32m'./dashboard.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG5002: Unexpected closing tag "div". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.html:878:0:
+[37m      878 │ [32m</div>[37m
+          ╵ [32m~~~~~~[0m
+
+  Error occurs in the template of component Dashboard.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:83:15:
+[37m      83 │   templateUrl: [32m'./dashboard.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Application bundle generation failed. [0.195 seconds] - 2026-11-22T01:57:48.427Z
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8113: ToastComponent is not used within the template of Dashboard[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:82:33:
+[37m      82 │   imports: [ReactiveFormsModule, [32mToastComponent[37m],
+         ╵                                  [32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG5002: Unexpected closing tag "div". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.html:559:8:
+[37m      559 │         [32m</div>[37m
+          ╵         [32m~~~~~~[0m
+
+  Error occurs in the template of component Dashboard.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:83:15:
+[37m      83 │   templateUrl: [32m'./dashboard.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG5002: Unexpected closing block. The block may have been closed earlier. If you meant to write the `}` character, you should use the "&#125;" HTML entity instead.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.html:560:6:
+[37m      560 │       [32m}[37m @else {
+          ╵       [32m^[0m
+
+  Error occurs in the template of component Dashboard.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:83:15:
+[37m      83 │   templateUrl: [32m'./dashboard.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG5002: Unexpected closing tag "section". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.html:625:4:
+[37m      625 │     [32m</section>[37m
+          ╵     [32m~~~~~~~~~~[0m
+
+  Error occurs in the template of component Dashboard.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:83:15:
+[37m      83 │   templateUrl: [32m'./dashboard.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG5002: Unexpected closing tag "main". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.html:626:2:
+[37m      626 │   [32m</main>[37m
+          ╵   [32m~~~~~~~[0m
+
+  Error occurs in the template of component Dashboard.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:83:15:
+[37m      83 │   templateUrl: [32m'./dashboard.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mNG5002: Unexpected closing tag "div". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.html:878:0:
+[37m      878 │ [32m</div>[37m
+          ╵ [32m~~~~~~[0m
+
+  Error occurs in the template of component Dashboard.
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:83:15:
+[37m      83 │   templateUrl: [32m'./dashboard.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles     
+Initial chunk files  | Names            |  Raw size
+styles.css           | styles           |  50.72 kB | 
+main.js              | main             |   4.82 kB | 
+chunk-KD2FXGID.js    | -                |   3.34 kB | 
+chunk-M6OHVEK3.js    | -                | 936 bytes | 
+
+                     | Initial total    |  59.81 kB
+
+Lazy chunk files     | Names            |  Raw size
+chunk-DUE7OVGA.js    | dashboard        | 137.33 kB | 
+chunk-CD6Z4DJP.js    | registro         |  34.01 kB | 
+chunk-MHHZTM4W.js    | login            |  26.86 kB | 
+chunk-BZ64EEZD.js    | -                |   4.03 kB | 
+
+
+Server bundles      
+Initial chunk files  | Names            |  Raw size
+main.server.mjs      | main.server      |   6.19 kB | 
+chunk-TTBRAMW3.mjs   | -                |   3.33 kB | 
+server.mjs           | server           |   1.86 kB | 
+chunk-D4S3BQJI.mjs   | -                | 921 bytes | 
+polyfills.server.mjs | polyfills.server | 268 bytes | 
+
+Lazy chunk files     | Names            |  Raw size
+chunk-MBQT7IXK.mjs   | dashboard        | 137.32 kB | 
+chunk-YA5EPYZI.mjs   | registro         |  33.99 kB | 
+chunk-WWLDS44O.mjs   | login            |  26.84 kB | 
+chunk-QYODCWB4.mjs   | -                |   4.01 kB | 
+
+Application bundle generation complete. [0.588 seconds] - 2026-11-22T01:57:53.928Z
+
+Page reload sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |   4.82 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-6LXU5QL2.js   | dashboard   | 137.33 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+main.server.mjs     | main.server |   6.19 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-AWRALTP7.mjs  | dashboard   | 137.31 kB | 
+
+Application bundle generation complete. [0.430 seconds] - 2026-11-22T01:57:58.740Z
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |   4.82 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-PLM26Q4R.js   | dashboard   | 137.33 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+main.server.mjs     | main.server |   6.19 kB | 
+
+Lazy chunk files    | Names       |  Raw size
+chunk-HXGCRIBX.mjs  | dashboard   | 137.31 kB | 
+
+Application bundle generation complete. [0.544 seconds] - 2026-11-22T01:58:15.611Z
+
+Page reload sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Application bundle generation failed. [0.515 seconds] - 2026-11-22T01:58:20.224Z
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'targetProjectId' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:310:27:
+[37m      310 │     const projectId = this.[32mtargetProjectId[37m();
+          ╵                            [32m~~~~~~~~~~~~~~~[0m
+
+
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Application bundle generation failed. [0.431 seconds] - 2026-11-22T01:58:31.931Z
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'targetProjectId' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:305:27:
+[37m      305 │     const projectId = this.[32mtargetProjectId[37m();
+          ╵                            [32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'epicForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:310:13:
+[37m      310 │     if (this.[32mepicForm[37m.invalid) {
+          ╵              [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'epicForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:311:11:
+[37m      311 │       this.[32mepicForm[37m.markAllAsTouched();
+          ╵            [32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'epicForm' does not exist on type 'Dashboard'.[0m [1m[35m[plugin angular-compiler][0m
+
+    H:/Proyectos/Backlog/frontend/src/app/pages/dashboard/dashboard.ts:315:21:
+[37m      315 │     const raw = this.[32mepicForm[37m.getRawValue();
+          ╵                      [32m~~~~~~~~[0m
+
+
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles     
+Initial chunk files  | Names            |  Raw size
+styles.css           | styles           |  50.72 kB | 
+main.js              | main             |   4.82 kB | 
+chunk-KD2FXGID.js    | -                |   3.34 kB | 
+chunk-M6OHVEK3.js    | -                | 936 bytes | 
+
+                     | Initial total    |  59.81 kB
+
+Lazy chunk files     | Names            |  Raw size
+chunk-SSLK3ED2.js    | dashboard        | 136.12 kB | 
+chunk-CD6Z4DJP.js    | registro         |  34.01 kB | 
+chunk-MHHZTM4W.js    | login            |  26.86 kB | 
+chunk-BZ64EEZD.js    | -                |   4.03 kB | 
+
+
+Server bundles      
+Initial chunk files  | Names            |  Raw size
+main.server.mjs      | main.server      |   6.19 kB | 
+chunk-TTBRAMW3.mjs   | -                |   3.33 kB | 
+server.mjs           | server           |   1.86 kB | 
+chunk-D4S3BQJI.mjs   | -                | 921 bytes | 
+polyfills.server.mjs | polyfills.server | 268 bytes | 
+
+Lazy chunk files     | Names            |  Raw size
+chunk-QGPO7Q37.mjs   | dashboard        | 136.11 kB | 
+chunk-YA5EPYZI.mjs   | registro         |  33.99 kB | 
+chunk-WWLDS44O.mjs   | login            |  26.84 kB | 
+chunk-QYODCWB4.mjs   | -                |   4.01 kB | 
+
+Application bundle generation complete. [0.538 seconds] - 2026-11-22T01:58:36.990Z
+
+Page reload sent to client(s).

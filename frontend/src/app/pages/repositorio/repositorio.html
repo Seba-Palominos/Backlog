@@ -1,0 +1,1047 @@
+<header
+  class="sticky top-0 z-30 flex h-14 items-center justify-between border-b border-light-border-subtle bg-white px-4 md:px-6"
+>
+  <div class="flex min-w-0 items-center gap-4">
+    <a routerLink="/dashboard" class="flex items-center gap-2.5">
+      <span
+        class="flex h-8 w-8 items-center justify-center rounded bg-neutral-950 text-white"
+      >
+        <span class="material-symbols-outlined text-lg">view_kanban</span>
+      </span>
+      <span class="font-headline text-title-md font-bold text-neutral-950">AgileFlow</span>
+    </a>
+
+    <nav class="hidden min-w-0 items-center gap-2 text-xs text-slate-500 md:flex">
+      <a routerLink="/dashboard" class="hover:text-slate-900">Repositorios</a>
+      <span class="text-slate-300">/</span>
+      @if (directorio(); as directorio) {
+        <a [routerLink]="['/repositorios', projectId()]" class="truncate hover:text-slate-900">
+          {{ proyecto()?.titulo ?? 'Repositorio' }}
+        </a>
+        <span class="text-slate-300">/</span>
+        <span class="truncate font-code font-semibold text-slate-900">
+          {{ directorio.titulo }}
+        </span>
+      } @else {
+        <span class="truncate font-code font-semibold text-slate-900">
+          {{ proyecto()?.titulo ?? 'Cargando...' }}
+        </span>
+      }
+    </nav>
+  </div>
+
+  <div class="flex items-center gap-3">
+    <div class="relative hidden w-56 sm:block">
+      <span
+        class="material-symbols-outlined pointer-events-none absolute left-2.5 top-2 text-base text-slate-400"
+        >search</span
+      >
+      <input
+        type="search"
+        [value]="searchTerm()"
+        (input)="onSearch($event)"
+        placeholder="Buscar en este repositorio..."
+        class="w-full rounded border border-light-border-subtle bg-light-surface-subtle py-1.5 pl-8 pr-3 text-xs text-slate-800 placeholder:text-slate-400 focus:bg-white focus:outline-none focus:ring-1 focus:ring-red-500"
+      />
+    </div>
+
+    <div class="flex items-center gap-2">
+      <div
+        class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-800 text-[11px] font-bold text-white"
+      >
+        {{ initials() }}
+      </div>
+      <span class="hidden text-xs font-medium text-slate-700 lg:block">{{ username() }}</span>
+    </div>
+
+    <button
+      type="button"
+      (click)="logout()"
+      class="rounded p-1.5 text-slate-500 transition-colors hover:bg-slate-100 hover:text-red-600"
+      title="Cerrar sesión"
+    >
+      <span class="material-symbols-outlined text-lg">logout</span>
+    </button>
+  </div>
+</header>
+
+<div class="flex flex-1 overflow-hidden">
+  <aside
+    class="hidden w-60 shrink-0 flex-col border-r border-light-border-subtle bg-white lg:flex"
+  >
+    <div class="flex-1 space-y-5 overflow-y-auto p-4">
+      <a
+        routerLink="/dashboard"
+        class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-500 hover:text-slate-900"
+      >
+        <span class="material-symbols-outlined text-base">arrow_back</span>
+        <span>Volver al dashboard</span>
+      </a>
+      @if (directorio()) {
+        <button
+          type="button"
+          (click)="openRoot()"
+          class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-600 hover:text-slate-900"
+        >
+          <span class="material-symbols-outlined text-base">folder_open</span>
+          <span>Volver al repositorio</span>
+        </button>
+      }
+
+      <div>
+        <p class="px-1 text-[11px] font-semibold uppercase tracking-wider text-slate-400">
+          Contenido
+        </p>
+        <div class="mt-2 space-y-0.5 text-xs">
+          <button
+            type="button"
+            (click)="setFilter('all')"
+            class="flex w-full items-center justify-between rounded px-2 py-1.5 text-left transition-colors hover:bg-slate-100"
+            [class.bg-slate-100]="filter() === 'all'"
+            [class.font-semibold]="filter() === 'all'"
+          >
+            <span>Todos</span>
+            <span class="font-code text-slate-400">
+              {{ directorios().length + epicas().length + historias().length }}
+            </span>
+          </button>
+          <button
+            type="button"
+            (click)="setFilter('directorio')"
+            class="flex w-full items-center justify-between rounded px-2 py-1.5 text-left transition-colors hover:bg-slate-100"
+            [class.bg-slate-100]="filter() === 'directorio'"
+            [class.font-semibold]="filter() === 'directorio'"
+          >
+            <span>Directorios</span>
+            <span class="font-code text-slate-400">{{ directorios().length }}</span>
+          </button>
+          <button
+            type="button"
+            (click)="setFilter('epica')"
+            class="flex w-full items-center justify-between rounded px-2 py-1.5 text-left transition-colors hover:bg-slate-100"
+            [class.bg-slate-100]="filter() === 'epica'"
+            [class.font-semibold]="filter() === 'epica'"
+          >
+            <span>Épicas</span>
+            <span class="font-code text-slate-400">{{ epicas().length }}</span>
+          </button>
+          <button
+            type="button"
+            (click)="setFilter('historia')"
+            class="flex w-full items-center justify-between rounded px-2 py-1.5 text-left transition-colors hover:bg-slate-100"
+            [class.bg-slate-100]="filter() === 'historia'"
+            [class.font-semibold]="filter() === 'historia'"
+          >
+            <span>Historias</span>
+            <span class="font-code text-slate-400">{{ historias().length }}</span>
+          </button>
+        </div>
+      </div>
+
+      <div>
+        <p class="px-1 text-[11px] font-semibold uppercase tracking-wider text-slate-400">
+          Directorios
+        </p>
+        @if (treeDirectorios().length === 0) {
+          <p class="mt-2 px-1 text-[11px] text-slate-400">Sin directorios todavía.</p>
+        } @else {
+          <div class="mt-2 space-y-0.5">
+            @for (directorio of treeDirectorios(); track directorio.id) {
+              <button
+                type="button"
+                (click)="selectElement(directorio)"
+                class="flex w-full items-center gap-2 rounded px-2 py-1.5 text-left text-[11px] text-slate-700 transition-colors hover:bg-slate-100"
+                [class.bg-slate-100]="directorioId() === directorio.id"
+                [class.font-semibold]="directorioId() === directorio.id"
+              >
+                <span class="material-symbols-outlined text-base text-slate-500">folder</span>
+                <span class="truncate">{{ directorio.titulo }}</span>
+              </button>
+            }
+          </div>
+        }
+      </div>
+
+      <div>
+        <p class="px-1 text-[11px] font-semibold uppercase tracking-wider text-slate-400">
+          Épicas
+        </p>
+        @if (treeEpicas().length === 0) {
+          <p class="mt-2 px-1 text-[11px] text-slate-400">Sin épicas todavía.</p>
+        } @else {
+          <div class="mt-2 space-y-0.5">
+            @for (epica of treeEpicas(); track epica.id) {
+              <button
+                type="button"
+                (click)="selectElement(epica)"
+                class="flex w-full items-center gap-2 rounded px-2 py-1.5 text-left text-[11px] text-purple-800 transition-colors hover:bg-purple-50"
+              >
+                <span class="material-symbols-outlined text-base text-purple-600"
+                  >description</span
+                >
+                <span class="truncate">{{ epica.titulo }}</span>
+              </button>
+            }
+          </div>
+        }
+      </div>
+
+      <div>
+        <p class="px-1 text-[11px] font-semibold uppercase tracking-wider text-slate-400">
+          Historias
+        </p>
+        @if (treeHistorias().length === 0) {
+          <p class="mt-2 px-1 text-[11px] text-slate-400">Sin historias todavía.</p>
+        } @else {
+          <div class="mt-2 space-y-0.5">
+            @for (historia of treeHistorias(); track historia.id) {
+              <button
+                type="button"
+                (click)="selectElement(historia)"
+                class="flex w-full items-center gap-2 rounded px-2 py-1.5 text-left text-[11px] text-sky-800 transition-colors hover:bg-sky-50"
+              >
+                <span class="material-symbols-outlined text-base text-sky-600">description</span>
+                <span class="truncate">{{ historia.titulo }}</span>
+              </button>
+            }
+          </div>
+        }
+      </div>
+    </div>
+  </aside>
+
+  <main class="flex-1 space-y-5 overflow-y-auto p-4 md:p-6">
+    @if (loading()) {
+      <div class="py-16 text-center text-sm text-slate-500">Cargando repositorio...</div>
+    } @else if (loadError()) {
+      <div class="rounded-lg border border-red-200 bg-red-50 p-6 text-center">
+        <span class="material-symbols-outlined text-3xl text-red-500">error</span>
+        <p class="mt-2 text-sm font-medium text-red-800">{{ loadError() }}</p>
+        <a
+          routerLink="/dashboard"
+          class="mt-4 inline-flex items-center gap-1.5 rounded bg-white px-3 py-1.5 text-xs font-semibold text-red-700 ring-1 ring-red-200 hover:bg-red-100"
+        >
+          <span class="material-symbols-outlined text-base">arrow_back</span>
+          Volver al dashboard
+        </a>
+      </div>
+    } @else if (proyecto(); as project) {
+      <section class="rounded-lg border border-light-border-subtle bg-white p-5">
+        <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+          <div class="flex min-w-0 items-start gap-3">
+            <div
+              class="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-neutral-950 text-white"
+            >
+              <span class="material-symbols-outlined text-2xl">folder_open</span>
+            </div>
+            <div class="min-w-0">
+              <div class="flex flex-wrap items-center gap-2">
+                <h1 class="font-headline text-headline-sm font-bold text-neutral-950">
+                  {{ directorio()?.titulo ?? project.titulo }}
+                </h1>
+                <span
+                  class="rounded-full border px-2 py-0.5 text-[10px] font-semibold"
+                  [class.border-emerald-200]="project.propio"
+                  [class.bg-emerald-50]="project.propio"
+                  [class.text-emerald-700]="project.propio"
+                  [class.border-slate-200]="!project.propio"
+                  [class.bg-slate-50]="!project.propio"
+                  [class.text-slate-600]="!project.propio"
+                >
+                  {{ project.propio ? 'Propietario' : 'Compartido' }}
+                </span>
+              </div>
+              <p class="mt-1 max-w-2xl text-xs text-slate-500">
+                @if (directorio(); as directorio) {
+                  Contenido de <span class="font-medium">{{ project.titulo }}</span> /
+                  {{ directorio.titulo }}
+                } @else {
+                  {{ project.descripcion || 'Sin descripción.' }}
+                }
+              </p>
+              <p class="mt-2 text-[11px] text-slate-400">
+                @if (directorio()) {
+                  Directorio de {{ project.titulo }} · {{ elementos().length }} elementos
+                } @else {
+                  Creado por &#64;{{ project.propietario }} · {{ project.epicas }} épicas ·
+                  {{ project.historias }} historias
+                }
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2">
+            <button
+              type="button"
+              (click)="openDirectorioModal()"
+              class="inline-flex items-center gap-1.5 rounded border border-slate-300 bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 transition-colors hover:bg-slate-50"
+            >
+              <span class="material-symbols-outlined text-base">add</span>
+              <span>Nuevo directorio</span>
+            </button>
+            <a
+              [routerLink]="['/repositorios', project.id, 'historias', 'nueva']"
+              [queryParams]="directorioId() ? { directorioId: directorioId() } : null"
+              class="inline-flex items-center gap-1.5 rounded border border-sky-300 bg-white px-3 py-1.5 text-xs font-semibold text-sky-700 transition-colors hover:bg-sky-50"
+            >
+              <span class="material-symbols-outlined text-base">add</span>
+              <span>Nueva historia</span>
+            </a>
+            <a
+              [routerLink]="['/repositorios', project.id, 'epicas', 'nueva']"
+              [queryParams]="directorioId() ? { directorioId: directorioId() } : null"
+              class="inline-flex items-center gap-1.5 rounded border border-purple-300 bg-white px-3 py-1.5 text-xs font-semibold text-purple-700 transition-colors hover:bg-purple-50"
+            >
+              <span class="material-symbols-outlined text-base">add</span>
+              <span>Nueva épica</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="rounded-lg border border-light-border-subtle bg-white">
+        <div
+          class="flex flex-col gap-3 border-b border-light-border-subtle p-4 sm:flex-row sm:items-center sm:justify-between"
+        >
+          <div class="flex items-center gap-1">
+            <button
+              type="button"
+              (click)="setFilter('all')"
+              class="rounded px-2.5 py-1 text-xs font-medium transition-colors"
+              [class.bg-neutral-950]="filter() === 'all'"
+              [class.text-white]="filter() === 'all'"
+              [class.text-slate-600]="filter() !== 'all'"
+            >
+              Todos
+            </button>
+            <button
+              type="button"
+              (click)="setFilter('directorio')"
+              class="rounded px-2.5 py-1 text-xs font-medium transition-colors"
+              [class.bg-neutral-950]="filter() === 'directorio'"
+              [class.text-white]="filter() === 'directorio'"
+              [class.text-slate-600]="filter() !== 'directorio'"
+            >
+              Directorios
+            </button>
+            <button
+              type="button"
+              (click)="setFilter('epica')"
+              class="rounded px-2.5 py-1 text-xs font-medium transition-colors"
+              [class.bg-neutral-950]="filter() === 'epica'"
+              [class.text-white]="filter() === 'epica'"
+              [class.text-slate-600]="filter() !== 'epica'"
+            >
+              Épicas
+            </button>
+            <button
+              type="button"
+              (click)="setFilter('historia')"
+              class="rounded px-2.5 py-1 text-xs font-medium transition-colors"
+              [class.bg-neutral-950]="filter() === 'historia'"
+              [class.text-white]="filter() === 'historia'"
+              [class.text-slate-600]="filter() !== 'historia'"
+            >
+              Historias
+            </button>
+          </div>
+
+          <div class="flex items-center gap-2 text-[11px] text-slate-400">
+            <span>{{ filtered().length }} archivos</span>
+            @if (searchTerm()) {
+              <button
+                type="button"
+                (click)="clearSearch()"
+                class="inline-flex items-center gap-0.5 font-medium text-slate-600 hover:text-slate-900"
+              >
+                <span class="material-symbols-outlined text-sm">close</span>
+                <span>Limpiar búsqueda</span>
+              </button>
+            }
+          </div>
+        </div>
+
+        @if (filtered().length === 0) {
+          <div class="p-10 text-center">
+            <span class="material-symbols-outlined text-3xl text-slate-300">description</span>
+            <p class="mt-2 text-sm font-medium text-slate-700">
+              No hay artefactos para mostrar
+            </p>
+            <p class="mt-1 text-xs text-slate-500">
+              Crea un directorio, una historia de usuario o una épica para comenzar el backlog.
+            </p>
+            <div class="mt-4 flex flex-wrap items-center justify-center gap-2">
+              <button
+                type="button"
+                (click)="openDirectorioModal()"
+                class="inline-flex items-center gap-1.5 rounded border border-slate-300 px-3 py-1.5 text-xs font-semibold text-slate-700 hover:bg-slate-50"
+              >
+                <span class="material-symbols-outlined text-base">add</span>
+                Nuevo directorio
+              </button>
+              <a
+                [routerLink]="['/repositorios', project.id, 'historias', 'nueva']"
+                [queryParams]="directorioId() ? { directorioId: directorioId() } : null"
+                class="inline-flex items-center gap-1.5 rounded border border-sky-300 px-3 py-1.5 text-xs font-semibold text-sky-700 hover:bg-sky-50"
+              >
+                <span class="material-symbols-outlined text-base">add</span>
+                Nueva historia
+              </a>
+              <a
+                [routerLink]="['/repositorios', project.id, 'epicas', 'nueva']"
+                [queryParams]="directorioId() ? { directorioId: directorioId() } : null"
+                class="inline-flex items-center gap-1.5 rounded border border-purple-300 px-3 py-1.5 text-xs font-semibold text-purple-700 hover:bg-purple-50"
+              >
+                <span class="material-symbols-outlined text-base">add</span>
+                Nueva épica
+              </a>
+            </div>
+          </div>
+        } @else {
+          <div class="grid grid-cols-1 gap-3 p-4 sm:grid-cols-2 xl:grid-cols-3">
+            @for (element of filtered(); track element.id) {
+              <article
+                class="rounded-lg border border-slate-200 p-3.5 transition-colors"
+                [class.border-purple-200]="element.tipo === 'EPICA'"
+                [class.border-sky-200]="element.tipo === 'HISTORIA'"
+                [class.cursor-pointer]="element.tipo === 'DIRECTORIO'"
+                (dblclick)="openDirectory(element)"
+              >
+                <div class="flex items-start gap-3">
+                  <div
+                    class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md"
+                    [class.bg-slate-100]="element.tipo === 'DIRECTORIO'"
+                    [class.text-slate-600]="element.tipo === 'DIRECTORIO'"
+                    [class.bg-purple-50]="element.tipo === 'EPICA'"
+                    [class.text-purple-600]="element.tipo === 'EPICA'"
+                    [class.bg-sky-50]="element.tipo === 'HISTORIA'"
+                    [class.text-sky-600]="element.tipo === 'HISTORIA'"
+                  >
+                    @if (element.tipo === 'DIRECTORIO') {
+                      <span class="material-symbols-outlined text-xl">folder</span>
+                    } @else {
+                      <span class="material-symbols-outlined text-xl">description</span>
+                    }
+                  </div>
+                  <div class="min-w-0 flex-1">
+                    <div class="flex flex-wrap items-center gap-1.5">
+                      <span
+                        class="rounded bg-slate-100 px-1.5 py-0.5 font-code text-[10px] font-bold text-slate-600"
+                        [class.bg-purple-100]="element.tipo === 'EPICA'"
+                        [class.text-purple-700]="element.tipo === 'EPICA'"
+                        [class.bg-sky-100]="element.tipo === 'HISTORIA'"
+                        [class.text-sky-700]="element.tipo === 'HISTORIA'"
+                      >
+                        @if (element.identificador) {
+                          {{ element.identificador }}
+                        } @else if (element.tipo === 'DIRECTORIO') {
+                          CARPETA
+                        } @else if (element.tipo === 'EPICA') {
+                          ÉPICA
+                        } @else {
+                          HISTORIA
+                        }
+                      </span>
+                      <span class="text-[10px] font-medium text-slate-500">
+                        @if (element.tipo === 'DIRECTORIO') {
+                          Directorio
+                        } @else if (element.tipo === 'EPICA') {
+                          Épica
+                        } @else {
+                          Historia
+                        }
+                      </span>
+                      @if (element.tipo === 'HISTORIA' && element.estado) {
+                        <span
+                          [class]="
+                            'rounded px-1.5 py-0.5 text-[10px] font-medium ' +
+                            estadoBadgeClass(element.estado)
+                          "
+                        >
+                          {{ element.estado }}
+                        </span>
+                      }
+                      @if (element.tipo === 'HISTORIA') {
+                        <span
+                          class="rounded bg-purple-50 px-1.5 py-0.5 text-[10px] font-medium text-purple-700"
+                          [title]="element.tituloEpica || 'Sin épica asociada'"
+                        >
+                          {{
+                            element.tituloEpica
+                              ? 'Épica: ' + element.tituloEpica
+                              : 'Sin épica asociada'
+                          }}
+                        </span>
+                      }
+                    </div>
+                    <h3 class="mt-1 truncate text-xs font-semibold text-slate-900">
+                      {{ element.titulo }}
+                    </h3>
+                    <p class="mt-0.5 line-clamp-2 text-[11px] text-slate-500">
+                      {{ element.descripcion || 'Sin descripción.' }}
+                    </p>
+                    @if (element.tipo !== 'HISTORIA' && element.tituloPadre) {
+                      <p class="mt-1 truncate text-[10px] text-slate-400">
+                        Carpeta: {{ element.tituloPadre }}
+                      </p>
+                    }
+                  </div>
+                </div>
+                <div class="mt-3 flex items-center gap-1 border-t border-slate-100 pt-2">
+                  @if (element.tipo === 'DIRECTORIO') {
+                    <button
+                      type="button"
+                      (click)="openDirectory(element)"
+                      class="inline-flex items-center gap-1 rounded px-2 py-1 text-[11px] font-semibold text-slate-700 transition-colors hover:bg-slate-100 hover:text-slate-900"
+                      title="Abrir directorio"
+                    >
+                      <span class="material-symbols-outlined text-sm">folder_open</span>
+                      <span>Abrir</span>
+                    </button>
+                  }
+                  <button
+                    type="button"
+                    (click)="openView(element)"
+                    class="inline-flex items-center gap-1 rounded px-2 py-1 text-[11px] font-semibold text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-900"
+                    title="Ver detalle"
+                  >
+                    <span class="material-symbols-outlined text-sm">visibility</span>
+                    <span>Ver</span>
+                  </button>
+                  <button
+                    type="button"
+                    (click)="openEdit(element)"
+                    class="inline-flex items-center gap-1 rounded px-2 py-1 text-[11px] font-semibold text-sky-700 transition-colors hover:bg-sky-50"
+                    title="Modificar elemento"
+                  >
+                    <span class="material-symbols-outlined text-sm">edit</span>
+                    <span>Modificar</span>
+                  </button>
+                  <button
+                    type="button"
+                    (click)="openDelete(element)"
+                    class="inline-flex items-center gap-1 rounded px-2 py-1 text-[11px] font-semibold text-red-600 transition-colors hover:bg-red-50"
+                    title="Eliminar elemento"
+                  >
+                    <span class="material-symbols-outlined text-sm">delete</span>
+                    <span>Eliminar</span>
+                  </button>
+                </div>
+              </article>
+            }
+          </div>
+        }
+      </section>
+    }
+  </main>
+
+  <aside
+    class="hidden w-72 shrink-0 flex-col overflow-y-auto border-l border-light-border-subtle bg-white xl:flex"
+  >
+    <div class="border-b border-light-border-subtle p-4">
+      <h2 class="text-sm font-semibold text-slate-900">Usuarios y permisos</h2>
+      <p class="mt-0.5 text-[11px] text-slate-500">Acceso, origen e historias por épica</p>
+    </div>
+
+    <div class="space-y-3 p-4">
+      @if (proyecto(); as project) {
+        <div class="rounded-lg border border-light-border-subtle p-3">
+          <div class="flex items-center gap-2.5">
+            <div
+              class="flex h-8 w-8 items-center justify-center rounded-full bg-neutral-900 text-[11px] font-bold text-white"
+            >
+              {{ ownerInitials() }}
+            </div>
+            <div class="min-w-0">
+              <p class="truncate text-xs font-semibold text-slate-900">
+                &#64;{{ project.propietario }}
+              </p>
+              <p class="text-[11px] text-slate-500">Propietario del repositorio</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-1.5 rounded-lg border border-light-border-subtle p-3 text-[11px]">
+          <div class="flex items-center justify-between">
+            <span class="text-slate-500">Tu acceso</span>
+            <span class="font-semibold text-slate-800">
+              {{ project.propio ? 'Propietario' : 'Participante' }}
+            </span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-slate-500">Origen</span>
+            <span class="font-semibold text-slate-800">
+              {{ project.propio ? 'Propio' : 'Compartido' }}
+            </span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-slate-500">Épicas / Historias</span>
+            <span class="font-code font-semibold text-slate-800">
+              {{ project.epicas }} / {{ project.historias }}
+            </span>
+          </div>
+        </div>
+
+        <div class="overflow-hidden rounded-lg border border-light-border-subtle">
+          <div class="flex items-center justify-between border-b border-light-border-subtle px-3 py-2">
+            <span class="text-[11px] font-semibold text-slate-700">Historias por épica</span>
+            <div class="flex items-center gap-1.5">
+              <span class="font-code text-[11px] text-slate-400"
+                >{{ resumenEpicas().length }} ép.</span
+              >
+              @if (resumenEpicas().length > 0) {
+                <button
+                  type="button"
+                  (click)="toggleAllEpics()"
+                  class="inline-flex items-center gap-0.5 rounded px-1 py-0.5 text-[10px] font-semibold text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-800"
+                  [title]="allEpicsExpanded() ? 'Contraer todas las épicas' : 'Expandir todas las épicas'"
+                >
+                  <span class="material-symbols-outlined text-sm">{{
+                    allEpicsExpanded() ? 'unfold_less' : 'unfold_more'
+                  }}</span>
+                  <span>{{ allEpicsExpanded() ? 'Contraer' : 'Expandir' }}</span>
+                </button>
+              }
+            </div>
+          </div>
+          <div class="max-h-72 space-y-2 overflow-y-auto p-2">
+            @for (epica of resumenEpicas(); track epica.id) {
+              <div class="rounded border border-light-border-subtle bg-slate-50/60 py-1">
+                <button
+                  type="button"
+                  (click)="toggleEpic(epica.id)"
+                  class="flex w-full items-center gap-1.5 px-2 py-1 text-left transition-colors hover:bg-purple-50/60"
+                  [attr.aria-expanded]="isEpicExpanded(epica.id)"
+                  [title]="'Directorio: ' + (epica.tituloPadre ?? 'raíz del repositorio')"
+                >
+                  @if (epica.totalHistorias > 0) {
+                    <span
+                      class="material-symbols-outlined shrink-0 text-base text-slate-400 transition-transform"
+                      [class.rotate-90]="isEpicExpanded(epica.id)"
+                      >chevron_right</span
+                    >
+                  } @else {
+                    <span class="w-4 shrink-0"></span>
+                  }
+                  <span class="material-symbols-outlined shrink-0 text-base text-purple-600"
+                    >description</span
+                  >
+                  <span class="min-w-0 flex-1 truncate text-[11px] font-semibold text-purple-800">
+                    {{ epica.titulo }}
+                  </span>
+                  <span
+                    class="shrink-0 rounded-full bg-purple-100 px-1.5 py-0.5 font-code text-[10px] font-semibold text-purple-700"
+                    [title]="epica.totalHistorias + ' historia(s) asociada(s)'"
+                  >
+                    {{ epica.totalHistorias }}
+                  </span>
+                </button>
+
+                @if (epica.totalHistorias === 0) {
+                  <p class="ml-8 pb-1 text-[10px] italic text-slate-400">
+                    Sin historias asociadas.
+                  </p>
+                } @else if (isEpicExpanded(epica.id)) {
+                  <ul class="ml-6 space-y-0.5 border-l border-purple-200 pb-0.5 pl-2">
+                    @for (historia of epica.historias; track historia.id) {
+                      <li
+                        class="relative flex items-center gap-1.5 py-0.5 before:absolute before:top-1/2 before:-left-2 before:h-px before:w-2 before:-translate-y-1/2 before:bg-purple-200"
+                        [title]="historia.titulo"
+                      >
+                        <span class="material-symbols-outlined shrink-0 text-sm text-sky-600"
+                          >description</span
+                        >
+                        <span
+                          class="min-w-0 truncate font-code text-[10px] font-medium text-sky-800"
+                        >
+                          {{ historia.identificador || ('#' + historia.id) }}
+                        </span>
+                      </li>
+                    }
+                  </ul>
+                }
+              </div>
+            } @empty {
+              <p class="p-2 text-[11px] text-slate-400">Sin épicas todavía.</p>
+            }
+          </div>
+        </div>
+
+        <p class="text-[11px] leading-relaxed text-slate-400">
+          La gestión de colaboradores y permisos se habilitará cuando existan los endpoints
+          de participantes.
+        </p>
+      }
+    </div>
+  </aside>
+</div>
+
+@if (modal() === 'directorio') {
+  <div
+    id="modal-directorio"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/50 p-4 backdrop-blur-xs"
+    (click)="closeModal()"
+  >
+    <div
+      class="w-full max-w-md overflow-hidden rounded-lg border border-light-border-subtle bg-white shadow-2xl"
+      (click)="$event.stopPropagation()"
+    >
+      <header
+        class="flex items-center justify-between border-b border-light-border-subtle bg-slate-50 px-5 py-4"
+      >
+        <div class="flex items-center gap-2.5">
+          <span class="material-symbols-outlined text-2xl text-slate-600">create_new_folder</span>
+          <div>
+            <h2 class="font-headline text-title-lg text-slate-900">Nuevo directorio</h2>
+            <p class="text-xs text-slate-500">
+              Se creará en {{ proyecto()?.titulo ?? 'este repositorio' }}.
+            </p>
+          </div>
+        </div>
+        <button type="button" (click)="closeModal()" class="text-slate-400 hover:text-slate-700">
+          <span class="material-symbols-outlined text-xl">close</span>
+        </button>
+      </header>
+
+      <form [formGroup]="directorioForm" (ngSubmit)="submitDirectorio()" class="space-y-4 p-5">
+        <div>
+          <label for="directorio-titulo" class="mb-1 block text-xs font-semibold text-slate-700">
+            Nombre del directorio *
+          </label>
+          <input
+            id="directorio-titulo"
+            type="text"
+            formControlName="titulo"
+            placeholder="ej: autenticacion"
+            class="w-full rounded border border-light-border-subtle bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-slate-500"
+          />
+          @if (directorioForm.controls.titulo.touched && directorioForm.controls.titulo.invalid) {
+            <p class="mt-1 text-[11px] text-red-600">
+              El nombre es obligatorio (máximo 150 caracteres).
+            </p>
+          }
+        </div>
+
+        <footer class="flex items-center justify-end gap-2 border-t border-light-border-subtle pt-4">
+          <button
+            type="button"
+            (click)="closeModal()"
+            class="rounded px-4 py-2 text-xs font-semibold text-slate-600 hover:bg-slate-100"
+          >
+            Cancelar
+          </button>
+          <button
+            type="submit"
+            [disabled]="saving()"
+            class="rounded bg-neutral-900 px-4 py-2 text-xs font-semibold text-white transition-colors hover:bg-neutral-800 disabled:cursor-not-allowed disabled:opacity-60"
+          >
+            {{ saving() ? 'Creando...' : 'Crear directorio' }}
+          </button>
+        </footer>
+      </form>
+    </div>
+  </div>
+}
+
+@if (modal() === 'ver') {
+  <div
+    class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/50 p-4 backdrop-blur-xs"
+    (click)="closeModal()"
+  >
+    <div
+      class="w-full max-w-lg overflow-hidden rounded-lg border border-light-border-subtle bg-white shadow-2xl"
+      (click)="$event.stopPropagation()"
+    >
+      <header
+        class="flex items-center justify-between border-b border-light-border-subtle bg-slate-50 px-5 py-4"
+      >
+        <div class="flex items-center gap-2.5">
+          <span class="material-symbols-outlined text-2xl text-slate-600">visibility</span>
+          <div>
+            <h2 class="font-headline text-title-lg text-slate-900">Detalle del elemento</h2>
+            <p class="text-xs text-slate-500">Consulta de solo lectura</p>
+          </div>
+        </div>
+        <button type="button" (click)="closeModal()" class="text-slate-400 hover:text-slate-700">
+          <span class="material-symbols-outlined text-xl">close</span>
+        </button>
+      </header>
+
+      @if (viewElement(); as detalle) {
+        <div class="max-h-[60vh] space-y-3 overflow-y-auto p-5 text-xs">
+          <div>
+            <span class="block font-semibold text-slate-500">Tipo</span>
+            <p class="text-slate-800">{{ detalle.tipo }}</p>
+          </div>
+          <div>
+            <span class="block font-semibold text-slate-500">Título</span>
+            <p class="text-slate-800">{{ detalle.titulo }}</p>
+          </div>
+          <div>
+            <span class="block font-semibold text-slate-500">Descripción</span>
+            <p class="whitespace-pre-wrap text-slate-800">
+              {{ detalle.descripcion || 'Sin descripción.' }}
+            </p>
+          </div>
+          @if (detalle.tipo === 'HISTORIA') {
+            <div>
+              <span class="block font-semibold text-slate-500">Identificador</span>
+              <p class="font-code text-slate-800">{{ detalle.identificador || '—' }}</p>
+            </div>
+            <div>
+              <span class="block font-semibold text-slate-500">Estado</span>
+              <span
+                [class]="
+                  'inline-flex rounded px-2 py-0.5 text-xs font-medium ' +
+                  estadoBadgeClass(detalle.estado)
+                "
+              >
+                {{ detalle.estado || '—' }}
+              </span>
+            </div>
+            <div>
+              <span class="block font-semibold text-slate-500">Reglas de negocio</span>
+              <p class="whitespace-pre-wrap font-code text-slate-800">
+                {{ detalle.reglasNegocio || '—' }}
+              </p>
+            </div>
+            <div>
+              <span class="block font-semibold text-slate-500">Criterios de aceptación</span>
+              <p class="whitespace-pre-wrap font-code text-slate-800">
+                {{ detalle.criteriosAceptacion || '—' }}
+              </p>
+            </div>
+            <div>
+              <span class="block font-semibold text-slate-500">Épica asociada</span>
+              <p class="text-slate-800">{{ detalle.tituloEpica || 'Sin épica asociada' }}</p>
+            </div>
+          }
+          @if (detalle.tipo === 'DIRECTORIO') {
+            <div>
+              <span class="block font-semibold text-slate-500">Color</span>
+              <p class="text-slate-800">{{ detalle.color || '—' }}</p>
+            </div>
+          }
+          <div>
+            <span class="block font-semibold text-slate-500">Última modificación</span>
+            <p class="font-code text-slate-800">{{ detalle.fechaUltModificacion }}</p>
+          </div>
+        </div>
+      }
+
+      <footer class="flex justify-end border-t border-light-border-subtle px-5 py-4">
+        <button
+          type="button"
+          (click)="closeModal()"
+          class="rounded bg-neutral-900 px-4 py-2 text-xs font-semibold text-white hover:bg-neutral-800"
+        >
+          Cerrar
+        </button>
+      </footer>
+    </div>
+  </div>
+}
+
+@if (modal() === 'editar' && selectedElement(); as element) {
+  <div
+    class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/50 p-4 backdrop-blur-xs"
+    (click)="closeModal()"
+  >
+    <div
+      class="max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-lg border border-light-border-subtle bg-white shadow-2xl"
+      (click)="$event.stopPropagation()"
+    >
+      <header
+        class="flex items-center justify-between border-b border-light-border-subtle bg-slate-50 px-5 py-4"
+      >
+        <div class="flex items-center gap-2.5">
+          <span class="material-symbols-outlined text-2xl text-sky-600">edit</span>
+          <div>
+            <h2 class="font-headline text-title-lg text-slate-900">Modificar elemento</h2>
+            <p class="text-xs text-slate-500">{{ element.titulo }}</p>
+          </div>
+        </div>
+        <button type="button" (click)="closeModal()" class="text-slate-400 hover:text-slate-700">
+          <span class="material-symbols-outlined text-xl">close</span>
+        </button>
+      </header>
+
+      <form [formGroup]="editForm" (ngSubmit)="submitEdit()" class="space-y-4 p-5">
+        <div>
+          <label for="editar-titulo" class="mb-1 block text-xs font-semibold text-slate-700">
+            Título *
+          </label>
+          <input
+            id="editar-titulo"
+            type="text"
+            formControlName="titulo"
+            class="w-full rounded border border-light-border-subtle bg-white px-3 py-2 text-sm text-slate-900 focus:outline-none focus:ring-1 focus:ring-sky-500"
+          />
+          @if (editForm.controls.titulo.touched && editForm.controls.titulo.invalid) {
+            <p class="mt-1 text-[11px] text-red-600">El título es obligatorio.</p>
+          }
+        </div>
+
+        <div>
+          <label for="editar-descripcion" class="mb-1 block text-xs font-semibold text-slate-700">
+            Descripción
+          </label>
+          <textarea
+            id="editar-descripcion"
+            rows="3"
+            formControlName="descripcion"
+            class="w-full resize-y rounded border border-light-border-subtle bg-white px-3 py-2 text-xs text-slate-800 focus:outline-none focus:ring-1 focus:ring-sky-500"
+          ></textarea>
+        </div>
+
+        @if (element.tipo === 'HISTORIA') {
+          <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            <div>
+              <label for="editar-identificador" class="mb-1 block text-xs font-semibold text-slate-700">
+                Identificador
+              </label>
+              <input
+                id="editar-identificador"
+                type="text"
+                formControlName="identificador"
+                class="w-full rounded border border-light-border-subtle bg-white px-3 py-2 text-sm text-slate-900 focus:outline-none focus:ring-1 focus:ring-sky-500"
+              />
+            </div>
+            <div>
+              <label for="editar-estado" class="mb-1 block text-xs font-semibold text-slate-700">
+                Estado
+              </label>
+              <select
+                id="editar-estado"
+                formControlName="estado"
+                class="w-full rounded border border-light-border-subtle bg-white px-3 py-2 text-sm text-slate-900 focus:outline-none focus:ring-1 focus:ring-sky-500"
+              >
+                <option value="en desarrollo">En desarrollo</option>
+                <option value="aprobada">Aprobada</option>
+                <option value="rechazada">Rechazada</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="editar-epica" class="mb-1 block text-xs font-semibold text-slate-700">
+              Épica asociada
+            </label>
+            <select
+              id="editar-epica"
+              formControlName="idEpicaPadre"
+              class="w-full rounded border border-light-border-subtle bg-white px-3 py-2 text-sm text-slate-900 focus:outline-none focus:ring-1 focus:ring-sky-500"
+            >
+              <option [ngValue]="null">Sin épica asociada</option>
+              @for (epica of epicas(); track epica.id) {
+                <option [ngValue]="epica.id">{{ epica.titulo }}</option>
+              }
+            </select>
+          </div>
+
+          <div>
+            <label for="editar-reglas" class="mb-1 block text-xs font-semibold text-slate-700">
+              Reglas de negocio
+            </label>
+            <textarea
+              id="editar-reglas"
+              rows="3"
+              formControlName="reglasNegocio"
+              class="w-full resize-y rounded border border-light-border-subtle bg-white px-3 py-2 font-code text-xs text-slate-800 focus:outline-none focus:ring-1 focus:ring-sky-500"
+            ></textarea>
+          </div>
+
+          <div>
+            <label for="editar-criterios" class="mb-1 block text-xs font-semibold text-slate-700">
+              Criterios de aceptación
+            </label>
+            <textarea
+              id="editar-criterios"
+              rows="5"
+              formControlName="criteriosAceptacion"
+              class="w-full resize-y rounded border border-light-border-subtle bg-white px-3 py-2 font-code text-xs text-slate-800 focus:outline-none focus:ring-1 focus:ring-sky-500"
+            ></textarea>
+          </div>
+        }
+
+        @if (element.tipo === 'DIRECTORIO') {
+          <div>
+            <label for="editar-color" class="mb-1 block text-xs font-semibold text-slate-700">
+              Color
+            </label>
+            <input
+              id="editar-color"
+              type="text"
+              formControlName="color"
+              placeholder="ej: #09090b"
+              class="w-full rounded border border-light-border-subtle bg-white px-3 py-2 text-sm text-slate-900 focus:outline-none focus:ring-1 focus:ring-sky-500"
+            />
+          </div>
+        }
+
+        <footer class="flex items-center justify-end gap-2 border-t border-light-border-subtle pt-4">
+          <button
+            type="button"
+            (click)="closeModal()"
+            class="rounded px-4 py-2 text-xs font-semibold text-slate-600 hover:bg-slate-100"
+          >
+            Cancelar
+          </button>
+          <button
+            type="submit"
+            [disabled]="saving()"
+            class="rounded bg-sky-600 px-4 py-2 text-xs font-semibold text-white transition-colors hover:bg-sky-700 disabled:cursor-not-allowed disabled:opacity-60"
+          >
+            {{ saving() ? 'Guardando...' : 'Guardar cambios' }}
+          </button>
+        </footer>
+      </form>
+    </div>
+  </div>
+}
+
+@if (modal() === 'eliminar' && selectedElement(); as element) {
+  <div
+    class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/50 p-4 backdrop-blur-xs"
+    (click)="closeModal()"
+  >
+    <div
+      class="w-full max-w-md overflow-hidden rounded-lg border border-light-border-subtle bg-white shadow-2xl"
+      (click)="$event.stopPropagation()"
+    >
+      <header
+        class="flex items-center gap-2.5 border-b border-light-border-subtle bg-red-50 px-5 py-4"
+      >
+        <span class="material-symbols-outlined text-2xl text-red-600">delete</span>
+        <h2 class="font-headline text-title-lg text-red-800">Eliminar elemento</h2>
+      </header>
+
+      <div class="p-5 text-xs text-slate-700">
+        <p>
+          ¿Eliminar <span class="font-semibold text-slate-900">{{ element.titulo }}</span>?
+        </p>
+        <p class="mt-1 text-slate-500">Esta acción no se puede deshacer.</p>
+      </div>
+
+      <footer class="flex items-center justify-end gap-2 border-t border-light-border-subtle px-5 py-4">
+        <button
+          type="button"
+          (click)="closeModal()"
+          class="rounded px-4 py-2 text-xs font-semibold text-slate-600 hover:bg-slate-100"
+        >
+          Cancelar
+        </button>
+        <button
+          type="button"
+          (click)="confirmDelete()"
+          [disabled]="saving()"
+          class="rounded bg-red-600 px-4 py-2 text-xs font-semibold text-white transition-colors hover:bg-red-700 disabled:cursor-not-allowed disabled:opacity-60"
+        >
+          {{ saving() ? 'Eliminando...' : 'Eliminar' }}
+        </button>
+      </footer>
+    </div>
+  </div>
+}
+
+<app-toast [message]="toastMessage()" [type]="toastType()" />

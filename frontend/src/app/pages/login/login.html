@@ -1,0 +1,210 @@
+<header
+  class="sticky top-0 z-20 flex h-16 w-full items-center justify-between border-b border-zinc-200/80 bg-white px-6 md:px-12"
+>
+  <div class="flex items-center gap-3">
+    <a routerLink="/" class="group flex items-center gap-3">
+      <div
+        class="flex h-8 w-8 items-center justify-center rounded bg-zinc-950 text-sm font-bold text-white shadow-xs transition-transform group-hover:scale-105 font-headline"
+      >
+        <span class="material-symbols-outlined text-lg">view_kanban</span>
+      </div>
+      <div class="flex items-baseline gap-2">
+        <span class="font-headline text-headline-sm font-bold tracking-tight text-zinc-950"
+          >AgileFlow</span
+        >
+        <span class="hidden font-code text-xs text-zinc-400 sm:inline">v2.4</span>
+      </div>
+    </a>
+  </div>
+
+  <div class="flex items-center gap-4 text-xs">
+    <span class="hidden text-zinc-500 sm:inline">¿No tienes una cuenta?</span>
+    <a
+      routerLink="/registro"
+      class="inline-flex items-center gap-1.5 rounded-lg border border-zinc-300 bg-white px-3 py-1.5 font-medium text-zinc-800 shadow-2xs transition-colors hover:border-zinc-900"
+    >
+      <span class="material-symbols-outlined text-base">person_add</span>
+      <span>Crear Cuenta</span>
+    </a>
+  </div>
+</header>
+
+<main class="flex flex-1 items-center justify-center p-4 sm:p-6 md:p-10">
+  <div
+    class="w-full max-w-md overflow-hidden rounded-2xl border border-zinc-200/90 bg-white shadow-xl transition-all duration-200"
+  >
+    <div class="flex gap-1 border-b border-zinc-200/80 bg-zinc-50/70 p-2">
+      <button
+        type="button"
+        class="flex flex-1 items-center justify-center gap-2 rounded-lg bg-zinc-950 px-3 py-2.5 font-label text-xs font-semibold text-white shadow-xs transition-all"
+      >
+        <span class="material-symbols-outlined text-base">login</span>
+        <span>Iniciar Sesión</span>
+      </button>
+      <a
+        routerLink="/registro"
+        class="flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2.5 font-label text-xs font-semibold text-zinc-600 transition-all hover:bg-zinc-100 hover:text-zinc-900"
+      >
+        <span class="material-symbols-outlined text-base">person_add</span>
+        <span>Crear Cuenta</span>
+      </a>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="space-y-4 p-6 sm:p-8">
+      <div class="space-y-1">
+        <h1 class="font-headline text-headline-sm font-bold text-zinc-950">Bienvenido de nuevo</h1>
+        <p class="text-xs text-zinc-500">
+          Ingresa tus credenciales para acceder a tus tableros y repositorios.
+        </p>
+      </div>
+
+      <div class="space-y-1.5">
+        <label for="login-username" class="block text-xs font-semibold text-zinc-700">
+          Nombre de usuario
+        </label>
+        <div class="relative flex items-center">
+          <span
+            class="material-symbols-outlined pointer-events-none absolute left-3 text-lg text-zinc-400"
+          >
+            person
+          </span>
+          <input
+            id="login-username"
+            name="username"
+            type="text"
+            formControlName="username"
+            required
+            placeholder="ej. scampos / techlead"
+            autocomplete="username"
+            class="w-full rounded-lg border border-zinc-300 bg-white py-2.5 pl-9 pr-3.5 text-xs text-zinc-900 transition-colors placeholder:text-zinc-400 focus:border-red-600 focus:outline-none focus:ring-2 focus:ring-red-600"
+          />
+        </div>
+        @if (form.controls.username.touched && form.controls.username.invalid) {
+          <p class="text-[11px] text-red-600">
+            El nombre de usuario es obligatorio y no puede superar los 100 caracteres.
+          </p>
+        }
+      </div>
+
+      <div class="space-y-1.5">
+        <div class="flex items-center justify-between">
+          <label for="login-password" class="block text-xs font-semibold text-zinc-700">
+            Contraseña
+          </label>
+          <button
+            type="button"
+            (click)="notifyRecovery()"
+            class="text-[11px] font-medium text-zinc-500 transition-colors hover:text-red-600"
+          >
+            ¿Olvidaste tu contraseña?
+          </button>
+        </div>
+        <div class="relative flex items-center">
+          <span
+            class="material-symbols-outlined pointer-events-none absolute left-3 text-lg text-zinc-400"
+          >
+            lock
+          </span>
+          <input
+            id="login-password"
+            name="password"
+            [type]="showPassword() ? 'text' : 'password'"
+            formControlName="password"
+            required
+            placeholder="••••••••••••"
+            autocomplete="current-password"
+            class="w-full rounded-lg border border-zinc-300 bg-white py-2.5 pl-9 pr-10 text-xs text-zinc-900 transition-colors placeholder:text-zinc-400 focus:border-red-600 focus:outline-none focus:ring-2 focus:ring-red-600"
+          />
+          <button
+            type="button"
+            (click)="togglePassword()"
+            class="absolute right-2.5 p-1 text-zinc-400 transition-colors hover:text-zinc-700"
+            title="Mostrar / ocultar contraseña"
+          >
+            <span class="material-symbols-outlined text-lg">
+              {{ showPassword() ? 'visibility_off' : 'visibility' }}
+            </span>
+          </button>
+        </div>
+        @if (form.controls.password.touched && form.controls.password.invalid) {
+          <p class="text-[11px] text-red-600">La contraseña es obligatoria.</p>
+        }
+      </div>
+
+      <div class="flex items-center gap-2 pt-0.5">
+        <input
+          id="remember-me"
+          type="checkbox"
+          formControlName="rememberMe"
+          class="h-4 w-4 rounded border-zinc-300 text-red-600 focus:ring-red-500 focus:ring-offset-0"
+        />
+        <label for="remember-me" class="cursor-pointer select-none text-xs text-zinc-600">
+          Recordar esta sesión en este navegador
+        </label>
+      </div>
+
+      <div class="pt-2">
+        <button
+          type="submit"
+          [disabled]="loading()"
+          class="group flex w-full items-center justify-center gap-2 rounded-lg bg-red-600 px-4 py-2.5 font-label text-xs font-semibold text-white shadow-sm transition-colors hover:bg-red-700 active:bg-red-800 disabled:cursor-not-allowed disabled:opacity-60"
+        >
+          <span>{{ loading() ? 'Accediendo...' : 'Acceder a AgileFlow' }}</span>
+          <span
+            class="material-symbols-outlined text-base transition-transform group-hover:translate-x-0.5"
+          >
+            arrow_forward
+          </span>
+        </button>
+      </div>
+
+      @if (googleConfigured) {
+        <div class="flex items-center gap-3 pt-1">
+          <span class="h-px flex-1 bg-zinc-200"></span>
+          <span class="text-[11px] font-medium uppercase tracking-wide text-zinc-400">o</span>
+          <span class="h-px flex-1 bg-zinc-200"></span>
+        </div>
+
+        <div class="flex flex-col items-center gap-2">
+          <!-- Google Identity Services dibuja aquí su botón oficial. -->
+          <div #googleButton class="flex w-full justify-center"></div>
+          @if (googleLoading()) {
+            <p class="text-center text-[11px] text-zinc-500">
+              Verificando tu cuenta de Google...
+            </p>
+          }
+        </div>
+      } @else {
+        <p
+          class="rounded-lg border border-dashed border-zinc-300 bg-zinc-50 px-3 py-2 text-center text-[11px] text-zinc-500"
+        >
+          El inicio de sesión con Google no está configurado (falta el Client ID).
+        </p>
+      }
+
+      <div class="border-t border-zinc-100 pt-3 text-center">
+        <p class="text-xs text-zinc-500">
+          ¿No tienes una cuenta aún?
+          <a
+            routerLink="/registro"
+            class="ml-1 font-bold text-zinc-950 underline transition-colors hover:text-red-600"
+          >
+            Regístrate aquí
+          </a>
+        </p>
+      </div>
+    </form>
+
+    <div
+      class="flex items-center justify-between border-t border-zinc-200/80 bg-zinc-50/90 px-6 py-3 text-[11px] text-zinc-500"
+    >
+      <span class="flex items-center gap-1.5 font-medium">
+        <span class="material-symbols-outlined text-sm text-zinc-600">verified_user</span>
+        <span>Autenticación cifrada para equipos ágiles</span>
+      </span>
+      <span class="font-code text-zinc-400">Scrum • Kanban</span>
+    </div>
+  </div>
+</main>
+
+<app-toast [message]="toastMessage()" [type]="toastType()" />

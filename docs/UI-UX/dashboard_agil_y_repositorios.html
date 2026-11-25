@@ -1,0 +1,1516 @@
+<!DOCTYPE html><html lang="es" class="h-full"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Ágil y Repositorios — AgileFlow</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'accent': '#DC2626',
+        'btn-primary': '#DC2626',
+        'btn-hover': '#B91C1C',
+        'success': '#16A34A',
+        'warning': '#D97706',
+        'error': '#DC2626',
+        'info': '#2563EB',
+        'epic': '#6D28D9',
+        'story': '#2563EB',
+        'subrepo': '#3F3F46',
+        'light-primary': '#09090B',
+        'light-on-primary': '#FFFFFF',
+        'light-accent': '#DC2626',
+        'light-surface': '#FAFAFA',
+        'light-on-surface': '#09090B',
+        'light-surface-card': '#FFFFFF',
+        'light-surface-subtle': '#F4F4F5',
+        'light-border-subtle': '#E4E4E7',
+        'dark-primary': '#09090B',
+        'dark-on-primary': '#FFFFFF',
+        'dark-accent': '#EF4444',
+        'dark-surface': '#09090B',
+        'dark-on-surface': '#FAFAFA',
+        'dark-surface-card': '#18181B',
+        'dark-surface-subtle': '#27272A',
+        'dark-border-subtle': '#3F3F46',
+      },
+      borderRadius: {
+        'sm': '4px',
+        'DEFAULT': '8px',
+        'md': '12px',
+        'lg': '16px',
+        'xl': '20px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '48px',
+        'page-margin': '24px',
+      },
+      fontFamily: {
+        'display': ['"Red Hat Text"', 'sans-serif'],
+        'headline': ['"Red Hat Text"', 'sans-serif'],
+        'title': ['"Instrument Sans"', 'sans-serif'],
+        'body': ['"Instrument Sans"', 'sans-serif'],
+        'label': ['"Instrument Sans"', 'sans-serif'],
+        'code': ['"Red Hat Mono"', 'monospace'],
+      },
+      fontSize: {
+        'display-lg': ['36px', { lineHeight: '44px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'display-lg-mobile': ['28px', { lineHeight: '34px', letterSpacing: '-0.25px', fontWeight: '700' }],
+        'headline-lg': ['28px', { lineHeight: '36px', letterSpacing: '-0.25px', fontWeight: '700' }],
+        'headline-lg-mobile': ['22px', { lineHeight: '28px', fontWeight: '700' }],
+        'headline-md': ['22px', { lineHeight: '28px', fontWeight: '600' }],
+        'headline-sm': ['18px', { lineHeight: '24px', fontWeight: '600' }],
+        'title-lg': ['16px', { lineHeight: '22px', fontWeight: '600' }],
+        'title-md': ['14px', { lineHeight: '20px', fontWeight: '600' }],
+        'body-lg': ['16px', { lineHeight: '24px', fontWeight: '400' }],
+        'body-md': ['14px', { lineHeight: '20px', fontWeight: '400' }],
+        'body-sm': ['12px', { lineHeight: '16px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '20px', fontWeight: '600' }],
+        'label-md': ['12px', { lineHeight: '16px', fontWeight: '500' }],
+        'label-sm': ['11px', { lineHeight: '14px', fontWeight: '500' }],
+        'code-md': ['13px', { lineHeight: '18px', fontWeight: '500' }],
+      },
+      transitionDuration: {
+        'state-change': '120ms',
+        'drawer-slide': '220ms',
+        'modal-enter': '200ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'drawer-slide': '0ms',
+        'modal-enter': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'cubic-bezier(0.4, 0, 0.2, 1)',
+        'drawer-slide': 'cubic-bezier(0.16, 1, 0.3, 1)',
+        'modal-enter': 'cubic-bezier(0.16, 1, 0.3, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&amp;family=Red+Hat+Mono:wght@500;600&amp;family=Red+Hat+Text:wght@600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>
+    .material-symbols-outlined { display: inline-flex; align-items: center; justify-content: center; line-height: 1 !important; box-sizing: border-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }
+    /* Scrollbar minimalista para chat y tablas */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    /* Estilo limpio para carpetas Google Drive */
+    .drive-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(220px, 1fr));
+      gap: 12px;
+      width: 100%;
+    }
+    .drive-card {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      background: #f8fafc;
+      transition: all 0.15s ease;
+      cursor: pointer;
+      overflow: hidden;
+    }
+    .drive-card:hover {
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+    }
+    .drive-card.active {
+      background: #f0fdfa;
+      border-color: #5eead4;
+      box-shadow: 0 0 0 2px rgba(20, 184, 166, 0.2);
+    }
+    .drive-icon {
+      width: 36px;
+      height: 36px;
+      min-width: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+    .drive-title {
+      font-size: 13px !important;
+      font-weight: 600 !important;
+      color: #0f172a !important;
+      line-height: 1.2 !important;
+      white-space: nowrap !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      max-width: 150px;
+    }
+    .drive-subtitle {
+      font-size: 11px !important;
+      color: #64748b !important;
+      line-height: 1.2 !important;
+      white-space: nowrap !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      margin-top: 2px !important;
+      max-width: 150px;
+    }
+  </style>
+</head>
+<body class="bg-light-surface text-light-on-surface font-body min-h-[1024px] flex flex-col antialiased" data-stitch-vh="min-h-[1024px]===min-h-screen">
+
+  <!-- TOP HEADER / APP SHELL -->
+  <header class="bg-light-surface-card border-b border-light-border-subtle h-16 px-6 flex items-center justify-between sticky top-0 z-30">
+    <!-- Brand & Workspace context -->
+    <div class="flex items-center gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded bg-neutral-950 text-white flex items-center justify-center font-headline font-bold text-headline-sm shadow-sm">
+          <span class="material-symbols-outlined text-xl">view_kanban</span>
+        </div>
+        <div>
+          <span class="font-headline text-headline-sm text-neutral-950 leading-none tracking-tight block">AgileFlow</span>
+          <span class="text-label-sm text-slate-500 font-label">Scrum &amp; Kanban Workspace</span>
+        </div>
+      </div>
+
+      <!-- Quick workspace switcher -->
+      <div class="hidden md:flex items-center gap-2 pl-4 border-l border-light-border-subtle">
+        <button type="button" class="flex items-center gap-2 px-3 py-1.5 rounded hover:bg-light-surface-subtle text-body-sm text-slate-700 transition-colors">
+          <span class="w-2 h-2 rounded-full bg-red-600"></span>
+          <span class="font-medium">Equipo Fintech Core</span>
+          <span class="material-symbols-outlined text-slate-400 text-lg">expand_more</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Global search & Actions -->
+    <div class="flex items-center gap-4">
+      <!-- Searchbar -->
+      <div class="relative w-64 md:w-80">
+        <span class="material-symbols-outlined absolute left-3 top-2.5 text-slate-400 text-lg pointer-events-none">search</span>
+        <input type="search" placeholder="Buscar repositorios, épicas (EP-*) o historias..." class="w-full pl-9 pr-8 py-1.5 bg-light-surface-subtle border border-light-border-subtle rounded font-body text-body-sm text-light-on-surface placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:bg-white transition-all">
+        <span class="absolute right-2.5 top-2 font-code text-[10px] text-slate-400 border border-slate-200 px-1 py-0.5 rounded">⌘K</span>
+      </div>
+
+      <!-- Creation quick trigger dropdown -->
+      <div class="relative">
+        <button id="btn-quick-create" type="button" onclick="toggleCreateMenu()" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-red-600 text-white rounded font-label text-label-md hover:bg-red-700 active:bg-red-800 transition-colors shadow-sm">
+          <span class="material-symbols-outlined text-lg">add</span>
+          <span>Crear</span>
+          <span class="material-symbols-outlined text-base">expand_more</span>
+        </button>
+
+        <!-- Dropdown menu for agile creations -->
+        <div id="create-menu" class="hidden absolute right-0 mt-2 w-64 bg-white border border-light-border-subtle rounded-md shadow-lg py-1 z-50">
+          <button type="button" onclick="openModal(&#39;modal-repo&#39;); toggleCreateMenu()" class="w-full px-4 py-2 text-left flex items-start gap-3 hover:bg-slate-50 transition-colors">
+            <span class="material-symbols-outlined text-teal-600 mt-0.5">create_new_folder</span>
+            <div>
+              <p class="font-label text-label-md text-slate-800">Nuevo Repositorio</p>
+              <p class="text-body-sm text-slate-500">Módulo o proyecto principal</p>
+            </div>
+          </button>
+          <button type="button" onclick="openModal(&#39;modal-epic&#39;); toggleCreateMenu()" class="w-full px-4 py-2 text-left flex items-start gap-3 hover:bg-slate-50 transition-colors">
+            <span class="material-symbols-outlined text-purple-600 mt-0.5">bookmark_add</span>
+            <div>
+              <p class="font-label text-label-md text-slate-800">Nueva Épica (Plantilla)</p>
+              <p class="text-body-sm text-slate-500">Objetivo macro y valor de negocio</p>
+            </div>
+          </button>
+          <button type="button" onclick="openModal(&#39;modal-story&#39;); toggleCreateMenu()" class="w-full px-4 py-2 text-left flex items-start gap-3 hover:bg-slate-50 transition-colors">
+            <span class="material-symbols-outlined text-sky-600 mt-0.5">assignment_add</span>
+            <div>
+              <p class="font-label text-label-md text-slate-800">Historia de Usuario (Plantilla)</p>
+              <p class="text-body-sm text-slate-500">Formato Como/Quiero/Para e INVEST</p>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Chat Drawer Toggle Button with Unread Badge -->
+      <button id="btn-chat-toggle" type="button" onclick="toggleChatDrawer()" class="relative p-2 rounded text-slate-600 hover:text-light-on-surface hover:bg-light-surface-subtle transition-colors" title="Abrir Chat de Equipos y Usuarios">
+        <span class="material-symbols-outlined text-2xl">forum</span>
+        <span class="absolute top-1.5 right-1.5 w-2.5 h-2.5 bg-accent rounded-full ring-2 ring-white"></span>
+      </button>
+
+      <!-- Profile Menu Trigger -->
+      <div class="relative">
+        <button id="btn-profile" type="button" onclick="toggleProfileMenu()" class="flex items-center gap-2 pl-2 focus:outline-none">
+          <div class="w-9 h-9 rounded-full bg-slate-700 text-white flex items-center justify-center font-headline text-label-md font-bold ring-2 ring-slate-200">
+            SC
+          </div>
+          <div class="hidden lg:block text-left">
+            <span class="block font-label text-label-md text-slate-800 leading-tight">Sofía Campos</span>
+            <span class="block text-body-sm text-slate-500 leading-none">Scrum Master / Lead</span>
+          </div>
+          <span class="material-symbols-outlined text-slate-400 text-lg">arrow_drop_down</span>
+        </button>
+
+        <!-- Profile Dropdown -->
+        <div id="profile-menu" class="hidden absolute right-0 mt-2 w-64 bg-white border border-light-border-subtle rounded-md shadow-xl py-2 z-50">
+          <div class="px-4 py-2 border-b border-light-border-subtle">
+            <p class="font-label text-label-md text-slate-900 font-bold">Sofía Campos</p>
+            <p class="text-body-sm text-slate-500">sofia.campos@agileflow.dev</p>
+            <span class="inline-block mt-1 font-code text-[11px] bg-teal-50 text-light-primary px-2 py-0.5 rounded font-medium">Scrum Master Certified (PSM II)</span>
+          </div>
+          <div class="py-1">
+            <a href="#perfil" class="flex items-center gap-2.5 px-4 py-2 text-body-md text-slate-700 hover:bg-slate-50">
+              <span class="material-symbols-outlined text-lg text-slate-500">person</span>
+              <span>Mi Perfil &amp; Preferencias</span>
+            </a>
+            <a href="#estimaciones" class="flex items-center gap-2.5 px-4 py-2 text-body-md text-slate-700 hover:bg-slate-50">
+              <span class="material-symbols-outlined text-lg text-slate-500">tune</span>
+              <span>Parámetros de Estimación (Fibonacci)</span>
+            </a>
+            <a href="#notificaciones" class="flex items-center gap-2.5 px-4 py-2 text-body-md text-slate-700 hover:bg-slate-50">
+              <span class="material-symbols-outlined text-lg text-slate-500">notifications</span>
+              <span>Notificaciones de Backlog</span>
+            </a>
+          </div>
+          <div class="pt-1 border-t border-light-border-subtle">
+            <a href="../auth/Auth.html" class="flex items-center gap-2.5 px-4 py-2 text-body-md text-red-600 hover:bg-red-50 transition-colors">
+              <span class="material-symbols-outlined text-lg">logout</span>
+              <span>Cerrar Sesión</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN WRAPPER: SIDEBAR + CONTENT + LATERAL CHAT -->
+  <div class="flex-1 flex overflow-hidden">
+
+    <!-- PRIMARY APP NAVIGATION (SIDEBAR) -->
+    <aside class="w-60 bg-light-surface-card border-r border-light-border-subtle flex flex-col justify-between shrink-0 hidden md:flex">
+      <div class="p-4 space-y-6">
+        <!-- Main sections -->
+        <div>
+          <span class="text-label-sm font-label text-slate-400 uppercase tracking-wider px-3 mb-2 block">Gestión del Flujo</span>
+          <nav class="space-y-1">
+            <a href="#repos" class="flex items-center gap-3 px-3 py-2 rounded bg-neutral-950 text-white font-label text-label-md font-semibold shadow-2xs">
+              <span class="material-symbols-outlined text-xl">folder_special</span>
+              <span>Repositorios</span>
+              <span class="ml-auto font-code text-xs bg-red-600 text-white px-2 py-0.2 rounded-full font-bold">17</span>
+            </a>
+            <a href="#sprints" class="flex items-center gap-3 px-3 py-2 rounded text-slate-700 hover:bg-slate-100 font-label text-label-md transition-colors">
+              <span class="material-symbols-outlined text-xl text-slate-500">sprint</span>
+              <span>Sprint Activo #4</span>
+            </a>
+            <a href="#backlog" class="flex items-center gap-3 px-3 py-2 rounded text-slate-700 hover:bg-slate-100 font-label text-label-md transition-colors">
+              <span class="material-symbols-outlined text-xl text-slate-500">layers</span>
+              <span>Product Backlog</span>
+            </a>
+            <a href="#epicas" class="flex items-center gap-3 px-3 py-2 rounded text-slate-700 hover:bg-slate-100 font-label text-label-md transition-colors">
+              <span class="material-symbols-outlined text-xl text-purple-700">description</span>
+              <span>Épicas</span>
+            </a>
+            <a href="#historias" class="flex items-center gap-3 px-3 py-2 rounded text-slate-700 hover:bg-slate-100 font-label text-label-md transition-colors">
+              <span class="material-symbols-outlined text-xl text-blue-700">description</span>
+              <span>Historias de Usuario</span>
+            </a>
+          </nav>
+        </div>
+
+        <!-- Agile Metrics summary widget (Minimal Style) -->
+        <div class="bg-zinc-50 p-3.5 rounded border border-zinc-200">
+          <div class="flex items-center justify-between mb-2">
+            <span class="font-label text-label-sm text-zinc-900 font-semibold">Sprint 4 en Curso</span>
+            <span class="font-code text-label-sm text-zinc-800 bg-zinc-200 px-2 py-0.2 rounded font-bold">Día 6/10</span>
+          </div>
+          <div class="w-full bg-zinc-200 h-1.5 rounded-full overflow-hidden mb-2">
+            <div class="bg-zinc-900 h-full rounded-full" style="width: 68%;"></div>
+          </div>
+          <div class="flex justify-between text-body-sm text-zinc-500">
+            <span>Velocidad: 42 pts</span>
+            <span class="font-semibold text-zinc-800">68% Done</span>
+          </div>
+        </div>
+
+        <!-- Shared Teams list -->
+        <div>
+          <span class="text-label-sm font-label text-slate-400 uppercase tracking-wider px-3 mb-2 block">Equipos &amp; Grupos</span>
+          <div class="space-y-1">
+            <button type="button" onclick="selectChatChannel(&#39;devs-frontend&#39;)" class="w-full flex items-center gap-2.5 px-3 py-1.5 rounded text-left text-body-sm text-slate-600 hover:bg-slate-100 transition-colors">
+              <span class="w-2 h-2 rounded-full bg-zinc-800"></span>
+              <span class="truncate">Frontend Guild</span>
+            </button>
+            <button type="button" onclick="selectChatChannel(&#39;backend-microservices&#39;)" class="w-full flex items-center gap-2.5 px-3 py-1.5 rounded text-left text-body-sm text-slate-600 hover:bg-slate-100 transition-colors">
+              <span class="w-2 h-2 rounded-full bg-zinc-600"></span>
+              <span class="truncate">Core Backend Team</span>
+            </button>
+            <button type="button" onclick="selectChatChannel(&#39;qa-automation&#39;)" class="w-full flex items-center gap-2.5 px-3 py-1.5 rounded text-left text-body-sm text-slate-600 hover:bg-slate-100 transition-colors">
+              <span class="w-2 h-2 rounded-full bg-zinc-400"></span>
+              <span class="truncate">QA &amp; Sprint Automation</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick user status block -->
+      <div class="p-3 border-t border-light-border-subtle bg-slate-50/50 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-red-600"></span>
+          <span class="text-body-sm text-slate-600">Modo Standup Ágil</span>
+        </div>
+        <button type="button" class="text-slate-400 hover:text-slate-600" title="Configuración de espacio">
+          <span class="material-symbols-outlined text-lg">settings</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- CENTER MAIN VIEWPORT: REPOSITORY DASHBOARD -->
+    <main class="flex-1 overflow-y-auto p-6 md:p-8 space-y-6">
+
+      <!-- HERO / DASHBOARD TITLE & METRICS BAR -->
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <div class="flex items-center gap-2 text-body-sm text-slate-500 mb-1">
+            <span>Workspace</span>
+            <span class="material-symbols-outlined text-sm">chevron_right</span>
+            <span class="text-light-primary font-medium">Gestión de Repositorios Ágiles</span>
+          </div>
+          <h1 class="font-headline text-headline-lg text-light-on-surface">Panel de Repositorios</h1>
+          <p class="text-body-md text-slate-500 max-w-2xl">
+            Control centralizado de arquitectura, división modular en sub-repositorios, epicas estratégicas e historias de usuario con estimaciones.
+          </p>
+        </div>
+
+        <!-- Quick actions -->
+        <div class="flex items-center gap-3">
+          <button type="button" onclick="openModal(&#39;modal-epic&#39;)" class="inline-flex items-center gap-2 px-3.5 py-2 bg-light-surface-card border border-light-border-subtle text-light-on-surface hover:bg-light-surface-subtle rounded font-label text-label-md shadow-sm transition-colors">
+            <span class="material-symbols-outlined text-purple-600 text-lg">bookmark</span>
+            <span>+ Plantilla Épica</span>
+          </button>
+
+          <button type="button" onclick="openModal(&#39;modal-story&#39;)" class="inline-flex items-center gap-2 px-3.5 py-2 bg-light-surface-card border border-light-border-subtle text-light-on-surface hover:bg-light-surface-subtle rounded font-label text-label-md shadow-sm transition-colors">
+            <span class="material-symbols-outlined text-sky-600 text-lg">assignment</span>
+            <span>+ Plantilla Historia</span>
+          </button>
+
+          <button type="button" onclick="openModal(&#39;modal-repo&#39;)" class="inline-flex items-center gap-2 px-4 py-2 bg-red-600 text-white hover:bg-red-700 active:bg-red-800 rounded font-label text-label-md shadow-sm transition-colors">
+            <span class="material-symbols-outlined text-lg">create_new_folder</span>
+            <span>Nuevo Repositorio</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- KEY AGILE KPI PILLS -->
+      <section class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div class="bg-light-surface-card border border-light-border-subtle p-4 rounded-md shadow-sm">
+          <div class="flex items-center justify-between text-slate-500 mb-1">
+            <span class="text-label-sm font-label">Repos Propios</span>
+            <span class="material-symbols-outlined text-neutral-800">folder_open</span>
+          </div>
+          <p class="font-headline text-headline-md text-slate-900">12</p>
+          <span class="text-body-sm text-slate-500">4 con sub-repositorios</span>
+        </div>
+
+        <div class="bg-light-surface-card border border-light-border-subtle p-4 rounded-md shadow-sm">
+          <div class="flex items-center justify-between text-slate-500 mb-1">
+            <span class="text-label-sm font-label">Compartidos</span>
+            <span class="material-symbols-outlined text-sky-600">share</span>
+          </div>
+          <p class="font-headline text-headline-md text-slate-900">5</p>
+          <span class="text-body-sm text-slate-500">3 equipos externos</span>
+        </div>
+
+        <div class="bg-light-surface-card border border-light-border-subtle p-4 rounded-md shadow-sm">
+          <div class="flex items-center justify-between text-slate-500 mb-1">
+            <span class="text-label-sm font-label">Épicas Activas</span>
+            <span class="material-symbols-outlined text-purple-600">description</span>
+          </div>
+          <p class="font-headline text-headline-md text-slate-900">9</p>
+          <span class="text-body-sm text-purple-700 font-medium">85% asignadas a sprint</span>
+        </div>
+
+        <div class="bg-light-surface-card border border-light-border-subtle p-4 rounded-md shadow-sm">
+          <div class="flex items-center justify-between text-slate-500 mb-1">
+            <span class="text-label-sm font-label">Historias Backlog</span>
+            <span class="material-symbols-outlined text-sky-600">description</span>
+          </div>
+          <p class="font-headline text-headline-md text-slate-900">48</p>
+          <span class="text-body-sm text-slate-500">184 Story Points</span>
+        </div>
+      </section>
+
+      <!-- TABS: MIS REPOSITORIOS VS REPOSITORIOS COMPARTIDOS -->
+      <section class="bg-light-surface-card border border-light-border-subtle rounded-md shadow-sm p-6">
+
+        <!-- Tab Header -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 pb-3 mb-5">
+          <div role="tablist" aria-label="Secciones de repositorios" class="flex items-center gap-2">
+            <button id="tab-btn-created" role="tab" aria-selected="true" onclick="switchRepoTab(&#39;created&#39;)" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-sm font-medium bg-neutral-950 text-white shadow-2xs transition-all">
+              <span class="material-symbols-outlined text-base">folder</span>
+              <span>Mis Carpetas</span>
+              <span class="text-xs bg-red-600 text-white px-2 py-0.2 rounded-full font-bold">12</span>
+            </button>
+
+            <button id="tab-btn-shared" role="tab" aria-selected="false" onclick="switchRepoTab(&#39;shared&#39;)" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-all">
+              <span class="material-symbols-outlined text-base">folder_shared</span>
+              <span>Compartido conmigo</span>
+              <span class="text-xs bg-slate-200 text-slate-700 px-2 py-0.2 rounded-full">5</span>
+            </button>
+          </div>
+
+          <!-- Filter & View modes -->
+          <div class="flex items-center gap-2 text-slate-500 text-xs">
+            <button type="button" class="p-1.5 rounded hover:bg-slate-100 text-slate-700" title="Vista cuadrícula">
+              <span class="material-symbols-outlined text-lg">grid_view</span>
+            </button>
+            <button type="button" class="p-1.5 rounded hover:bg-slate-100 text-slate-400" title="Vista lista">
+              <span class="material-symbols-outlined text-lg">format_list_bulleted</span>
+            </button>
+            <span class="text-slate-300">|</span>
+            <span class="text-slate-500">Última modificación</span>
+          </div>
+        </div>
+
+        <!-- TAB CONTENT 1: MIS REPOSITORIOS (ESTILO CARPETAS GOOGLE DRIVE) -->
+        <div id="tab-panel-created" class="space-y-6">
+
+          <!-- Google Drive Style Folders Section -->
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Carpetas principales</span>
+              <span class="text-xs text-slate-400">3 directorios</span>
+            </div>
+
+            <!-- FOLDERS GRID (GOOGLE DRIVE MINIMAL STYLE) -->
+            <div class="drive-grid">
+
+              <!-- Folder 1: agile-core-platform (Selected / Active) -->
+              <div id="folder-card-core" onclick="toggleFolderDetails(&#39;core&#39;)" ondblclick="window.location.href=&#39;../repo-detail/RepoDetail.html&#39;" title="Doble clic para abrir contenido y permisos" class="drive-card active group cursor-pointer">
+                <div style="display: flex; align-items: center; gap: 12px; min-width: 0; flex: 1;">
+                  <div class="drive-icon" style="background-color: #09090b; color: #ffffff;">
+                    <span class="material-symbols-outlined" style="font-size: 22px;">folder</span>
+                  </div>
+                  <div style="min-width: 0; flex: 1;">
+                    <p class="drive-title">agile-core-platform</p>
+                    <p class="drive-subtitle">3 sub-carpetas • <span style="color: #dc2626; font-weight: 600;">Sprint 4</span></p>
+                  </div>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 4px; flex-shrink: 0; margin-left: 8px;">
+                  <button type="button" onclick="event.stopPropagation(); openModalSubrepo(&#39;agile-core-platform&#39;)" class="p-1 rounded text-slate-400 hover:text-slate-900 hover:bg-slate-100 transition-colors" title="Dividir en sub-carpeta">
+                    <span class="material-symbols-outlined text-base">create_new_folder</span>
+                  </button>
+                  <button type="button" onclick="event.stopPropagation(); openModalStoryWithContext(&#39;agile-core-platform&#39;)" class="p-1 rounded text-slate-400 hover:text-slate-900 hover:bg-slate-100 transition-colors" title="+ Historia">
+                    <span class="material-symbols-outlined text-base">add_task</span>
+                  </button>
+                  <a href="../repo-detail/RepoDetail.html" onclick="event.stopPropagation()" class="p-1 rounded text-neutral-900 hover:text-red-600 hover:bg-slate-100 transition-colors" title="Abrir repositorio completo">
+                    <span class="material-symbols-outlined text-base">open_in_new</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Folder 2: mobile-agile-assistant -->
+              <div id="folder-card-mobile" onclick="toggleFolderDetails(&#39;mobile&#39;)" ondblclick="window.location.href=&#39;../repo-detail/RepoDetail.html&#39;" title="Doble clic para abrir contenido y permisos" class="drive-card group cursor-pointer">
+                <div style="display: flex; align-items: center; gap: 12px; min-width: 0; flex: 1;">
+                  <div class="drive-icon" style="background-color: #27272a; color: #ffffff;">
+                    <span class="material-symbols-outlined" style="font-size: 22px;">folder</span>
+                  </div>
+                  <div style="min-width: 0; flex: 1;">
+                    <p class="drive-title">mobile-agile-assistant</p>
+                    <p class="drive-subtitle">2 sub-carpetas • 12 historias</p>
+                  </div>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 4px; flex-shrink: 0; margin-left: 8px;">
+                  <button type="button" onclick="event.stopPropagation(); openModalSubrepo(&#39;mobile-agile-assistant&#39;)" class="p-1 rounded text-slate-400 hover:text-slate-900 hover:bg-slate-100 transition-colors" title="Dividir en sub-carpeta">
+                    <span class="material-symbols-outlined text-base">create_new_folder</span>
+                  </button>
+                  <button type="button" onclick="event.stopPropagation(); openModalStoryWithContext(&#39;mobile-agile-assistant&#39;)" class="p-1 rounded text-slate-400 hover:text-slate-900 hover:bg-slate-100 transition-colors" title="+ Historia">
+                    <span class="material-symbols-outlined text-base">add_task</span>
+                  </button>
+                  <a href="../repo-detail/RepoDetail.html" onclick="event.stopPropagation()" class="p-1 rounded text-slate-400 hover:text-red-600 hover:bg-slate-100 transition-colors" title="Abrir repositorio completo">
+                    <span class="material-symbols-outlined text-base">open_in_new</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Folder 3: analytics-burndown-service -->
+              <div id="folder-card-analytics" onclick="toggleFolderDetails(&#39;analytics&#39;)" ondblclick="window.location.href=&#39;../repo-detail/RepoDetail.html&#39;" title="Doble clic para abrir contenido y permisos" class="drive-card group cursor-pointer">
+                <div style="display: flex; align-items: center; gap: 12px; min-width: 0; flex: 1;">
+                  <div class="drive-icon" style="background-color: #3f3f46; color: #ffffff;">
+                    <span class="material-symbols-outlined" style="font-size: 22px;">folder</span>
+                  </div>
+                  <div style="min-width: 0; flex: 1;">
+                    <p class="drive-title">analytics-burndown-service</p>
+                    <p class="drive-subtitle">1 sub-carpeta • 5 historias</p>
+                  </div>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 4px; flex-shrink: 0; margin-left: 8px;">
+                  <button type="button" onclick="event.stopPropagation(); openModalSubrepo(&#39;analytics-burndown-service&#39;)" class="p-1 rounded text-slate-400 hover:text-indigo-700 hover:bg-white transition-colors" title="Dividir en sub-carpeta">
+                    <span class="material-symbols-outlined text-base">create_new_folder</span>
+                  </button>
+                  <button type="button" onclick="event.stopPropagation(); openModalStoryWithContext(&#39;analytics-burndown-service&#39;)" class="p-1 rounded text-slate-400 hover:text-sky-700 hover:bg-white transition-colors" title="+ Historia">
+                    <span class="material-symbols-outlined text-base">add_task</span>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- SUB-DIRECTORIOS (DIVISIÓN DEL PROYECTO) EN FORMATO GOOGLE DRIVE -->
+          <div class="border-t border-slate-100 pt-5">
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-slate-400 text-lg">subdirectory_arrow_right</span>
+                <span class="font-headline text-title-md text-slate-800">
+                  Sub-carpetas en <strong class="text-light-primary font-code">agile-core-platform</strong>
+                </span>
+                <span class="text-body-sm text-slate-400">(División del proyecto)</span>
+              </div>
+              <button type="button" onclick="openModalSubrepo(&#39;agile-core-platform&#39;)" class="text-label-sm font-label text-indigo-700 hover:text-indigo-900 inline-flex items-center gap-1">
+                <span class="material-symbols-outlined text-base">add</span>
+                <span>Crear sub-carpeta</span>
+              </button>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <!-- Subfolder 1 -->
+              <div class="flex items-center justify-between p-3 rounded-lg border border-zinc-200/90 bg-white hover:bg-zinc-50 transition-colors">
+                <div class="flex items-center gap-2.5 min-w-0">
+                  <span class="material-symbols-outlined text-zinc-700 text-xl">folder_open</span>
+                  <div class="min-w-0">
+                    <p class="font-code text-body-sm font-semibold text-zinc-900 truncate">/auth-service</p>
+                    <p class="text-[11px] text-zinc-500">8 historias • 24 pts</p>
+                  </div>
+                </div>
+                <span class="w-2 h-2 rounded-full bg-zinc-400" title="Activo"></span>
+              </div>
+
+              <!-- Subfolder 2 -->
+              <div class="flex items-center justify-between p-3 rounded-lg border border-zinc-200/90 bg-white hover:bg-zinc-50 transition-colors">
+                <div class="flex items-center gap-2.5 min-w-0">
+                  <span class="material-symbols-outlined text-zinc-700 text-xl">folder_open</span>
+                  <div class="min-w-0">
+                    <p class="font-code text-body-sm font-semibold text-zinc-900 truncate">/kanban-engine</p>
+                    <p class="text-[11px] text-zinc-500">14 historias • 42 pts</p>
+                  </div>
+                </div>
+                <span class="w-2 h-2 rounded-full bg-zinc-400" title="Activo"></span>
+              </div>
+
+              <!-- Subfolder 3 -->
+              <div class="flex items-center justify-between p-3 rounded-lg border border-zinc-200/90 bg-white hover:bg-zinc-50 transition-colors">
+                <div class="flex items-center gap-2.5 min-w-0">
+                  <span class="material-symbols-outlined text-zinc-700 text-xl">folder_open</span>
+                  <div class="min-w-0">
+                    <p class="font-code text-body-sm font-semibold text-zinc-900 truncate">/chat-collaboration</p>
+                    <p class="text-[11px] text-zinc-500">6 historias • 18 pts</p>
+                  </div>
+                </div>
+                <span class="w-2 h-2 rounded-full bg-zinc-400" title="En revisión"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- STREAMLINED FILES / AGILE ARTIFACTS TABLE (LISTA LIMPIA COMO GOOGLE DRIVE) -->
+          <div class="border-t border-slate-100 pt-5">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-headline text-title-md text-slate-800 flex items-center gap-2">
+                <span class="material-symbols-outlined text-slate-500 text-lg">description</span>
+                <span>Artefactos Ágiles y Plantillas en esta Carpeta</span>
+              </h3>
+              <div class="flex items-center gap-2">
+                <button type="button" onclick="openModal(&#39;modal-story&#39;)" class="text-label-sm font-label text-sky-700 hover:text-sky-900 inline-flex items-center gap-1">
+                  <span class="material-symbols-outlined text-base">assignment</span>
+                  <span>+ Historia (INVEST)</span>
+                </button>
+                <span class="text-slate-300">•</span>
+                <button type="button" onclick="openModal(&#39;modal-epic&#39;)" class="text-label-sm font-label text-purple-700 hover:text-purple-900 inline-flex items-center gap-1">
+                  <span class="material-symbols-outlined text-base">bookmark</span>
+                  <span>+ Épica (Lean)</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Clean Files Table -->
+            <div class="border border-slate-200 rounded-lg overflow-hidden">
+              <table class="w-full text-left border-collapse text-body-sm">
+                <thead>
+                  <tr class="bg-slate-50/80 border-b border-slate-200 text-slate-500 font-label text-label-sm">
+                    <th class="py-2.5 px-4 font-semibold">Nombre / Código</th>
+                    <th class="py-2.5 px-4 font-semibold hidden sm:table-cell">Tipo / Plantilla</th>
+                    <th class="py-2.5 px-4 font-semibold hidden md:table-cell">Sub-carpeta</th>
+                    <th class="py-2.5 px-4 font-semibold text-right">Puntos / Estado</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100 bg-white">
+                  <!-- Row 1: Epic (File icon in Purple) -->
+                  <tr class="hover:bg-slate-50/70 transition-colors cursor-pointer" onclick="openModal(&#39;modal-epic&#39;)">
+                    <td class="py-2.5 px-4 flex items-center gap-3">
+                      <span class="material-symbols-outlined text-purple-600 text-xl">description</span>
+                      <div>
+                        <span class="font-medium text-slate-900">EPIC-01: Tablero Kanban Multiequipo</span>
+                        <p class="text-[11px] text-slate-400">Hipótesis Lean Agile • OKRs de cycle time</p>
+                      </div>
+                    </td>
+                    <td class="py-2.5 px-4 hidden sm:table-cell">
+                      <span class="font-code text-xs bg-purple-50 text-purple-700 px-2 py-0.5 rounded border border-purple-200">Plantilla Épica</span>
+                    </td>
+                    <td class="py-2.5 px-4 hidden md:table-cell font-code text-xs text-slate-500">/kanban-engine</td>
+                    <td class="py-2.5 px-4 text-right">
+                      <span class="font-code text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">75% Completada</span>
+                    </td>
+                  </tr>
+
+                  <!-- Row 2: User Story 1 (File icon in Sky-Blue) -->
+                  <tr class="hover:bg-slate-50/70 transition-colors cursor-pointer" onclick="openModal(&#39;modal-story&#39;)">
+                    <td class="py-2.5 px-4 flex items-center gap-3">
+                      <span class="material-symbols-outlined text-sky-600 text-xl">description</span>
+                      <div>
+                        <span class="font-medium text-slate-900">US-201: Crear sub-repositorios para modularizar</span>
+                        <p class="text-[11px] text-slate-400">Como usuario quiero crear sub-carpetas...</p>
+                      </div>
+                    </td>
+                    <td class="py-2.5 px-4 hidden sm:table-cell">
+                      <span class="font-code text-xs bg-sky-50 text-sky-700 px-2 py-0.5 rounded border border-sky-200">Plantilla INVEST</span>
+                    </td>
+                    <td class="py-2.5 px-4 hidden md:table-cell font-code text-xs text-slate-500">/auth-service</td>
+                    <td class="py-2.5 px-4 text-right">
+                      <span class="font-code text-xs font-bold text-sky-800 bg-sky-100 px-2 py-0.5 rounded">5 pts</span>
+                    </td>
+                  </tr>
+
+                  <!-- Row 3: User Story 2 (File icon in Sky-Blue) -->
+                  <tr class="hover:bg-slate-50/70 transition-colors cursor-pointer" onclick="openModal(&#39;modal-story&#39;)">
+                    <td class="py-2.5 px-4 flex items-center gap-3">
+                      <span class="material-symbols-outlined text-sky-600 text-xl">description</span>
+                      <div>
+                        <span class="font-medium text-slate-900">US-204: Enviar mensajes a canales de equipo</span>
+                        <p class="text-[11px] text-slate-400">Como Scrum Master quiero enviar mensajes...</p>
+                      </div>
+                    </td>
+                    <td class="py-2.5 px-4 hidden sm:table-cell">
+                      <span class="font-code text-xs bg-sky-50 text-sky-700 px-2 py-0.5 rounded border border-sky-200">Plantilla INVEST</span>
+                    </td>
+                    <td class="py-2.5 px-4 hidden md:table-cell font-code text-xs text-slate-500">/chat-collaboration</td>
+                    <td class="py-2.5 px-4 text-right">
+                      <span class="font-code text-xs font-bold text-sky-800 bg-sky-100 px-2 py-0.5 rounded">3 pts</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- TAB CONTENT 2: REPOSITORIOS COMPARTIDOS (FORMATO CARPETAS DRIVE) -->
+        <div id="tab-panel-shared" class="hidden space-y-4">
+          <div class="flex items-center justify-between mb-2">
+            <h2 class="font-headline text-title-lg text-slate-800 flex items-center gap-2">
+              <span class="material-symbols-outlined text-slate-500 text-xl">folder_shared</span>
+              <span>Carpetas Compartidas Conmigo</span>
+            </h2>
+            <span class="text-body-sm text-slate-400 font-label">2 proyectos externos</span>
+          </div>
+
+          <!-- Shared Folders Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
+            <!-- Shared Folder 1 -->
+            <div class="group bg-slate-50/70 hover:bg-slate-100/90 border border-light-border-subtle hover:border-slate-300 rounded-lg p-3.5 transition-all cursor-pointer shadow-2xs hover:shadow-xs flex items-center justify-between">
+              <div class="flex items-center gap-3 min-w-0">
+                <div class="w-10 h-10 rounded-md bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                  <span class="material-symbols-outlined text-2xl" style="font-variation-settings: &#39;FILL&#39; 1;">folder_shared</span>
+                </div>
+                <div class="min-w-0">
+                  <p class="font-headline text-body-md font-semibold text-slate-900 truncate">fintech-payment-gateway</p>
+                  <p class="text-body-sm text-slate-500 truncate">De: @banco-aliado • Colaborador</p>
+                </div>
+              </div>
+              <span class="material-symbols-outlined text-slate-400 text-lg">chevron_right</span>
+            </div>
+
+            <!-- Shared Folder 2 -->
+            <div class="group bg-slate-50/70 hover:bg-slate-100/90 border border-light-border-subtle hover:border-slate-300 rounded-lg p-3.5 transition-all cursor-pointer shadow-2xs hover:shadow-xs flex items-center justify-between">
+              <div class="flex items-center gap-3 min-w-0">
+                <div class="w-10 h-10 rounded-md bg-purple-50 text-purple-600 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                  <span class="material-symbols-outlined text-2xl" style="font-variation-settings: &#39;FILL&#39; 1;">folder_shared</span>
+                </div>
+                <div class="min-w-0">
+                  <p class="font-headline text-body-md font-semibold text-slate-900 truncate">design-system-tokens-hub</p>
+                  <p class="text-body-sm text-slate-500 truncate">De: UI/UX Guild • Revisor</p>
+                </div>
+              </div>
+              <span class="material-symbols-outlined text-slate-400 text-lg">chevron_right</span>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- RIGHT SUBMENU / DRAWER: CHAT COLABORATIVO (GRUPOS Y USUARIOS) -->
+    <aside id="chat-drawer" class="w-80 lg:w-96 bg-light-surface-card border-l border-light-border-subtle flex flex-col justify-between shrink-0 transition-all duration-200 z-20">
+      <!-- Chat Header -->
+      <div class="p-4 border-b border-light-border-subtle flex items-center justify-between bg-slate-50/60">
+        <div class="flex items-center gap-2.5">
+          <span class="w-8 h-8 rounded-full bg-teal-100 text-light-primary flex items-center justify-center">
+            <span class="material-symbols-outlined text-lg">forum</span>
+          </span>
+          <div>
+            <h2 class="font-headline text-title-lg text-light-on-surface">Comunicación Ágil</h2>
+            <p class="text-body-sm text-slate-500" id="chat-channel-status">Canal: #devs-frontend</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-1">
+          <button type="button" onclick="toggleChatChannelsView()" class="p-1 rounded text-slate-400 hover:text-slate-700" title="Cambiar grupo o usuario">
+            <span class="material-symbols-outlined text-xl">swap_horiz</span>
+          </button>
+          <button type="button" onclick="toggleChatDrawer()" class="p-1 rounded text-slate-400 hover:text-slate-700" title="Cerrar chat">
+            <span class="material-symbols-outlined text-xl">close</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- CHANNELS & USERS SELECTOR SUBMENU (TOGGLEABLE) -->
+      <div id="chat-selector-panel" class="hidden p-3 bg-slate-100 border-b border-light-border-subtle max-h-56 overflow-y-auto space-y-3">
+        <!-- Channels / Groups -->
+        <div>
+          <span class="text-label-sm font-label text-slate-500 uppercase tracking-wider block mb-1">Grupos de Proyecto</span>
+          <div class="space-y-1">
+            <button type="button" onclick="selectChatChannel(&#39;devs-frontend&#39;)" class="w-full flex items-center justify-between px-2.5 py-1.5 rounded bg-white text-slate-800 text-body-sm font-medium hover:bg-slate-50">
+              <span class="flex items-center gap-2">
+                <span class="text-slate-400 font-bold">#</span>
+                <span>devs-frontend</span>
+              </span>
+              <span class="w-2 h-2 rounded-full bg-teal-500"></span>
+            </button>
+            <button type="button" onclick="selectChatChannel(&#39;backend-microservices&#39;)" class="w-full flex items-center justify-between px-2.5 py-1.5 rounded text-slate-700 text-body-sm hover:bg-white">
+              <span class="flex items-center gap-2">
+                <span class="text-slate-400 font-bold">#</span>
+                <span>backend-microservices</span>
+              </span>
+              <span class="text-[10px] bg-slate-200 px-1 rounded">3 nuevos</span>
+            </button>
+            <button type="button" onclick="selectChatChannel(&#39;daily-standup&#39;)" class="w-full flex items-center justify-between px-2.5 py-1.5 rounded text-slate-700 text-body-sm hover:bg-white">
+              <span class="flex items-center gap-2">
+                <span class="text-slate-400 font-bold">#</span>
+                <span>daily-standup-sprint4</span>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Direct Users -->
+        <div>
+          <span class="text-label-sm font-label text-slate-500 uppercase tracking-wider block mb-1">Mensajes Directos</span>
+          <div class="space-y-1">
+            <button type="button" onclick="selectChatDirect(&#39;Marcos Rivera (Dev Lead)&#39;)" class="w-full flex items-center justify-between px-2.5 py-1.5 rounded text-slate-700 text-body-sm hover:bg-white">
+              <span class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                <span>Marcos Rivera (Dev Lead)</span>
+              </span>
+            </button>
+            <button type="button" onclick="selectChatDirect(&#39;Elena Gómez (PO)&#39;)" class="w-full flex items-center justify-between px-2.5 py-1.5 rounded text-slate-700 text-body-sm hover:bg-white">
+              <span class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                <span>Elena Gómez (Product Owner)</span>
+              </span>
+            </button>
+            <button type="button" onclick="selectChatDirect(&#39;Javier QA&#39;)" class="w-full flex items-center justify-between px-2.5 py-1.5 rounded text-slate-700 text-body-sm hover:bg-white">
+              <span class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-slate-300"></span>
+                <span>Javier QA Tester</span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Messages Thread Container -->
+      <div id="chat-messages-container" class="flex-1 overflow-y-auto p-4 space-y-4 text-body-sm">
+        <div class="text-center my-2">
+          <span class="font-code text-xs text-slate-400 bg-slate-100 px-3 py-1 rounded-full">Hoy • Standup Sprint 4</span>
+        </div>
+
+        <!-- Message from user 1 -->
+        <div class="flex items-start gap-2.5">
+          <div class="w-7 h-7 rounded-full bg-sky-600 text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+            MR
+          </div>
+          <div class="space-y-1 max-w-[85%]">
+            <div class="flex items-baseline gap-2">
+              <span class="font-label text-label-sm text-slate-900 font-bold">Marcos Rivera</span>
+              <span class="text-[11px] text-slate-400">10:14 AM</span>
+            </div>
+            <div class="bg-slate-100 p-2.5 rounded-r-lg rounded-bl-lg text-slate-800">
+              Acabo de dividir el repo <span class="font-code text-xs bg-slate-200 px-1 rounded">agile-core-platform</span> y agregué el módulo <span class="font-code text-xs text-indigo-700 font-semibold">/kanban-engine</span>.
+            </div>
+          </div>
+        </div>
+
+        <!-- Message from user 2 (Agile Bot / Notification) -->
+        <div class="p-2.5 bg-purple-50 border border-purple-200 rounded text-purple-950 text-body-sm flex items-start gap-2">
+          <span class="material-symbols-outlined text-purple-600 text-lg mt-0.5">bookmark</span>
+          <div>
+            <span class="font-bold text-xs block uppercase tracking-wider text-purple-800">Nueva Épica Creada</span>
+            <p class="text-xs">Sofía definió <strong class="font-code">EPIC-01: Tablero Kanban Multiequipo</strong> (18 puntos de historia estimados).</p>
+          </div>
+        </div>
+
+        <!-- Message from user 3 -->
+        <div class="flex items-start gap-2.5">
+          <div class="w-7 h-7 rounded-full bg-amber-600 text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+            EG
+          </div>
+          <div class="space-y-1 max-w-[85%]">
+            <div class="flex items-baseline gap-2">
+              <span class="font-label text-label-sm text-slate-900 font-bold">Elena Gómez (PO)</span>
+              <span class="text-[11px] text-slate-400">10:22 AM</span>
+            </div>
+            <div class="bg-slate-100 p-2.5 rounded-r-lg rounded-bl-lg text-slate-800">
+              ¿Revisaron la plantilla de criterios Gherkin para la historia <span class="font-code text-xs text-sky-700 font-semibold bg-sky-100 px-1 rounded">US-201</span>? Ya está lista para estimación en la daily.
+            </div>
+          </div>
+        </div>
+
+        <!-- Outgoing message from current user (Sofía Campos) -->
+        <div class="flex items-start gap-2.5 justify-end">
+          <div class="space-y-1 max-w-[85%] text-right">
+            <div class="flex items-baseline gap-2 justify-end">
+              <span class="text-[11px] text-slate-400">10:28 AM</span>
+              <span class="font-label text-label-sm text-light-primary font-bold">Tú</span>
+            </div>
+            <div class="bg-light-primary text-light-on-primary p-2.5 rounded-l-lg rounded-br-lg text-left">
+              Perfecto Elena. En 10 min comenzamos el standup y asignamos los story points al sprint activo.
+            </div>
+          </div>
+          <div class="w-7 h-7 rounded-full bg-slate-800 text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+            SC
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Agile Attachment Shortcuts & Input Area -->
+      <div class="p-3 border-t border-light-border-subtle bg-white space-y-2">
+        <!-- Agile snippet tag chips -->
+        <div class="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs">
+          <button type="button" onclick="insertChatTag(&#39;/daily&#39;)" class="font-code px-2 py-0.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded transition-colors whitespace-nowrap">
+            /daily
+          </button>
+          <button type="button" onclick="insertChatTag(&#39;US-201&#39;)" class="font-code px-2 py-0.5 bg-sky-50 text-sky-700 hover:bg-sky-100 rounded transition-colors whitespace-nowrap">
+            #US-201
+          </button>
+          <button type="button" onclick="insertChatTag(&#39;EPIC-01&#39;)" class="font-code px-2 py-0.5 bg-purple-50 text-purple-700 hover:bg-purple-100 rounded transition-colors whitespace-nowrap">
+            #EPIC-01
+          </button>
+          <button type="button" onclick="insertChatTag(&#39;/blocker&#39;)" class="font-code px-2 py-0.5 bg-rose-50 text-rose-700 hover:bg-rose-100 rounded transition-colors whitespace-nowrap">
+            !bloqueo
+          </button>
+        </div>
+
+        <!-- Chat Input Field -->
+        <form onsubmit="handleSendChatMessage(event)" class="flex items-center gap-2">
+          <input id="chat-input" type="text" placeholder="Escribe al grupo o menciona @usuario..." class="flex-1 px-3 py-2 bg-light-surface-subtle border border-light-border-subtle rounded font-body text-body-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-accent">
+          <button type="submit" class="p-2 bg-light-primary text-light-on-primary hover:bg-teal-800 rounded transition-colors flex items-center justify-center shadow-sm" title="Enviar mensaje">
+            <span class="material-symbols-outlined text-lg">send</span>
+          </button>
+        </form>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- MODAL 1: CREAR / REGISTRAR NUEVO REPOSITORIO -->
+  <!-- ======================================================== -->
+  <div id="modal-repo" class="hidden fixed inset-0 bg-slate-900/50 backdrop-blur-xs flex items-center justify-center z-50 p-4">
+    <div class="bg-white rounded-lg border border-light-border-subtle shadow-2xl max-w-lg w-full overflow-hidden animate-in fade-in zoom-in duration-150">
+      <header class="px-6 py-4 border-b border-light-border-subtle flex items-center justify-between bg-slate-50">
+        <div class="flex items-center gap-2.5">
+          <span class="material-symbols-outlined text-teal-600 text-2xl">create_new_folder</span>
+          <div>
+            <h2 class="font-headline text-title-lg text-slate-900">Crear Nuevo Repositorio</h2>
+            <p class="text-body-sm text-slate-500">Define un repositorio principal para el espacio ágil</p>
+          </div>
+        </div>
+        <button type="button" onclick="closeModal(&#39;modal-repo&#39;)" class="text-slate-400 hover:text-slate-700">
+          <span class="material-symbols-outlined text-xl">close</span>
+        </button>
+      </header>
+
+      <form onsubmit="handleCreateRepo(event)" class="p-6 space-y-4">
+        <div>
+          <label class="block font-label text-label-md text-slate-700 mb-1">Nombre del Repositorio *</label>
+          <input type="text" required placeholder="ej: billing-reconciliation-engine" class="w-full px-3.5 py-2 bg-white border border-light-border-subtle rounded text-body-md text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-accent">
+          <span class="text-body-sm text-slate-500 mt-1 block">Usa nombres descriptivos en minúsculas y guiones.</span>
+        </div>
+
+        <div>
+          <label class="block font-label text-label-md text-slate-700 mb-1">Descripción del Objetivo</label>
+          <textarea rows="2" placeholder="Explica qué funcionalidad cubre este repositorio dentro del proyecto..." class="w-full px-3.5 py-2 bg-white border border-light-border-subtle rounded text-body-md text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-accent"></textarea>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block font-label text-label-md text-slate-700 mb-1">Metodología Predeterminada</label>
+            <select class="w-full px-3 py-2 bg-white border border-light-border-subtle rounded text-body-sm text-slate-800">
+              <option>Scrum (Sprints de 2 semanas)</option>
+              <option>Kanban (Flujo continuo)</option>
+              <option>Híbrido Scrumban</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-label text-label-md text-slate-700 mb-1">Visibilidad</label>
+            <select class="w-full px-3 py-2 bg-white border border-light-border-subtle rounded text-body-sm text-slate-800">
+              <option>Privado (Solo equipo)</option>
+              <option>Compartido con squads</option>
+              <option>Público del workspace</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="p-3 bg-teal-50 border border-teal-200 rounded flex items-start gap-2.5 text-body-sm text-teal-900">
+          <span class="material-symbols-outlined text-teal-600 mt-0.5">alt_route</span>
+          <div>
+            <strong>Modularización disponible:</strong> Una vez creado, podrás subdividir este repositorio en sub-módulos dentro de la misma sección.
+          </div>
+        </div>
+
+        <footer class="pt-4 border-t border-light-border-subtle flex items-center justify-end gap-3">
+          <button type="button" onclick="closeModal(&#39;modal-repo&#39;)" class="px-4 py-2 font-label text-label-md text-slate-600 hover:bg-slate-100 rounded">
+            Cancelar
+          </button>
+          <button type="submit" class="px-4 py-2 font-label text-label-md bg-light-primary text-light-on-primary hover:bg-teal-800 rounded shadow-sm">
+            Crear Repositorio
+          </button>
+        </footer>
+      </form>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- MODAL 2: DIVIDIR EN SUB-REPOSITORIO (MODULARIZACIÓN) -->
+  <!-- ======================================================== -->
+  <div id="modal-subrepo" class="hidden fixed inset-0 bg-slate-900/50 backdrop-blur-xs flex items-center justify-center z-50 p-4">
+    <div class="bg-white rounded-lg border border-light-border-subtle shadow-2xl max-w-lg w-full overflow-hidden animate-in fade-in zoom-in duration-150">
+      <header class="px-6 py-4 border-b border-light-border-subtle flex items-center justify-between bg-indigo-50/70">
+        <div class="flex items-center gap-2.5">
+          <span class="material-symbols-outlined text-indigo-700 text-2xl">alt_route</span>
+          <div>
+            <h2 class="font-headline text-title-lg text-indigo-950">Dividir Repositorio (Crear Sub-repo)</h2>
+            <p class="text-body-sm text-indigo-700" id="subrepo-parent-label">Repo padre: agile-core-platform</p>
+          </div>
+        </div>
+        <button type="button" onclick="closeModal(&#39;modal-subrepo&#39;)" class="text-slate-400 hover:text-slate-700">
+          <span class="material-symbols-outlined text-xl">close</span>
+        </button>
+      </header>
+
+      <form onsubmit="handleCreateSubrepo(event)" class="p-6 space-y-4">
+        <div>
+          <label class="block font-label text-label-md text-slate-700 mb-1">Nombre del Sub-repositorio / Submódulo *</label>
+          <div class="flex items-center">
+            <span class="px-3 py-2 bg-slate-100 border border-r-0 border-light-border-subtle rounded-l font-code text-body-sm text-slate-500">/</span>
+            <input type="text" required placeholder="ej: payment-webhooks" class="w-full px-3 py-2 bg-white border border-light-border-subtle rounded-r text-body-md text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent">
+          </div>
+          <span class="text-body-sm text-slate-500 mt-1 block">Permite desacoplar microservicios o librerías internas del repositorio central.</span>
+        </div>
+
+        <div>
+          <label class="block font-label text-label-md text-slate-700 mb-1">Responsable Técnico del Módulo</label>
+          <select class="w-full px-3 py-2 bg-white border border-light-border-subtle rounded text-body-sm text-slate-800">
+            <option>Marcos Rivera (Dev Lead Backend)</option>
+            <option>Sofía Campos (Scrum Master)</option>
+            <option>Elena Gómez (Product Owner)</option>
+            <option>Carlos Mendoza (Frontend Lead)</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block font-label text-label-md text-slate-700 mb-1">Propósito o Alcance Ágil</label>
+          <textarea rows="2" placeholder="Define el límite funcional para evitar dependencias circulares..." class="w-full px-3 py-2 bg-white border border-light-border-subtle rounded text-body-md text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent"></textarea>
+        </div>
+
+        <footer class="pt-4 border-t border-light-border-subtle flex items-center justify-end gap-3">
+          <button type="button" onclick="closeModal(&#39;modal-subrepo&#39;)" class="px-4 py-2 font-label text-label-md text-slate-600 hover:bg-slate-100 rounded">
+            Cancelar
+          </button>
+          <button type="submit" class="px-4 py-2 font-label text-label-md bg-indigo-700 text-white hover:bg-indigo-800 rounded shadow-sm">
+            Crear Sub-repositorio
+          </button>
+        </footer>
+      </form>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- MODAL 3: PLANTILLA DE HISTORIA DE USUARIO (INVEST & GHERKIN) -->
+  <!-- ======================================================== -->
+  <div id="modal-story" class="hidden fixed inset-0 bg-slate-900/50 backdrop-blur-xs flex items-center justify-center z-50 p-4">
+    <div class="bg-white rounded-lg border border-light-border-subtle shadow-2xl max-w-2xl w-full overflow-hidden animate-in fade-in zoom-in duration-150 max-h-[921px] flex flex-col" data-stitch-vh="max-h-[921px]===max-h-[90vh]">
+      <!-- TOP BANNER: ÉPICA A LA QUE PERTENECE -->
+      <div class="bg-purple-50 border-b border-purple-200/80 px-6 py-2 flex items-center justify-between text-xs shrink-0">
+        <div class="flex items-center gap-2">
+          <span class="flex items-center gap-1 font-bold text-purple-900 uppercase tracking-wider text-[11px]">
+            <span class="material-symbols-outlined text-purple-700 text-base">bookmark</span>
+            <span>Épica a la que pertenece:</span>
+          </span>
+          <span class="font-code font-bold text-purple-700 bg-purple-100 px-1.5 py-0.5 rounded text-xs">EPIC-01</span>
+          <span class="font-medium text-purple-950">Reorganización y Tablero Kanban Multiequipo</span>
+        </div>
+        <span class="text-xs text-purple-700 font-semibold">Sprint 4 Activo</span>
+      </div>
+
+      <header class="px-6 py-3.5 border-b border-light-border-subtle flex items-center justify-between bg-sky-50/70 shrink-0">
+        <div class="flex items-center gap-2.5">
+          <span class="material-symbols-outlined text-sky-600 text-2xl">assignment</span>
+          <div>
+            <div class="flex items-center gap-2">
+              <h2 class="font-headline text-title-lg text-sky-950">Plantilla: Historia de Usuario</h2>
+              <span class="font-code text-xs bg-sky-200 text-sky-800 px-2 py-0.5 rounded font-bold">Patrón Ágil INVEST</span>
+            </div>
+            <p class="text-body-sm text-sky-700">Pertenece al objetivo macro de la épica para el Sprint 4 activo</p>
+          </div>
+        </div>
+        <button type="button" onclick="closeModal(&#39;modal-story&#39;)" class="text-slate-400 hover:text-slate-700">
+          <span class="material-symbols-outlined text-xl">close</span>
+        </button>
+      </header>
+
+      <form onsubmit="handleCreateStory(event)" class="p-6 space-y-4 overflow-y-auto flex-1">
+        
+        <!-- 1. SECCIÓN: IDENTIFICADOR (ID) & METADATOS TÁCTICOS -->
+        <div class="bg-slate-50/70 border border-slate-200 rounded-lg p-3.5 space-y-2.5">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-sm text-sky-600">tag</span>
+              <span>1. Identificador (ID) y Destino</span>
+            </span>
+            <span class="text-xs text-slate-400 font-code">Autogenerado</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div>
+              <label class="block text-xs font-medium text-slate-600 mb-1">ID Historia</label>
+              <input type="text" readonly value="US-205" class="w-full px-3 py-1.5 bg-white border border-slate-200 rounded font-code text-xs font-bold text-sky-800">
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-slate-600 mb-1">Repositorio / Sub-repo</label>
+              <select class="w-full px-3 py-1.5 bg-white border border-slate-200 rounded text-xs text-slate-800">
+                <option>agile-core-platform /kanban-engine</option>
+                <option>agile-core-platform /auth-service</option>
+                <option>mobile-agile-assistant</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-slate-600 mb-1">Story Points (Fibonacci)</label>
+              <select class="w-full px-3 py-1.5 bg-white border border-slate-200 rounded text-xs text-slate-800 font-code">
+                <option>1 Punto</option>
+                <option>2 Puntos</option>
+                <option selected>3 Puntos</option>
+                <option>5 Puntos</option>
+                <option>8 Puntos</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. SECCIÓN: TÍTULO DE LA HISTORIA -->
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5 flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-sm text-sky-600">title</span>
+            <span>2. Título de la Historia *</span>
+          </label>
+          <input type="text" required placeholder="ej: Permitir arrastrar y soltar tarjetas entre columnas del tablero Kanban" class="w-full px-3.5 py-2 bg-white border border-slate-300 rounded text-sm text-slate-900 font-medium placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-accent">
+        </div>
+
+        <!-- Sintetizado Rol / Quiero / Para -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-2 text-xs bg-sky-50/50 p-3 rounded border border-sky-100">
+          <div><strong class="text-sky-800 block">COMO:</strong> Desarrollador / Scrum Master</div>
+          <div><strong class="text-sky-800 block">QUIERO:</strong> Mover tarjetas con feedback táctil</div>
+          <div><strong class="text-sky-800 block">PARA:</strong> Actualizar el estado del sprint ágilmente</div>
+        </div>
+
+        <!-- 3. SECCIÓN: REGLAS DE NEGOCIO -->
+        <div>
+          <div class="flex items-center justify-between mb-1.5">
+            <label class="text-xs font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-sm text-amber-600">policy</span>
+              <span>3. Reglas de Negocio</span>
+            </label>
+            <span class="text-xs text-slate-400">Restricciones de lógica y permisos</span>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 rounded p-3 text-xs text-slate-700 space-y-1.5">
+            <div class="flex items-start gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0"></span>
+              <span><strong>RN-01:</strong> No se puede mover una historia a &#39;Done&#39; si no tiene al menos un escenario de aceptación validado.</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0"></span>
+              <span><strong>RN-02:</strong> Los límites WIP (Work in Progress) de la columna destino no deben ser superados.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. SECCIÓN: CRITERIOS DE ACEPTACIÓN & BOTÓN AGREGAR ESCENARIO -->
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <div>
+              <label class="text-xs font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-sm text-teal-600">fact_check</span>
+                <span>4. Criterios de Aceptación</span>
+              </label>
+              <span class="text-[11px] text-slate-400">Escenarios en formato BDD (Dado / Cuando / Entonces)</span>
+            </div>
+            <button type="button" onclick="addDashboardScenario()" class="inline-flex items-center gap-1.5 px-3 py-1 bg-teal-50 hover:bg-teal-100 text-teal-800 border border-teal-200 rounded text-xs font-semibold transition-colors">
+              <span class="material-symbols-outlined text-base">add_circle</span>
+              <span>Agregar escenario</span>
+            </button>
+          </div>
+
+          <div id="modal-scenarios-list" class="space-y-2">
+            <div class="p-3 bg-white border border-slate-200 rounded text-xs space-y-1">
+              <div class="font-bold text-slate-700 mb-1 flex items-center justify-between">
+                <span>Escenario 1: Transición válida</span>
+                <span class="text-[11px] text-emerald-600 font-semibold">Gherkin BDD</span>
+              </div>
+              <div class="font-code text-slate-600 space-y-0.5 bg-slate-50 p-2 rounded">
+                <div><strong class="text-teal-700">DADO</strong> que una historia está en la columna &#39;In Progress&#39;</div>
+                <div><strong class="text-sky-700">CUANDO</strong> el desarrollador la arrastra a la columna &#39;Review&#39;</div>
+                <div><strong class="text-purple-700">ENTONCES</strong> se notifica al reviewer por el canal de chat correspondiente</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="pt-4 border-t border-light-border-subtle flex items-center justify-end gap-3">
+          <button type="button" onclick="closeModal(&#39;modal-story&#39;)" class="px-4 py-2 font-label text-label-md text-slate-600 hover:bg-slate-100 rounded">
+            Cancelar
+          </button>
+          <button type="submit" class="px-4 py-2 font-label text-label-md bg-sky-600 text-white hover:bg-sky-700 rounded shadow-sm">
+            Guardar Historia de Usuario
+          </button>
+        </footer>
+      </form>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- MODAL 4: PLANTILLA DE ÉPICA (ESTRATÉGICA Y BACKLOG) -->
+  <!-- ======================================================== -->
+  <div id="modal-epic" class="hidden fixed inset-0 bg-slate-900/50 backdrop-blur-xs flex items-center justify-center z-50 p-4">
+    <div class="bg-white rounded-lg border border-light-border-subtle shadow-2xl max-w-2xl w-full overflow-hidden animate-in fade-in zoom-in duration-150 max-h-[921px] flex flex-col" data-stitch-vh="max-h-[921px]===max-h-[90vh]">
+      <header class="px-6 py-4 border-b border-light-border-subtle flex items-center justify-between bg-purple-50/70 shrink-0">
+        <div class="flex items-center gap-2.5">
+          <span class="material-symbols-outlined text-purple-600 text-2xl">bookmark_add</span>
+          <div>
+            <div class="flex items-center gap-2">
+              <h2 class="font-headline text-title-lg text-purple-950">Plantilla: Épica de Producto</h2>
+              <span class="font-code text-xs bg-purple-200 text-purple-800 px-2 py-0.5 rounded font-bold">Nivel Estratégico</span>
+            </div>
+            <p class="text-body-sm text-purple-700">Contenedor de alto nivel para agrupar múltiples historias de usuario en varios sprints</p>
+          </div>
+        </div>
+        <button type="button" onclick="closeModal(&#39;modal-epic&#39;)" class="text-slate-400 hover:text-slate-700">
+          <span class="material-symbols-outlined text-xl">close</span>
+        </button>
+      </header>
+
+      <form onsubmit="handleCreateEpic(event)" class="p-6 space-y-4 overflow-y-auto flex-1">
+        <div>
+          <label class="block font-label text-label-md text-slate-700 mb-1">Nombre de la Épica *</label>
+          <input type="text" required placeholder="ej: Reorganización Modular de Repositorios y Chat de Equipos" class="w-full px-3.5 py-2 bg-white border border-light-border-subtle rounded text-body-md text-slate-900 focus:outline-none focus:ring-2 focus:ring-accent">
+        </div>
+
+        <!-- FORMAL EPIC TEMPLATE (HIPÓTESIS DE NEGOCIO Y OUTCOMES) -->
+        <div class="bg-purple-50/60 border border-purple-200 rounded-md p-4 space-y-3">
+          <span class="font-label text-label-sm text-purple-900 font-bold uppercase tracking-wider block">Plantilla Canónica de Épica (Lean Agile)</span>
+
+          <div>
+            <label class="block font-label text-label-sm text-slate-700 mb-1">
+              <span class="text-purple-800 font-bold">DECLARACIÓN DE HIPÓTESIS:</span>
+            </label>
+            <textarea rows="2" class="w-full px-3 py-1.5 bg-white border border-purple-200 rounded text-body-sm text-slate-900 focus:outline-none">Creemos que al permitir la división en sub-repositorios y un chat contextualizado, los equipos Scrum reducirán los tiempos de coordinación en un 35%.</textarea>
+          </div>
+
+          <div>
+            <label class="block font-label text-label-sm text-slate-700 mb-1">
+              <span class="text-purple-800 font-bold">MÉTRICAS DE ÉXITO (OKRs / KPIs):</span>
+            </label>
+            <input type="text" value="Adopción del 90% de sub-módulos y reducción del cycle time a menos de 4 días." class="w-full px-3 py-1.5 bg-white border border-purple-200 rounded text-body-sm text-slate-900 focus:outline-none">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block font-label text-label-md text-slate-700 mb-1">Repositorio Principal Asociado</label>
+            <select class="w-full px-3 py-2 bg-white border border-light-border-subtle rounded text-body-sm text-slate-800">
+              <option>agile-core-platform</option>
+              <option>mobile-agile-assistant</option>
+              <option>analytics-burndown-service</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-label text-label-md text-slate-700 mb-1">Estado en Roadmap</label>
+            <select class="w-full px-3 py-2 bg-white border border-light-border-subtle rounded text-body-sm text-slate-800">
+              <option>En Progreso (Sprints 3 al 5)</option>
+              <option>Planificado (Trimestre Q1)</option>
+              <option>En Definición</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-label text-label-md text-slate-700 mb-1">Criterios de Finalización (Definition of Done de la Épica)</label>
+          <ul class="text-body-sm text-slate-600 space-y-1 list-disc list-inside bg-slate-50 p-3 rounded border border-light-border-subtle">
+            <li>Todas las historias hijas completadas y probadas en ambiente staging.</li>
+            <li>Documentación de arquitectura y sub-repositorios aprobada por Tech Lead.</li>
+            <li>Métricas de adopción de chat y plantillas validadas por Scrum Master.</li>
+          </ul>
+        </div>
+
+        <footer class="pt-4 border-t border-light-border-subtle flex items-center justify-end gap-3">
+          <button type="button" onclick="closeModal(&#39;modal-epic&#39;)" class="px-4 py-2 font-label text-label-md text-slate-600 hover:bg-slate-100 rounded">
+            Cancelar
+          </button>
+          <button type="submit" class="px-4 py-2 font-label text-label-md bg-purple-700 text-white hover:bg-purple-800 rounded shadow-sm">
+            Guardar Épica
+          </button>
+        </footer>
+      </form>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-notification" class="hidden fixed bottom-6 left-6 bg-slate-900 text-white px-4 py-3 rounded-md shadow-xl flex items-center gap-3 z-50 text-body-sm">
+    <span class="material-symbols-outlined text-emerald-400 text-xl" id="toast-icon">check_circle</span>
+    <span id="toast-message">Operación realizada con éxito</span>
+  </div>
+
+  <!-- CLIENT SCRIPTS FOR INTERACTIVITY -->
+  <script>
+    // Tab switching between Created and Shared Repositories
+    function switchRepoTab(tabName) {
+      const createdPanel = document.getElementById('tab-panel-created');
+      const sharedPanel = document.getElementById('tab-panel-shared');
+      const btnCreated = document.getElementById('tab-btn-created');
+      const btnShared = document.getElementById('tab-btn-shared');
+
+      if (tabName === 'created') {
+        createdPanel.classList.remove('hidden');
+        sharedPanel.classList.add('hidden');
+        btnCreated.className = 'inline-flex items-center gap-2 px-3 py-1.5 rounded-md font-label text-label-md bg-teal-50 text-light-primary font-bold border border-teal-200 transition-all';
+        btnCreated.setAttribute('aria-selected', 'true');
+        btnShared.className = 'inline-flex items-center gap-2 px-3 py-1.5 rounded-md font-label text-label-md text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-all';
+        btnShared.setAttribute('aria-selected', 'false');
+      } else {
+        createdPanel.classList.add('hidden');
+        sharedPanel.classList.remove('hidden');
+        btnShared.className = 'inline-flex items-center gap-2 px-3 py-1.5 rounded-md font-label text-label-md bg-teal-50 text-light-primary font-bold border border-teal-200 transition-all';
+        btnShared.setAttribute('aria-selected', 'true');
+        btnCreated.className = 'inline-flex items-center gap-2 px-3 py-1.5 rounded-md font-label text-label-md text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-all';
+        btnCreated.setAttribute('aria-selected', 'false');
+      }
+    }
+
+    // Toggle Chat Drawer visibility
+    function toggleChatDrawer() {
+      const drawer = document.getElementById('chat-drawer');
+      drawer.classList.toggle('hidden');
+    }
+
+    // Toggle Chat Channels list
+    function toggleChatChannelsView() {
+      const panel = document.getElementById('chat-selector-panel');
+      panel.classList.toggle('hidden');
+    }
+
+    function selectChatChannel(channelName) {
+      document.getElementById('chat-channel-status').textContent = 'Canal: #' + channelName;
+      document.getElementById('chat-selector-panel').classList.add('hidden');
+      showToast('Cambiado al canal #' + channelName);
+    }
+
+    function selectChatDirect(userName) {
+      document.getElementById('chat-channel-status').textContent = 'Chat directo con: ' + userName;
+      document.getElementById('chat-selector-panel').classList.add('hidden');
+      showToast('Conversación con ' + userName);
+    }
+
+    // Dropdown toggles
+    function toggleCreateMenu() {
+      const menu = document.getElementById('create-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    function toggleProfileMenu() {
+      const menu = document.getElementById('profile-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    // Modals handling
+    function openModal(modalId) {
+      document.getElementById(modalId).classList.remove('hidden');
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).classList.add('hidden');
+    }
+
+    function openModalSubrepo(parentRepoName) {
+      document.getElementById('subrepo-parent-label').textContent = 'Repo padre: ' + parentRepoName;
+      openModal('modal-subrepo');
+    }
+
+    function openModalStoryWithContext(repoName) {
+      openModal('modal-story');
+    }
+
+    function openModalEpicWithContext(repoName) {
+      openModal('modal-epic');
+    }
+
+    // Chat shortcuts
+    function insertChatTag(tag) {
+      const input = document.getElementById('chat-input');
+      input.value += (input.value ? ' ' : '') + tag + ' ';
+      input.focus();
+    }
+
+    function handleSendChatMessage(event) {
+      event.preventDefault();
+      const input = document.getElementById('chat-input');
+      const text = input.value.trim();
+      if (!text) return;
+
+      const container = document.getElementById('chat-messages-container');
+      const now = new Date();
+      const timeStr = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+      const msgDiv = document.createElement('div');
+      msgDiv.className = 'flex items-start gap-2.5 justify-end animate-in fade-in duration-150';
+      msgDiv.innerHTML = `
+        <div class="space-y-1 max-w-[85%] text-right">
+          <div class="flex items-baseline gap-2 justify-end">
+            <span class="text-[11px] text-slate-400">${timeStr}</span>
+            <span class="font-label text-label-sm text-light-primary font-bold">Tú</span>
+          </div>
+          <div class="bg-light-primary text-light-on-primary p-2.5 rounded-l-lg rounded-br-lg text-left">
+            ${escapeHtml(text)}
+          </div>
+        </div>
+        <div class="w-7 h-7 rounded-full bg-slate-800 text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+          SC
+        </div>
+      `;
+      container.appendChild(msgDiv);
+      container.scrollTop = container.scrollHeight;
+      input.value = '';
+    }
+
+    // Toggle Active Google Drive Folder Selection
+    function toggleFolderDetails(folderKey) {
+      const cards = ['core', 'mobile', 'analytics'];
+      cards.forEach(k => {
+        const el = document.getElementById('folder-card-' + k);
+        if (el) {
+          if (k === folderKey) {
+            el.className = 'group bg-slate-50/90 hover:bg-slate-100/90 border border-teal-400 rounded-lg p-3.5 transition-all cursor-pointer shadow-xs flex items-center justify-between relative ring-2 ring-teal-500/20';
+          } else {
+            el.className = 'group bg-slate-50/70 hover:bg-slate-100/90 border border-light-border-subtle hover:border-slate-300 rounded-lg p-3.5 transition-all cursor-pointer shadow-2xs hover:shadow-xs flex items-center justify-between';
+          }
+        }
+      });
+      showToast('Carpeta seleccionada: ' + (folderKey === 'core' ? 'agile-core-platform' : folderKey === 'mobile' ? 'mobile-agile-assistant' : 'analytics-burndown-service'));
+    }
+
+    function handleCreateRepo(event) {
+      event.preventDefault();
+      closeModal('modal-repo');
+      showToast('Repositorio creado exitosamente');
+    }
+
+    function handleCreateSubrepo(event) {
+      event.preventDefault();
+      closeModal('modal-subrepo');
+      showToast('Sub-repositorio añadido a la división del proyecto');
+    }
+
+    let dashboardScenarioCount = 1;
+    function addDashboardScenario() {
+      dashboardScenarioCount++;
+      const list = document.getElementById('modal-scenarios-list');
+      if (!list) return;
+      const card = document.createElement('div');
+      card.className = 'p-3 bg-white border border-slate-200 rounded text-xs space-y-1.5 animate-in fade-in duration-150';
+      card.innerHTML = `
+        <div class="font-bold text-slate-700 flex items-center justify-between">
+          <span>Escenario ${dashboardScenarioCount}: Criterio de Aceptación</span>
+          <button type="button" onclick="this.closest('div.p-3').remove()" class="text-rose-500 hover:text-rose-700 text-xs">Quitar</button>
+        </div>
+        <div class="space-y-1 bg-slate-50 p-2 rounded font-code">
+          <input type="text" placeholder="DADO [condición previa]..." class="w-full bg-white border border-slate-200 rounded px-2 py-0.5 text-xs">
+          <input type="text" placeholder="CUANDO [acción realizada]..." class="w-full bg-white border border-slate-200 rounded px-2 py-0.5 text-xs">
+          <input type="text" placeholder="ENTONCES [resultado esperado]..." class="w-full bg-white border border-slate-200 rounded px-2 py-0.5 text-xs">
+        </div>
+      `;
+      list.appendChild(card);
+    }
+
+    function handleCreateStory(event) {
+      event.preventDefault();
+      closeModal('modal-story');
+      showToast('Historia de usuario registrada con plantilla INVEST');
+    }
+
+    function handleCreateEpic(event) {
+      event.preventDefault();
+      closeModal('modal-epic');
+      showToast('Épica estratégica creada y vinculada al backlog');
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toast-notification');
+      document.getElementById('toast-message').textContent = message;
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 3500);
+    }
+
+    function escapeHtml(string) {
+      const div = document.createElement('div');
+      div.innerText = string;
+      return div.innerHTML;
+    }
+
+    // Close popups on click outside
+    document.addEventListener('click', function(e) {
+      const profileMenu = document.getElementById('profile-menu');
+      const btnProfile = document.getElementById('btn-profile');
+      if (profileMenu && !profileMenu.contains(e.target) && !btnProfile.contains(e.target)) {
+        profileMenu.classList.add('hidden');
+      }
+
+      const createMenu = document.getElementById('create-menu');
+      const btnCreate = document.getElementById('btn-quick-create');
+      if (createMenu && !createMenu.contains(e.target) && !btnCreate.contains(e.target)) {
+        createMenu.classList.add('hidden');
+      }
+    });
+  </script>
+
+
+</body></html>

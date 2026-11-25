@@ -1,0 +1,37 @@
+
+> frontend@0.0.0 start
+> ng serve
+
+> Building...
+√ Building...
+Browser bundles     
+Initial chunk files  | Names            |  Raw size
+styles.css           | styles           |  23.35 kB | 
+main.js              | main             |   3.04 kB | 
+chunk-YQOESBWP.js    | -                | 803 bytes | 
+
+                     | Initial total    |  27.20 kB
+
+Lazy chunk files     | Names            |  Raw size
+chunk-6SC6GM43.js    | registro         |  38.02 kB | 
+
+
+Server bundles      
+Initial chunk files  | Names            |  Raw size
+main.server.mjs      | main.server      |   4.26 kB | 
+server.mjs           | server           |   1.86 kB | 
+chunk-FFILDKJJ.mjs   | -                | 788 bytes | 
+polyfills.server.mjs | polyfills.server | 268 bytes | 
+
+Lazy chunk files     | Names            |  Raw size
+chunk-RSJSVLVZ.mjs   | registro         |  38.01 kB | 
+
+Application bundle generation complete. [3.524 seconds] - 2026-11-21T21:45:41.913Z
+
+Watch mode enabled. Watching for file changes...
+NOTE: Raw file sizes do not reflect development server per-request transformations.
+[2m6:45:44 p.m.[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m Re-optimizing dependencies because vite config has changed
+[2m6:45:44 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m Re-optimizing dependencies because vite config has changed
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m4200[22m/[39m
+[2m6:45:45 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [optimizer] bundling dependencies...
+[2m6:45:45 p.m.[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [optimizer] bundling dependencies...

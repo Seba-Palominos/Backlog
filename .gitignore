@@ -1,0 +1,21 @@
+# Java / Maven / Gradle
+target/
+.mvn/
+*.jar
+*.war
+
+# Angular / Node
+node_modules/
+dist/
+.angular/
+
+# IDEs y Sistema
+.vscode/
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+# Instaladores y archivos pesados
+docs/UI-UX/*.exe
+*.exe
+service.zip
